@@ -1,30 +1,32 @@
 <script lang="ts">
-  export let name: string;
+  import { onMount } from "svelte";
+  import { gameState } from './stores/state';
+  import { appStatus } from './stores/appStatus';
+  import { GameStatus } from './enums';
+  import WelcomeScreen from "./WelcomeScreen.svelte";
+  import GameScreen from "./GameScreen.svelte";
+  import ResultScreen from "./ResultScreen.svelte";
+
+  let showGameScreen: boolean = false;
+  let showResultScreen: boolean = false;
+
+  onMount(() => {
+    const localStorage = window.localStorage;
+
+    if (localStorage && localStorage.getItem('state')) {
+      gameState.set(JSON.parse(localStorage.getItem('state')));
+    }
+  });
+
+  // Svelte doesn't give access to Typescript out of <script> tag
+  $: showGameScreen = ($appStatus === GameStatus.ONGOING);
+  $: showResultScreen = ($appStatus === GameStatus.FINISHED);
 </script>
 
-<main>
-  <h1>Hello {name}!</h1>
-  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
-
-<style>
-  main {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
-  }
-
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
-  }
-
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
-  }
-</style>
+{#if showGameScreen}
+  <GameScreen />
+{:else if showResultScreen}
+  <ResultScreen />
+{:else}
+  <WelcomeScreen />
+{/if}
