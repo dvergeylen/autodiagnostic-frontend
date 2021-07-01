@@ -1,5 +1,11 @@
 /// <reference types="svelte" />
 
+interface ScenarioHash {
+  [chapterId: string]: {
+    [dialogNodeId: string]: DialogNode,
+  },
+}
+
 interface GameState {
   gender: 'm' | 'f' | '',
   nodes: {
