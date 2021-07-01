@@ -4,14 +4,18 @@
   import { appStatus } from './stores/appStatus';
   import { GameStatus } from './enums';
 
-  let scenariosPromises: Promise<Array<Object>>;
+  interface ScenarioHash {
+    [key: string]: DialogNode,
+  }
+
+  let scenariosPromises: Promise<ScenarioHash>;
 
   onMount(async () => {
-      const promises: Array<Promise<Object>> = Array.from(Array(10).keys()).map(async (i) => {
-        const scenarioFile = await fetch(`scenarios/chapitre${String(i).padStart(2, '0')}.json`)
-        const scenario = await scenarioFile.text();
+      const promises: Array<Promise<DialogNode>> = Array.from(Array(10).keys()).map(async (i: number): Promise<DialogNode> => {
+        const scenarioFile = await fetch(`scenarios/chapitre${String(i + 1).padStart(2, '0')}.json`);
 
-        if (scenario.length > 0) {
+        if (scenarioFile.ok) {
+          const scenario: string = await scenarioFile.text();
           return JSON.parse(scenario);
         } else {
           throw new Error(`Impossible de lire le scénario n°${String(i).padStart(2, '0')}`);
@@ -20,7 +24,11 @@
 
       scenariosPromises = new Promise(async (resolve, reject) => {
         try {
-          const results = await Promise.all(promises);
+          const scenariosArray = await Promise.all(promises);
+          const results: ScenarioHash = scenariosArray.reduce((acc: ScenarioHash, scenario: DialogNode) => ({
+            ...acc,
+            [scenario.id]: scenario,
+          }), {});
           resolve(results);
         } catch (e) {
           reject(e);
@@ -36,8 +44,8 @@
 
 {#await scenariosPromises}
   <p>Chargement du jeu, veuillez patienter</p>
-{:then scenario}
+{:then scenarios}
   <p>Les scénarios sont chargés</p>
 {:catch error}
-  <p style="color: red">Une erreur est survenue: {error}</p>
+  <p style="color: red">{error}</p>
 {/await}
