@@ -28,15 +28,17 @@
 <main>
   <h1>Voyage au bout du monde</h1>
   <h3>Une aventure d'introspection</h3>
-    {#if isNewGame && isGenderConfigured }
-      <button class:pressed={!newGamePressed} on:click={startGame}>
-        Continuer
-    </button>
-    {/if}
-    <button on:click={toggleNewGamePressed} class:pressed={newGamePressed}>
-      Nouvelle Partie
-    </button>
-    <div class:is-hidden={!newGamePressed} class="protagoniste">
+    <div class="is-grid">
+      {#if isNewGame && isGenderConfigured }
+        <button class:pressed={!newGamePressed} on:click={startGame}>
+          Continuer
+      </button>
+      {/if}
+      <button on:click={toggleNewGamePressed} class:pressed={newGamePressed}>
+        Nouvelle Partie
+      </button>
+    </div>
+    <div class:is-hidden={!newGamePressed} class="is-grid protagoniste">
       Protagoniste:
       <button on:click={() => startNewGame('m')}>
         <svg class="icon" >
@@ -54,13 +56,6 @@
 </main>
 
 <style lang="scss">
-  main {
-    text-align: center;
-    padding: 1em;
-    max-width: 50em;
-    margin: 0 auto;
-  }
-
   h1 {
     color: #a10000;
     font-size: 4em;
@@ -74,7 +69,6 @@
   }
 
   .protagoniste {
-    display: grid;
     padding: 1em;
     border: 1px solid black;
     max-width: 80%;
@@ -86,6 +80,16 @@
     margin: 1em auto auto auto; /* top right bottom left */
   }
 
+  // Commons
+  main {
+    text-align: center;
+    padding: 1em;
+    max-width: 50em;
+    margin: 0 auto;
+  }
+  .is-grid {
+    display: grid;
+  }
   .is-hidden {
     display: none;
   }
