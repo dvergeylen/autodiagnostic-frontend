@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { gameState } from './stores/state';
+  import { gameState } from './stores/gameState';
   import { appStatus } from './stores/appStatus';
   import { GameStatus } from './enums';
 

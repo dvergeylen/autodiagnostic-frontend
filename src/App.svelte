@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { gameState } from './stores/state';
+  import { gameState } from './stores/gameState';
   import { appStatus } from './stores/appStatus';
   import { GameStatus } from './enums';
   import WelcomeScreen from "./WelcomeScreen.svelte";
