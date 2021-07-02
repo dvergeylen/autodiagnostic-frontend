@@ -1,0 +1,69 @@
+.is-hidden {
+  display: none;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  color: #1F1F1F;
+  vertical-align: middle;
+}
+
+button.pressed {
+  background-color: #a10000;
+  color: white;
+}
+
+main.svelte-tc4gj5 {
+  text-align: center;
+  padding: 1em;
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+h1.svelte-tc4gj5 {
+  color: #a10000;
+  font-size: 4em;
+  font-weight: 100;
+}
+
+@media (min-width: 640px) {
+  main.svelte-tc4gj5 {
+    max-width: none;
+  }
+}
+.protagoniste.svelte-tc4gj5 {
+  display: grid;
+  padding: 1em;
+  border: 1px solid black;
+  max-width: 80%;
+  margin: 1em auto auto auto;
+}
+
+button.svelte-tc4gj5 {
+  width: 15em;
+  margin: 1em auto auto auto;
+}
+
+.is-hidden.svelte-tc4gj5 {
+  display: none;
+}
+
+.icon.svelte-tc4gj5 {
+  width: 1em;
+  height: 1em;
+  color: #1F1F1F;
+  vertical-align: middle;
+}
+
+button.pressed.svelte-tc4gj5 {
+  background-color: #a10000;
+  color: white;
+}
+
+.icon.svelte-d5swo4 {
+  width: 1em;
+  height: 1em;
+  color: #1F1F1F;
+  vertical-align: middle;
+}
