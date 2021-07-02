@@ -28,45 +28,34 @@
 <main>
   <h1>Voyage au bout du monde</h1>
   <h3>Une aventure d'introspection</h3>
-    <div class="is-grid">
-      {#if isNewGame && isGenderConfigured }
-        <button class:pressed={!newGamePressed} on:click={startGame}>
-          Continuer
-      </button>
-      {/if}
-      <button on:click={toggleNewGamePressed} class:pressed={newGamePressed}>
-        Nouvelle Partie
-      </button>
-    </div>
-    <div class:is-hidden={!newGamePressed} class="is-grid protagoniste">
-      Protagoniste:
-      <button on:click={() => startNewGame('m')}>
-        <svg class="icon" >
-          <use href='assets/sprite_icons.svg#mars' />
-        </svg>
-        Masculin
-      </button>
-      <button on:click={() => startNewGame('f')}>
-        <svg class="icon" >
-          <use href='assets/sprite_icons.svg#venus' />
-        </svg>
-        Féminin
-      </button>
-    </div>
+  <div class="is-grid">
+    {#if isNewGame && isGenderConfigured }
+      <button class:pressed={!newGamePressed} on:click={startGame}>
+        Continuer
+    </button>
+    {/if}
+    <button on:click={toggleNewGamePressed} class:pressed={newGamePressed}>
+      Nouvelle Partie
+    </button>
+  </div>
+  <div class:is-hidden={!newGamePressed} class="is-grid protagoniste">
+    Protagoniste:
+    <button on:click={() => startNewGame('m')}>
+      <svg class="icon" >
+        <use href='assets/sprite_icons.svg#mars' />
+      </svg>
+      Masculin
+    </button>
+    <button on:click={() => startNewGame('f')}>
+      <svg class="icon" >
+        <use href='assets/sprite_icons.svg#venus' />
+      </svg>
+      Féminin
+    </button>
+  </div>
 </main>
 
 <style lang="scss">
-  h1 {
-    color: #a10000;
-    font-size: 4em;
-    font-weight: 100;
-  }
-
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
-  }
 
   .protagoniste {
     padding: 1em;
@@ -81,6 +70,18 @@
   }
 
   // Commons
+  h1 {
+    color: #a10000;
+    font-size: 4em;
+    font-weight: 100;
+  }
+
+  @media (min-width: 640px) {
+    main {
+      max-width: none;
+    }
+  }
+
   main {
     text-align: center;
     padding: 1em;
