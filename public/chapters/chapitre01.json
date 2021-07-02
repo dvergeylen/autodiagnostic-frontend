@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "part": "I",
+    "chapter": "1"
+  },
+  "dialogNodes": {
+    "1": {
+      "id": "1",
+      "text": {
+        "fr": {
+          "m": "Quelle est votre couleur pr\u00e9f\u00e9r\u00e9e?",
+          "f": "Quelle est votre couleur pr\u00e9f\u00e9r\u00e9e?"
+        }
+      },
+      "nextNodes": [
+        "2",
+        "5"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "2": {
+      "id": "2",
+      "text": {
+        "fr": "Le bleu"
+      },
+      "nextNodes": [
+        "3"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "3": {
+      "id": "3",
+      "text": {
+        "fr": "Le bleu? Moi aussi!"
+      },
+      "nextNodes": [
+        "4"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "4": {
+      "id": "4",
+      "text": {
+        "fr": "Mais le rouge est sympa aussi"
+      },
+      "nextNodes": [
+        "8"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "5": {
+      "id": "5",
+      "text": {
+        "fr": "Le rouge"
+      },
+      "nextNodes": [
+        "6"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "6": {
+      "id": "6",
+      "text": {
+        "fr": "Le rouge? Moi je n'aime pas trop"
+      },
+      "nextNodes": [
+        "7"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "7": {
+      "id": "7",
+      "text": {
+        "fr": "En fait je pr\u00e9f\u00e8re le bleu.."
+      },
+      "nextNodes": [
+        "8"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "8": {
+      "id": "8",
+      "text": {
+        "fr": "A bient\u00f4t!"
+      },
+      "nextNodes": [],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    }
+  }
+}
