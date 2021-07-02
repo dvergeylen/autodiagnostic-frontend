@@ -8,6 +8,7 @@ interface ScenarioHash {
 
 interface GameState {
   gender: 'm' | 'f' | '',
+  language: 'fr' | 'en',
   nodes: {
     [chapterId: string]: Array<string>,
   }

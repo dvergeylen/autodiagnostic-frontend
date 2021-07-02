@@ -4,6 +4,7 @@ import { writable, Writable } from 'svelte/store';
 
 const newGame: GameState = {
   gender: '',
+  language: 'fr',
   nodes: { },
 };
 
