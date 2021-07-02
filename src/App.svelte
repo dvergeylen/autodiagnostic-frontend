@@ -6,9 +6,11 @@
   import WelcomeScreen from "./WelcomeScreen.svelte";
   import GameScreen from "./GameScreen.svelte";
   import ResultScreen from "./ResultScreen.svelte";
+  import ErrorScreen from "./ErrorScreen.svelte";
 
   let showGameScreen: boolean = false;
   let showResultScreen: boolean = false;
+  let showErrorScreen: boolean = false;
 
   onMount(() => {
     const localStorage = window.localStorage;
@@ -21,12 +23,15 @@
   // Svelte doesn't give access to Typescript out of <script> tag
   $: showGameScreen = ($appStatus === GameStatus.ONGOING);
   $: showResultScreen = ($appStatus === GameStatus.FINISHED);
+  $: showErrorScreen = ($appStatus === GameStatus.ERROR);
 </script>
 
 {#if showGameScreen}
   <GameScreen />
 {:else if showResultScreen}
   <ResultScreen />
+{:else if showErrorScreen}
+  <ErrorScreen />
 {:else}
   <WelcomeScreen />
 {/if}
