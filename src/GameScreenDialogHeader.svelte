@@ -6,6 +6,7 @@
 
 <style lang="scss">
   .header {
+    flex-grow: 1;
     background: #075e54;
     padding-left: 1em;
     color: white;

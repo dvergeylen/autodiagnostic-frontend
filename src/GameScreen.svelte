@@ -14,8 +14,14 @@
   // Commons
   main {
     text-align: center;
-    padding: 1em;
-    max-width: 50em;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    @media (min-width: 640px) {
+      padding: 1em;
+      max-width: 50em;
+      margin: 0 auto;
+    }
   }
 </style>

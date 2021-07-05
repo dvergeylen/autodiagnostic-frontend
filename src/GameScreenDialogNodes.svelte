@@ -107,8 +107,10 @@
 <style lang="scss">
 
   #dialog-container-background {
-    min-height: 30vh;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     background-color: #E0E0E0;
 
     #dialog-container {
