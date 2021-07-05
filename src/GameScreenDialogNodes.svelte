@@ -7,6 +7,9 @@
 
   let displayedNodeIds: Array<string>;
   let lastDisplayedNodeId: string;
+  let showIsTyping: boolean = false;
+  let npc1Typing: boolean = false;
+  let playerTyping: boolean = false;
 
   // Display error screen if unable to load chapters
   $: if (Object.keys($chapters).includes('error')) {
@@ -23,20 +26,33 @@
     const nextSpeaker = nextNodes.reduce<"Player" | "NPC1">((acc, n: DialogNode) => {
       return (acc === "Player") || (n.character === "Player") ? 'Player' : acc;
     }, "NPC1");
+    npc1Typing = nextSpeaker === 'NPC1';
+    playerTyping = nextSpeaker === 'Player';
 
-    // Multiple replies of the same character
-    if (nextSpeaker === currentSpeaker) {
-      if (nextNodes.length === 1) {
-        displayedNodeIds = [...displayedNodeIds, nextNodeIds[0]];
-        $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
+    // Display node, after a random time typing
+    const timerIsTyping = Math.floor(Math.random() * (750 - 500 + 1) + 500);
+    setTimeout(() => {
+      showIsTyping = true;
 
-        // Call recursively, after a random time
-        const timer = Math.floor(Math.random() * 2000);
-        setTimeout(() => {
+      const timerReply = Math.floor(Math.random() * (3000 - 1000 + 1) + 1000);
+      setTimeout(() => {
+        showIsTyping = false;
+
+        // Multiple replies of the same character
+        if (nextNodes.length === 1) {
+          displayedNodeIds = [...displayedNodeIds, nextNodeIds[0]];
+          $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
+
+          // Call recursively
           displayNextDialogNode(nextNodeIds[0]);
-        }, timer);
-      }
-    }
+        } else {
+          showIsTyping = false;
+          if (nextSpeaker === currentSpeaker) {
+            // TODO
+          }
+        }
+      }, timerReply);
+    }, timerIsTyping);
   }
 
   function waitStoresToLoad() {
@@ -59,12 +75,12 @@
   $: lastDisplayedNodeId = displayedNodeIds[displayedNodeIds.length - 1];
 </script>
 
-<div class="dialog-container-background">
+<div id="dialog-container-background">
   {#if $chapters[$currentChapterId]}
-    <div class="dialog-container">
+    <div id="dialog-container">
       {#each displayedNodeIds as dialogNodeId (dialogNodeId)}
         <div
-          class:npc={$chapters[$currentChapterId][dialogNodeId].character === 'NPC1'}
+          class:npc1={$chapters[$currentChapterId][dialogNodeId].character === 'NPC1'}
           class:player={$chapters[$currentChapterId][dialogNodeId].character === 'Player'}>
             <p>
               {#if $chapters[$currentChapterId][dialogNodeId].text[$gameState.language] instanceof Object}
@@ -75,6 +91,11 @@
             </p>
         </div>
       {/each}
+      <div id="typing-container" class:is-hidden={!showIsTyping} class:npc1={npc1Typing} class:player={playerTyping}>
+        <p>
+          ...
+        </p>
+      </div>
     </div>
     <div class="answer-container">
     </div>
@@ -85,12 +106,12 @@
 
 <style lang="scss">
 
-  .dialog-container-background {
+  #dialog-container-background {
     min-height: 30vh;
     height: 100%;
     background-color: #E0E0E0;
 
-    .dialog-container {
+    #dialog-container {
       display: grid;
       padding-top: 1em;
       grid-gap: 0.5em;
@@ -117,7 +138,7 @@
         }
       }
 
-      div.npc {
+      div.npc1 {
         background: white;
         border-radius: 0 0.5em 0.5em 0.5em; /* top-left corner, top-right corner, bottom-right corner, bottom-left corner */
         margin-left: 0.5em;
@@ -133,5 +154,10 @@
         justify-self: right;
       }
     }
+  }
+
+  // Commons
+  .is-hidden {
+    display: none !important;
   }
 </style>
