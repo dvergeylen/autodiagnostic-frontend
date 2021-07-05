@@ -2,8 +2,8 @@
   import { onMount, tick } from 'svelte';
   import { appStatus } from './stores/appStatus';
   import { GameStatus } from './enums';
-  import { gameState } from './stores/gameState';
-  import { chapters, currentChapterId } from './stores/chapters';
+  import { gameState, currentChapterId } from './stores/gameState';
+  import { chapters } from './stores/chapters';
 
   let displayedNodeIds: Array<string>;
   let lastDisplayedNodeId: string;

@@ -1,10 +1,6 @@
 import { Readable, readable, Subscriber, Unsubscriber, derived } from 'svelte/store';
 
 export const chapters = readable({}, start);
-export const currentChapterId: Readable<string> = derived(
-  chapters,
-  $chapters => Object.keys($chapters).reduce((id, k) => k > id ? k : id, "1"),
-);
 
 function start(set: Subscriber<{}>): Unsubscriber {
   // Array(3) should be Array(10) when all chapters will be available
