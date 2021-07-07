@@ -1,7 +1,7 @@
 {
   "metadata": {
     "part": "I",
-    "chapter": "3"
+    "chapter": "2"
   },
   "dialogNodes": {
     "1": {
@@ -793,15 +793,15 @@
       "id": "38",
       "text": {
         "fr": {
-          "m": "[Arya déconnectée]",
-          "f": "[Jon déconnecté]"
+          "m": "Arya s'est déconnectée",
+          "f": "Jon s'est déconnecté"
         },
         "en": ""
       },
       "nextNodes": [
         "39"
       ],
-      "character": "NPC1",
+      "character": "Narrator",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -846,7 +846,7 @@
       "nextNodes": [
         "41"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -1176,11 +1176,11 @@
     "56": {
       "id": "56",
       "text": {
-        "fr": "[Arya déconnectée]",
-        "en": "[Jon déconnecté]"
+        "fr": "Arya s'est déconnectée",
+        "en": "Jon s'est déconnecté"
       },
       "nextNodes": [],
-      "character": "NPC1",
+      "character": "Narrator",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
