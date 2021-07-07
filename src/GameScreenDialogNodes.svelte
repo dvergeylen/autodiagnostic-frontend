@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount, tick } from 'svelte';
+  import { onMount, afterUpdate } from 'svelte';
   import { appStatus } from './stores/appStatus';
   import { GameStatus } from './enums';
   import { gameState, currentChapterId } from './stores/gameState';
@@ -117,6 +117,10 @@
   onMount(async () => {
     waitStoresToLoad();
   });
+
+  afterUpdate(() => {
+    window.scrollTo(0,document.body.scrollHeight);
+  })
 
   $: displayedNodeIds = ($gameState.nodes[$currentChapterId] || []);
   $: lastDisplayedNodeId = displayedNodeIds[displayedNodeIds.length - 1];
