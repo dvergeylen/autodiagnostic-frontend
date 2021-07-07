@@ -2311,7 +2311,9 @@
         "fr": "Ouais",
         "en": ""
       },
-      "nextNodes": [],
+      "nextNodes": [
+        "111"
+      ],
       "character": "NPC1",
       "attribution": {
         "leader": 0,
@@ -2331,7 +2333,7 @@
         "en": ""
       },
       "nextNodes": [
-        "111"
+        "109"
       ],
       "character": "Player",
       "attribution": {
@@ -2353,7 +2355,7 @@
       },
       "nextNodes": [
         "112",
-        "113"
+        "114"
       ],
       "character": "NPC1",
       "attribution": {
@@ -2374,7 +2376,7 @@
         "en": ""
       },
       "nextNodes": [
-        "114"
+        "113"
       ],
       "character": "Player",
       "attribution": {
@@ -2391,10 +2393,33 @@
     "113": {
       "id": "113",
       "text": {
+        "fr": "Tu domines le monde!",
+        "en": ""
+      },
+      "nextNodes": [
+        "115"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "114": {
+      "id": "114",
+      "text": {
         "fr": "J'imagine trop! La vue, la sensation …",
         "en": ""
       },
-      "nextNodes": [],
+      "nextNodes": [
+        "113"
+      ],
       "character": "Player",
       "attribution": {
         "leader": 0,
@@ -2407,10 +2432,287 @@
         "explorateur": 0
       }
     },
-    "114": {
-      "id": "114",
+    "115": {
+      "id": "115",
       "text": {
-        "fr": "Tu domines le monde!",
+        "fr": "C'est d'une beauté",
+        "en": ""
+      },
+      "nextNodes": [
+        "116"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "116": {
+      "id": "116",
+      "text": {
+        "fr": "Ce voyage quand même …",
+        "en": ""
+      },
+      "nextNodes": [
+        "117",
+        "118"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "117": {
+      "id": "117",
+      "text": {
+        "fr": "explorer le monde, c'est top!",
+        "en": ""
+      },
+      "nextNodes": [
+        "119"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 1
+      }
+    },
+    "118": {
+      "id": "118",
+      "text": {
+        "fr": "quelle chance t'as dit!!",
+        "en": ""
+      },
+      "nextNodes": [
+        "119"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "119": {
+      "id": "119",
+      "text": {
+        "fr": "D'ailleurs, faut que j'te dises",
+        "en": ""
+      },
+      "nextNodes": [
+        "120"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "120": {
+      "id": "120",
+      "text": {
+        "fr": "…",
+        "en": ""
+      },
+      "nextNodes": [
+        "121"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "121": {
+      "id": "121",
+      "text": {
+        "fr": "quoi?",
+        "en": ""
+      },
+      "nextNodes": [
+        "122"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "122": {
+      "id": "122",
+      "text": {
+        "fr": "J'vais pas rentrer ",
+        "en": ""
+      },
+      "nextNodes": [
+        "123"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "123": {
+      "id": "123",
+      "text": {
+        "fr": "en Belgique",
+        "en": ""
+      },
+      "nextNodes": [
+        "124"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "124": {
+      "id": "124",
+      "text": {
+        "fr": "je pense",
+        "en": ""
+      },
+      "nextNodes": [
+        "125"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "125": {
+      "id": "125",
+      "text": {
+        "fr": "tu déconnes, là !!?!",
+        "en": ""
+      },
+      "nextNodes": [
+        "126"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "126": {
+      "id": "126",
+      "text": {
+        "fr": "OUI",
+        "en": ""
+      },
+      "nextNodes": [
+        "127"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "127": {
+      "id": "127",
+      "text": {
+        "fr": {
+          "m": "idiot ",
+          "f": "idiote"
+        },
+        "en": ""
+      },
+      "nextNodes": [
+        "128"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "128": {
+      "id": "128",
+      "text": {
+        "fr": "😇 😙",
         "en": ""
       },
       "nextNodes": [],
