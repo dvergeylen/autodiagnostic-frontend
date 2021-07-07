@@ -9,6 +9,16 @@ interface ScenarioHash {
 interface GameState {
   gender: 'm' | 'f' | '',
   language: 'fr' | 'en',
+  attribution: {
+    leader: number,
+    bricoleur: number,
+    coequipier: number,
+    planificateur: number,
+    idealiste: number,
+    creatif: number,
+    audacieux: number,
+    explorateur: number
+  },
   nodes: {
     [chapterId: string]: Array<string>,
   }
@@ -25,7 +35,7 @@ interface DialogNode {
   },
   nextNodes: Array<string>,
   incomingNodes?: Array<string>,
-  character: "Player" | "NPC1",
+  character: "Player" | "NPC1" | "Narrator",
   attribution?: {
     leader?: number,
     bricoleur?: number,

@@ -6,10 +6,12 @@
   import { chapters } from './stores/chapters';
 
   let displayedNodeIds: Array<string>;
+  let answersNodeIds: Array<string> = [];
   let lastDisplayedNodeId: string;
   let showIsTyping: boolean = false;
   let npc1Typing: boolean = false;
   let playerTyping: boolean = false;
+  let narratorTyping: boolean = false;
 
   // Display error screen if unable to load chapters
   $: if (Object.keys($chapters).includes('error')) {
@@ -27,20 +29,31 @@
     const nextNodes: Array<DialogNode> = Object.entries<DialogNode>($chapters[$currentChapterId])
       .filter(([_, n]) => nextNodeIds.includes(n.id))
       .map(([_, n]) => n);
-    const currentSpeaker: "Player" | "NPC1" = $chapters[$currentChapterId][lastDisplayedNodeId || "1"].character;
-    const nextSpeaker = nextNodes.reduce<"Player" | "NPC1">((acc, n: DialogNode) => {
+    const previousSpeaker: "Player" | "NPC1" | "Narrator" = $chapters[$currentChapterId][lastDisplayedNodeId || "1"].character;
+    const currentSpeaker = nextNodes.reduce<"Player" | "NPC1" | "Narrator">((acc, n: DialogNode) => {
       return (acc === "Player") || (n.character === "Player") ? 'Player' : acc;
-    }, "NPC1");
-    npc1Typing = nextSpeaker === 'NPC1';
-    playerTyping = nextSpeaker === 'Player';
+    }, nextNodes[0]?.character || "NPC1");
+    npc1Typing = currentSpeaker === 'NPC1';
+    playerTyping = currentSpeaker === 'Player';
+    narratorTyping = currentSpeaker === 'Narrator';
 
 
 
     // Display Answer DialogNode div:
-    // - when transitioning from NPCX → Player (event if 1 choice)
+    // - when transitioning from NPCx → Player (event if 1 choice)
     // - when Player and multiple nextNodes
-    if (nextSpeaker === 'Player' && (nextNodes.length > 1 || currentSpeaker === 'NPC1')) {
-      displayAnswerDialogBox(nextNodeIds);
+    if (currentSpeaker === 'Player' && (nextNodes.length > 1 || previousSpeaker !== currentSpeaker)) {
+      const timerReply = 1000;
+      setTimeout(() => {
+        displayAnswerDialogBox(nextNodeIds);
+      }, timerReply);
+    } else if (currentSpeaker === 'Narrator') {
+      // Display node immediately
+      displayedNodeIds = [...displayedNodeIds, nextNodeIds[0]];
+      $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
+
+      // Call next DialogNode, if any
+      displayNextDialogNode(nextNodeIds[0]);
     } else {
       // Display node, after a random time typing
       const timerIsTyping = Math.floor(Math.random() * (750 - 500 + 1) + 500);
@@ -58,6 +71,35 @@
         }, timerReply);
       }, timerIsTyping);
     }
+  }
+
+  function addAnswer(dialogNodeid: string) {
+    // Clear AnswerDialogBox
+    answersNodeIds = [];
+
+    // Append to displayedNodeIds
+    displayedNodeIds = [...displayedNodeIds, dialogNodeid];
+    $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), dialogNodeid];
+
+    // Update gameState
+    if ($chapters[$currentChapterId][dialogNodeid].character === 'Player') {
+      $gameState.attribution = Object.keys($gameState.attribution).reduce((acc, [k, v]) => ({
+        ...acc,
+        [k]: v + $chapters[$currentChapterId][dialogNodeid].attribution[k],
+      }), {
+        leader: 0,
+        bricoleur: 0,
+        coequipier: 0,
+        planificateur: 0,
+        idealiste: 0,
+        creatif: 0,
+        audacieux: 0,
+        explorateur: 0
+      });
+    }
+
+    // Continue dialog, if any
+    displayNextDialogNode(dialogNodeid);
   }
 
   function waitStoresToLoad() {
@@ -86,7 +128,8 @@
       {#each displayedNodeIds as dialogNodeId (dialogNodeId)}
         <div
           class:npc1={$chapters[$currentChapterId][dialogNodeId].character === 'NPC1'}
-          class:player={$chapters[$currentChapterId][dialogNodeId].character === 'Player'}>
+          class:player={$chapters[$currentChapterId][dialogNodeId].character === 'Player'}
+          class:narrator={$chapters[$currentChapterId][dialogNodeId].character === 'Narrator'}>
             <p>
               {#if $chapters[$currentChapterId][dialogNodeId].text[$gameState.language] instanceof Object}
                 {$chapters[$currentChapterId][dialogNodeId].text[$gameState.language][$gameState.gender]}
@@ -102,7 +145,18 @@
         </p>
       </div>
     </div>
-    <div class="answer-container">
+    <div id="answer-container">
+      <div class="player">
+        {#each answersNodeIds as answerDialogNodeId (answerDialogNodeId)}
+          <p class="choice" on:click={() => addAnswer(answerDialogNodeId)}>
+            {#if $chapters[$currentChapterId][answerDialogNodeId].text[$gameState.language] instanceof Object}
+              {$chapters[$currentChapterId][answerDialogNodeId].text[$gameState.language][$gameState.gender]}
+            {:else}
+              {$chapters[$currentChapterId][answerDialogNodeId].text[$gameState.language]}
+            {/if}
+          </p>
+        {/each}
+      </div>
     </div>
   {:else}
     <p>Chargement...</p>
@@ -118,7 +172,7 @@
     flex-grow: 1;
     background-color: #E0E0E0;
 
-    #dialog-container {
+    #dialog-container, #answer-container {
       display: grid;
       padding-top: 1em;
       grid-gap: 0.5em;
@@ -151,6 +205,8 @@
         margin-left: 0.5em;
         text-align: left;
         justify-self: left;
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
       }
 
       div.player {
@@ -159,6 +215,35 @@
         margin-right: 0.5em;
         text-align: right;
         justify-self: right;
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+
+        p.choice {
+          color: #2577e1;
+          cursor: pointer;
+          margin: 0;
+          padding-top: 0.3em;
+          padding-bottom: 0.3em;
+        }
+        p.choice:not(:last-child) {
+          border-bottom: solid 1px lightgray;
+        }
+      }
+
+      @keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+      }
+      div.narrator {
+        background: gray;
+        border-radius: 0; /* top-left corner, top-right corner, bottom-right corner, bottom-left corner */
+        text-align: center;
+        justify-self: center;
+        border-radius: 0.5em;
+        background-color: #b7b5b5;
+        box-shadow: none;
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
       }
     }
   }
