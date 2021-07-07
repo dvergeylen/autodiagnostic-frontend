@@ -41,7 +41,9 @@
     // Display Answer DialogNode div:
     // - when transitioning from NPCx → Player (event if 1 choice)
     // - when Player and multiple nextNodes
-    if (currentSpeaker === 'Player' && (nextNodes.length > 1 || previousSpeaker !== currentSpeaker)) {
+    if (nextNodes.length === 0) {
+      console.log("End of chapter");
+    } else if (currentSpeaker === 'Player' && (nextNodes.length > 1 || previousSpeaker !== currentSpeaker)) {
       const timerReply = 1000;
       setTimeout(() => {
         displayAnswerDialogBox(nextNodeIds);
