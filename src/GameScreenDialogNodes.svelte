@@ -16,6 +16,11 @@
     appStatus.set(GameStatus.ERROR);
   }
 
+
+  function displayAnswerDialogBox(nextNodeIds: Array<string>) {
+    answersNodeIds = nextNodeIds;
+  }
+
   function displayNextDialogNode(lastDisplayedNodeId: string | undefined) {
     // '1' is nextNode is there is no previous node (e.g: chapter root node)
     const nextNodeIds: Array<string> = lastDisplayedNodeId ? $chapters[$currentChapterId][lastDisplayedNodeId].nextNodes : ["1"];
@@ -29,30 +34,30 @@
     npc1Typing = nextSpeaker === 'NPC1';
     playerTyping = nextSpeaker === 'Player';
 
-    // Display node, after a random time typing
-    const timerIsTyping = Math.floor(Math.random() * (750 - 500 + 1) + 500);
-    setTimeout(() => {
-      showIsTyping = true;
 
-      const timerReply = Math.floor(Math.random() * (3000 - 1000 + 1) + 1000);
+
+    // Display Answer DialogNode div:
+    // - when transitioning from NPCX → Player (event if 1 choice)
+    // - when Player and multiple nextNodes
+    if (nextSpeaker === 'Player' && (nextNodes.length > 1 || currentSpeaker === 'NPC1')) {
+      displayAnswerDialogBox(nextNodeIds);
+    } else {
+      // Display node, after a random time typing
+      const timerIsTyping = Math.floor(Math.random() * (750 - 500 + 1) + 500);
       setTimeout(() => {
-        showIsTyping = false;
+        showIsTyping = true;
 
-        // Multiple replies of the same character
-        if (nextNodes.length === 1) {
+        const timerReply = Math.floor(Math.random() * (3000 - 1000 + 1) + 1000);
+        setTimeout(() => {
+          showIsTyping = false;
           displayedNodeIds = [...displayedNodeIds, nextNodeIds[0]];
           $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
 
           // Call recursively
           displayNextDialogNode(nextNodeIds[0]);
-        } else {
-          showIsTyping = false;
-          if (nextSpeaker === currentSpeaker) {
-            // TODO
-          }
-        }
-      }, timerReply);
-    }, timerIsTyping);
+        }, timerReply);
+      }, timerIsTyping);
+    }
   }
 
   function waitStoresToLoad() {
