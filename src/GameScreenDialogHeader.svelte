@@ -11,6 +11,8 @@
     padding-left: 1em;
     color: white;
     font-style: bold;
+    position: sticky;
+    top: 2em;
   }
 
   // Commons

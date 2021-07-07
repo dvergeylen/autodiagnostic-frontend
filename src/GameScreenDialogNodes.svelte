@@ -171,6 +171,7 @@
     flex-direction: column;
     flex-grow: 1;
     background-color: #E0E0E0;
+    padding-bottom: 1em;
 
     #dialog-container, #answer-container {
       display: grid;

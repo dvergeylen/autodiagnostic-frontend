@@ -7,7 +7,7 @@
   }
 </script>
 
-<div class="is-flex is-justify-content-center">
+<div id="navbar" class="is-flex is-justify-content-center">
   <svg class="icon navbar-icon" on:click={updateAppStatus}>
     <use href='assets/sprite_icons.svg#home' />
   </svg>
@@ -32,6 +32,14 @@
 </div>
 
 <style lang="scss">
+  #navbar {
+    position: sticky;
+    top: 0;
+    margin: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background: white;
+  }
   .navbar-icon {
     margin-right: 0.5em;
     cursor: pointer;
