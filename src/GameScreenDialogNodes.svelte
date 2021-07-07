@@ -64,7 +64,7 @@
     // Display Answer DialogNode div:
     // - when transitioning from NPCx → Player (event if 1 choice)
     // - when Player and multiple nextNodes
-    } else if (currentSpeaker === 'Player' && (nextNodes.length > 1 || previousSpeaker !== currentSpeaker)) {
+    } else if (currentSpeaker === 'Player' && (nextNodes.length > 1)) {
       const timerReply = 1000;
       setTimeout(() => {
         displayAnswerDialogBox(nextNodeIds);
@@ -83,7 +83,7 @@
       setTimeout(() => {
         showIsTyping = true;
 
-        const timerReply = Math.floor(Math.random() * (3000 - 1000 + 1) + 1000);
+        const timerReply = Math.floor(Math.random() * (2000 - 1000 + 1) + 1000);
         setTimeout(() => {
           showIsTyping = false;
           $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
