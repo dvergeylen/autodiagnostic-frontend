@@ -7,7 +7,6 @@
 
   let displayedNodeIds: Array<string>;
   let answersNodeIds: Array<string> = [];
-  let lastDisplayedNodeId: string;
   let showIsTyping: boolean = false;
   let npc1Typing: boolean = false;
   let playerTyping: boolean = false;
@@ -23,13 +22,13 @@
     answersNodeIds = nextNodeIds;
   }
 
-  function displayNextDialogNode(lastDisplayedNodeId: string | undefined) {
+  function displayNextDialogNode(parentNodeId: string | undefined, isRootNode: boolean = false) {
     // '1' is nextNode is there is no previous node (e.g: chapter root node)
-    const nextNodeIds: Array<string> = lastDisplayedNodeId ? $chapters[$currentChapterId][lastDisplayedNodeId].nextNodes : ["1"];
+    const nextNodeIds: Array<string> = isRootNode ? ["1"] : $chapters[$currentChapterId][parentNodeId].nextNodes;
     const nextNodes: Array<DialogNode> = Object.entries<DialogNode>($chapters[$currentChapterId])
       .filter(([_, n]) => nextNodeIds.includes(n.id))
       .map(([_, n]) => n);
-    const previousSpeaker: "Player" | "NPC1" | "Narrator" = $chapters[$currentChapterId][lastDisplayedNodeId || "1"].character;
+    const previousSpeaker: "Player" | "NPC1" | "Narrator" = $chapters[$currentChapterId][parentNodeId || "1"].character;
     const currentSpeaker = nextNodes.reduce<"Player" | "NPC1" | "Narrator">((acc, n: DialogNode) => {
       return (acc === "Player") || (n.character === "Player") ? 'Player' : acc;
     }, nextNodes[0]?.character || "NPC1");
@@ -49,7 +48,6 @@
       }, timerReply);
     } else if (currentSpeaker === 'Narrator') {
       // Display node immediately
-      displayedNodeIds = [...displayedNodeIds, nextNodeIds[0]];
       $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
 
       // Call next DialogNode, if any
@@ -63,7 +61,6 @@
         const timerReply = Math.floor(Math.random() * (3000 - 1000 + 1) + 1000);
         setTimeout(() => {
           showIsTyping = false;
-          displayedNodeIds = [...displayedNodeIds, nextNodeIds[0]];
           $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
 
           // Call recursively
@@ -78,7 +75,6 @@
     answersNodeIds = [];
 
     // Append to displayedNodeIds
-    displayedNodeIds = [...displayedNodeIds, dialogNodeid];
     $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), dialogNodeid];
 
     // Update gameState
@@ -105,8 +101,8 @@
   function waitStoresToLoad() {
     // Stores fully loaded
     if (Object.keys($chapters).length > 0) {
-      lastDisplayedNodeId = displayedNodeIds[displayedNodeIds.length - 1];
-      displayNextDialogNode(lastDisplayedNodeId); // Display next Dialog box or append DialogNodes
+      const parentNodeId = displayedNodeIds[displayedNodeIds.length - 1];
+      displayNextDialogNode(parentNodeId, (parentNodeId === undefined)); // Display next Dialog box or append DialogNodes
 
     // Stores not fully loaded, yet
     } else {
@@ -123,7 +119,6 @@
   })
 
   $: displayedNodeIds = ($gameState.nodes[$currentChapterId] || []);
-  $: lastDisplayedNodeId = displayedNodeIds[displayedNodeIds.length - 1];
 </script>
 
 <div id="dialog-container-background">
