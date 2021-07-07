@@ -1,11 +1,14 @@
 <script lang="ts">
-  import { onMount, afterUpdate } from 'svelte';
+  import { onMount, afterUpdate, tick } from 'svelte';
   import { appStatus } from './stores/appStatus';
   import { GameStatus } from './enums';
   import { gameState, currentChapterId } from './stores/gameState';
   import { chapters } from './stores/chapters';
 
   let displayedNodeIds: Array<string>;
+  let displayNextChapterBox: boolean = false;
+  let displayResultsBox: boolean = false;
+  let nextChapterId: number;
   let answersNodeIds: Array<string> = [];
   let showIsTyping: boolean = false;
   let npc1Typing: boolean = false;
@@ -17,6 +20,16 @@
     appStatus.set(GameStatus.ERROR);
   }
 
+  function displayResultsScreen() {
+    appStatus.set(GameStatus.FINISHED);
+  }
+
+  async function startNextChapter() {
+    $gameState.nodes[String(nextChapterId)] = [];
+    displayNextChapterBox = false;
+    await tick();
+    displayNextDialogNode(undefined, true);
+  }
 
   function displayAnswerDialogBox(nextNodeIds: Array<string>) {
     answersNodeIds = nextNodeIds;
@@ -38,24 +51,34 @@
 
 
 
+    // End of Chapter
+    if (nextNodes.length === 0) {
+      const maxChapterId = Object.keys($chapters).reduce((id, k) => Number(k) > id ? Number(k) : id, 1);
+      nextChapterId = Number($currentChapterId) + 1;
+      if (maxChapterId >= nextChapterId) {
+        displayNextChapterBox = true;
+      } else {
+        displayResultsBox = true;
+      }
+
     // Display Answer DialogNode div:
     // - when transitioning from NPCx → Player (event if 1 choice)
     // - when Player and multiple nextNodes
-    if (nextNodes.length === 0) {
-      console.log("End of chapter");
     } else if (currentSpeaker === 'Player' && (nextNodes.length > 1 || previousSpeaker !== currentSpeaker)) {
       const timerReply = 1000;
       setTimeout(() => {
         displayAnswerDialogBox(nextNodeIds);
       }, timerReply);
+
+    // Narrator, display node immediately
     } else if (currentSpeaker === 'Narrator') {
-      // Display node immediately
       $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
 
       // Call next DialogNode, if any
       displayNextDialogNode(nextNodeIds[0]);
+
+    // Display next node, after a random time typing
     } else {
-      // Display node, after a random time typing
       const timerIsTyping = Math.floor(Math.random() * (750 - 500 + 1) + 500);
       setTimeout(() => {
         showIsTyping = true;
@@ -123,6 +146,7 @@
   $: displayedNodeIds = ($gameState.nodes[$currentChapterId] || []);
 </script>
 
+
 <div id="dialog-container-background">
   {#if $chapters[$currentChapterId]}
     <div id="dialog-container">
@@ -159,6 +183,16 @@
         {/each}
       </div>
     </div>
+    {#if displayNextChapterBox}
+      <div id="next-chapter-container" on:click={startNextChapter}>
+        <p>Continuer (Chapitre {nextChapterId}) →</p>
+      </div>
+    {/if}
+    {#if displayResultsBox}
+      <div id="next-chapter-container" on:click={displayResultsScreen}>
+        <p>Fin de l'Aventure (Résultats) →</p>
+      </div>
+    {/if}
   {:else}
     <p>Chargement...</p>
   {/if}
@@ -248,6 +282,14 @@
         animation-duration: 0.5s;
       }
     }
+  }
+
+  #next-chapter-container {
+    background-color: darkgray;
+    font-weight: 600;
+    cursor: pointer;
+      animation-name: fadeIn;
+      animation-duration: 2s;
   }
 
   // Commons
