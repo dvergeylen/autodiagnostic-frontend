@@ -608,7 +608,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "http://gph.is/XMsJtl "
+      "imagePath": "/assets/images/chapter5_hello_there.gif"
     },
     "29": {
       "id": "29",
@@ -784,7 +784,7 @@
     "37": {
       "id": "37",
       "text": {
-        "fr": " 🤣🤣🤣",
+        "fr": "🤣🤣🤣",
         "en": ""
       },
       "nextNodes": [
@@ -1723,7 +1723,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "http://gph.is/2uFgmVv"
+      "imagePath": "/assets/images/chapter5_enjoy.gif"
     },
     "81": {
       "id": "81",
@@ -1745,7 +1745,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "https://gph.is/g/4Lx99vR  "
+      "imagePath": "/assets/images/chapter5_so.gif"
     },
     "82": {
       "id": "82",

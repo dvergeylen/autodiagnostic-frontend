@@ -439,7 +439,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "http://gph.is/YC576S"
+      "imagePath": "/assets/images/chapter6_sponge_bob_bored.gif"
     },
     "21": {
       "id": "21",
@@ -482,7 +482,7 @@
         "audacieux": 0,
         "explorateur": 1
       },
-      "imagePath": "http://gph.is/1yqexne"
+      "imagePath": "/assets/images/chapter6_minions.gif"
     },
     "23": {
       "id": "23",
@@ -594,7 +594,7 @@
     "28": {
       "id": "28",
       "text": {
-        "fr": "",
+        "fr": "L'occasion fait le larron!",
         "en": ""
       },
       "nextNodes": [
@@ -611,7 +611,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "L'occasion fait le larron!"
+      "imagePath": ""
     },
     "29": {
       "id": "29",
