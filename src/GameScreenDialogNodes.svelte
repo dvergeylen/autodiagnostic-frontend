@@ -104,7 +104,7 @@
 
     // Update gameState
     if ($chapters[$currentChapterId][dialogNodeid].character === 'Player') {
-      $gameState.attribution = Object.keys($gameState.attribution).reduce((acc, [k, v]) => ({
+      $gameState.attribution = Object.entries($gameState.attribution).reduce((acc, [k, v]) => ({
         ...acc,
         [k]: v + $chapters[$currentChapterId][dialogNodeid].attribution[k],
       }), {
