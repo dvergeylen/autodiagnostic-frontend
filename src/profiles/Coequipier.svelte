@@ -1,7 +1,3 @@
-<script lang="ts">
-  export let score = 0;
-</script>
-
 <h4>🎯 Points forts :</h4>
 <ul class="strengths">
   <li># Goût pour « faire équipe » avec les autres</li>
@@ -26,10 +22,6 @@
 </p>
 
 <style lang="scss">
-  h3 {
-    text-align: center;
-  }
-
   ul.strengths {
     padding-left: 0.25em;
 
