@@ -2,8 +2,6 @@
   export let score = 0;
 </script>
 
-
-<h3>Le Planificateur [{score}]</h3>
 <h4>🎯 Points forts :</h4>
 <ul class="strengths">
   <li># Sens de la réflexion, de l'analyse</li>
@@ -18,8 +16,10 @@
 <p>
   Une fois ton plan lancé, tu t'attaches à suivre, pas à pas, chacune des tâches prévues. Cela te permet de bien évaluer ton avancement et donc de vérifier si tu es dans les temps par rapport à tes prévisions de départ. Cette maîtrise de choses et de leur déroulement, mais aussi ton état permanent de vigilance sur ce qui se passe et pourrait mettre à mal tes plans, te permet d'absorber les obstacles et surprises rencontrés en effectuant rapidement les changements nécessaires. Cette flexibilité doit garantir la poursuite de ton objectif de départ.
 </p>
+
+<h4>🚀 Un conseil :</h4>
 <p>
-  Un conseil : ne reste pas trop absorbé par ton besoin de tout contrôler, lâche prise aussi, en accueillant les imprévus pour explorer autre chose, cela te permettra de combiner les talents du planificateur et du bricoleur, deux profils souvent opposés, alors qu'ils sont en réalité très complémentaires !
+  Ne reste pas trop absorbé par ton besoin de tout contrôler, lâche prise aussi, en accueillant les imprévus pour explorer autre chose, cela te permettra de combiner les talents du planificateur et du bricoleur, deux profils souvent opposés, alors qu'ils sont en réalité très complémentaires !
 </p>
 
 <style lang="scss">
