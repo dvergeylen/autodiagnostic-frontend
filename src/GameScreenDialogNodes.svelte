@@ -155,6 +155,10 @@
           class:npc1={$chapters[$currentChapterId][dialogNodeId].character === 'NPC1'}
           class:player={$chapters[$currentChapterId][dialogNodeId].character === 'Player'}
           class:narrator={$chapters[$currentChapterId][dialogNodeId].character === 'Narrator'}>
+          {#if $chapters[$currentChapterId][dialogNodeId].imagePath}
+            <img src="{$chapters[$currentChapterId][dialogNodeId].imagePath}"
+              alt="{$chapters[$currentChapterId][dialogNodeId].imageAlt}" />
+          {:else}
             <p>
               {#if $chapters[$currentChapterId][dialogNodeId].text[$gameState.language] instanceof Object}
                 {$chapters[$currentChapterId][dialogNodeId].text[$gameState.language][$gameState.gender]}
@@ -162,6 +166,7 @@
                 {$chapters[$currentChapterId][dialogNodeId].text[$gameState.language]}
               {/if}
             </p>
+          {/if}
         </div>
       {/each}
       <div id="typing-container" class:is-hidden={!showIsTyping} class:npc1={npc1Typing} class:player={playerTyping}>
@@ -171,15 +176,21 @@
       </div>
     </div>
     <div id="answer-container">
-      <div class="player">
+      <div class="player" class:is-inline-flex={answersNodeIds.reduce((acc, id) => acc || $chapters[$currentChapterId][id].imagePath, false)}>
         {#each answersNodeIds as answerDialogNodeId (answerDialogNodeId)}
-          <p class="choice" on:click={() => addAnswer(answerDialogNodeId)}>
-            {#if $chapters[$currentChapterId][answerDialogNodeId].text[$gameState.language] instanceof Object}
-              {$chapters[$currentChapterId][answerDialogNodeId].text[$gameState.language][$gameState.gender]}
+            {#if $chapters[$currentChapterId][answerDialogNodeId].imagePath}
+              <img src="{$chapters[$currentChapterId][answerDialogNodeId].imagePath}"
+              alt="{$chapters[$currentChapterId][answerDialogNodeId].imageAlt}"
+               on:click={() => addAnswer(answerDialogNodeId)}/>
             {:else}
-              {$chapters[$currentChapterId][answerDialogNodeId].text[$gameState.language]}
+              <p class="choice" on:click={() => addAnswer(answerDialogNodeId)}>
+                {#if $chapters[$currentChapterId][answerDialogNodeId].text[$gameState.language] instanceof Object}
+                  {$chapters[$currentChapterId][answerDialogNodeId].text[$gameState.language][$gameState.gender]}
+                {:else}
+                  {$chapters[$currentChapterId][answerDialogNodeId].text[$gameState.language]}
+                {/if}
+              </p>
             {/if}
-          </p>
         {/each}
       </div>
     </div>
@@ -253,6 +264,22 @@
         justify-self: right;
         animation-name: fadeIn;
         animation-duration: 0.5s;
+        display: grid;
+        width: -moz-fit-content;
+        width: fit-content;
+
+        img {
+          max-width: 80%;
+          margin-top: auto;
+          margin-bottom: auto;
+          padding-left: 0.25em;
+          padding-right: 0.25em;
+          cursor: pointer;
+          max-height: 10em;
+        }
+        img:only-child {
+          margin: auto;
+        }
 
         p.choice {
           color: #2577e1;
@@ -295,5 +322,9 @@
   // Commons
   .is-hidden {
     display: none !important;
+  }
+
+  .is-inline-flex {
+    display: inline-flex !important;
   }
 </style>
