@@ -594,7 +594,7 @@
         "audacieux": 1,
         "explorateur": 0
       },
-      "imagePath": "https://gph.is/g/E1Y1QqE "
+      "imagePath": "/assets/images/chapter2_you_can_do_it.gif"
     },
     "29": {
       "id": "29",
@@ -616,12 +616,12 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "https://gph.is/2xzvQh0 "
+      "imagePath": "/assets/images/chapter2_whats_your_plan.gif"
     },
     "30": {
       "id": "30",
       "text": {
-        "fr": "http://gph.is/1aiSNnT",
+        "fr": "",
         "en": ""
       },
       "nextNodes": [
@@ -637,7 +637,8 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      }
+      },
+      "imagePath": "/assets/images/chapter2_hug.gif"
     },
     "31": {
       "id": "31",

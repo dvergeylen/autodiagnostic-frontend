@@ -211,7 +211,8 @@
         "en": ""
       },
       "nextNodes": [
-        "11"
+        "11",
+        "12"
       ],
       "character": "NPC1",
       "attribution": {
@@ -232,7 +233,6 @@
         "en": ""
       },
       "nextNodes": [
-        "12",
         "13"
       ],
       "character": "Player",
