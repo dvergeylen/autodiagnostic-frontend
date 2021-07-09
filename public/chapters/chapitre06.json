@@ -2718,8 +2718,29 @@
         "fr": "😇 😙",
         "en": ""
       },
-      "nextNodes": [],
+      "nextNodes": [
+        "129"
+      ],
       "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "129": {
+      "id": "129",
+      "text": {
+        "fr": "Arya s'est déconnectée",
+        "en": "Jon s'est déconnecté"
+      },
+      "nextNodes": [],
+      "character": "Narrator",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,

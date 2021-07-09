@@ -503,11 +503,14 @@
     "24": {
       "id": "24",
       "text": {
-        "fr": "[Arya et Jon déconnectés]",
+        "fr": {
+          "m": "Arya s'est déconnectée",
+          "f": "Jon s'est déconnecté"
+        },
         "en": ""
       },
       "nextNodes": [],
-      "character": "NPC1",
+      "character": "Narrator",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,

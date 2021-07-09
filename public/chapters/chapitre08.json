@@ -1239,13 +1239,13 @@
       "id": "59",
       "text": {
         "fr": {
-          "m": "[Arya déconnectée]",
-          "f": "[Jon déconnecté]"
+          "m": "Arya s'est déconnectée",
+          "f": "Jon s'est déconnecté"
         },
         "en": ""
       },
       "nextNodes": [],
-      "character": "NPC1",
+      "character": "Narrator",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
