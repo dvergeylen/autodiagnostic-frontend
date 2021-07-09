@@ -135,13 +135,19 @@
     }
   }
 
+  // Image loading doesn't trigger an 'afterUpdate' svelte event,
+  // thus linking this function to images
+  function updateScrollHeight() {
+    window.scrollTo(0,document.body.scrollHeight);
+  }
+
   onMount(async () => {
     waitStoresToLoad();
   });
 
   afterUpdate(() => {
     window.scrollTo(0,document.body.scrollHeight);
-  })
+  });
 
   $: displayedNodeIds = ($gameState.nodes[$currentChapterId] || []);
 </script>
@@ -157,7 +163,8 @@
           class:narrator={$chapters[$currentChapterId][dialogNodeId].character === 'Narrator'}>
           {#if $chapters[$currentChapterId][dialogNodeId].imagePath}
             <img src="{$chapters[$currentChapterId][dialogNodeId].imagePath}"
-              alt="{$chapters[$currentChapterId][dialogNodeId].imageAlt}" />
+              alt="{$chapters[$currentChapterId][dialogNodeId].imageAlt}"
+              on:load={updateScrollHeight} />
           {:else}
             <p>
               {#if $chapters[$currentChapterId][dialogNodeId].text[$gameState.language] instanceof Object}
@@ -176,12 +183,13 @@
       </div>
     </div>
     <div id="answer-container">
-      <div class="player" class:is-inline-flex={answersNodeIds.reduce((acc, id) => acc || $chapters[$currentChapterId][id].imagePath, false)}>
+      <div class="player" class:is-grid-2x2={answersNodeIds.reduce((acc, id) => acc || $chapters[$currentChapterId][id].imagePath, false)}>
         {#each answersNodeIds as answerDialogNodeId (answerDialogNodeId)}
             {#if $chapters[$currentChapterId][answerDialogNodeId].imagePath}
               <img src="{$chapters[$currentChapterId][answerDialogNodeId].imagePath}"
               alt="{$chapters[$currentChapterId][answerDialogNodeId].imageAlt}"
-               on:click={() => addAnswer(answerDialogNodeId)}/>
+               on:click={() => addAnswer(answerDialogNodeId)}
+               on:load={updateScrollHeight}/>
             {:else}
               <p class="choice" on:click={() => addAnswer(answerDialogNodeId)}>
                 {#if $chapters[$currentChapterId][answerDialogNodeId].text[$gameState.language] instanceof Object}
@@ -268,19 +276,6 @@
         width: -moz-fit-content;
         width: fit-content;
 
-        img {
-          max-width: 80%;
-          margin-top: auto;
-          margin-bottom: auto;
-          padding-left: 0.25em;
-          padding-right: 0.25em;
-          cursor: pointer;
-          max-height: 10em;
-        }
-        img:only-child {
-          margin: auto;
-        }
-
         p.choice {
           color: #2577e1;
           cursor: pointer;
@@ -291,6 +286,27 @@
         p.choice:not(:last-child) {
           border-bottom: solid 1px lightgray;
         }
+      }
+
+      div.player, div.npc1 {
+        img {
+          max-width: 7.5em;
+          margin: auto;
+          cursor: pointer;
+          max-height: 10em;
+        }
+        img:only-child {
+          margin: auto;
+          padding-top: 0.5em;
+          padding-bottom: 0.5em;
+        }
+      }
+
+      .is-grid-2x2 {
+        grid-template-columns: auto auto;
+        grid-gap: 1em;
+        margin: 0;
+        padding: 0.5em;
       }
 
       @keyframes fadeIn {
@@ -322,9 +338,5 @@
   // Commons
   .is-hidden {
     display: none !important;
-  }
-
-  .is-inline-flex {
-    display: inline-flex !important;
   }
 </style>
