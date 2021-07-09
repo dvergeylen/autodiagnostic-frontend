@@ -1,0 +1,1093 @@
+{
+  "metadata": {
+    "part": "I",
+    "chapter": "9"
+  },
+  "dialogNodes": {
+    "1": {
+      "id": "1",
+      "text": {
+        "fr": "T'es là?"
+      },
+      "nextNodes": [
+        "2"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      },
+      "incomingNodes": []
+    },
+    "2": {
+      "id": "2",
+      "text": {
+        "fr": "…",
+        "en": ""
+      },
+      "nextNodes": [
+        "3"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "3": {
+      "id": "3",
+      "text": {
+        "fr": {
+          "m": "Jon?",
+          "f": "Arya?"
+        },
+        "en": ""
+      },
+      "nextNodes": [
+        "4"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "4": {
+      "id": "4",
+      "text": {
+        "fr": "…",
+        "en": ""
+      },
+      "nextNodes": [
+        "5"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "5": {
+      "id": "5",
+      "text": {
+        "fr": "…",
+        "en": ""
+      },
+      "nextNodes": [
+        "6"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "6": {
+      "id": "6",
+      "text": {
+        "fr": "oui, sorry",
+        "en": ""
+      },
+      "nextNodes": [
+        "7"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "7": {
+      "id": "7",
+      "text": {
+        "fr": "je dormais bien en fait",
+        "en": ""
+      },
+      "nextNodes": [
+        "8"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "8": {
+      "id": "8",
+      "text": {
+        "fr": "oh pardon, juste!!",
+        "en": ""
+      },
+      "nextNodes": [
+        "9"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "9": {
+      "id": "9",
+      "text": {
+        "fr": "pas grave",
+        "en": ""
+      },
+      "nextNodes": [
+        "10"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "10": {
+      "id": "10",
+      "text": {
+        "fr": "au guichet, on me refoule",
+        "en": ""
+      },
+      "nextNodes": [
+        "11"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "11": {
+      "id": "11",
+      "text": {
+        "fr": "what, mais, POURQUOI??",
+        "en": ""
+      },
+      "nextNodes": [
+        "12"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "12": {
+      "id": "12",
+      "text": {
+        "fr": "ma valise dépasse le poids max",
+        "en": ""
+      },
+      "nextNodes": [
+        "13"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "13": {
+      "id": "13",
+      "text": {
+        "fr": "autorisé",
+        "en": ""
+      },
+      "nextNodes": [
+        "14"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "14": {
+      "id": "14",
+      "text": {
+        "fr": "et faut faire quoi alors?",
+        "en": ""
+      },
+      "nextNodes": [
+        "15"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "15": {
+      "id": "15",
+      "text": {
+        "fr": "payer un supplément",
+        "en": ""
+      },
+      "nextNodes": [
+        "16"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "16": {
+      "id": "16",
+      "text": {
+        "fr": "oups et t'as encore du cash?",
+        "en": ""
+      },
+      "nextNodes": [
+        "17"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "17": {
+      "id": "17",
+      "text": {
+        "fr": "ben non, quasi plus rien!!",
+        "en": ""
+      },
+      "nextNodes": [
+        "18"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "18": {
+      "id": "18",
+      "text": {
+        "fr": "donc j'ai dit que j'allais jeter des trucs",
+        "en": ""
+      },
+      "nextNodes": [
+        "19"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "19": {
+      "id": "19",
+      "text": {
+        "fr": "jeter comme ça ?",
+        "en": ""
+      },
+      "nextNodes": [
+        "20"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "20": {
+      "id": "20",
+      "text": {
+        "fr": "ben oui",
+        "en": ""
+      },
+      "nextNodes": [
+        "21",
+        "22"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "21": {
+      "id": "21",
+      "text": {
+        "fr": "Ca va pas... Je ferai jamais ça, moi!",
+        "en": ""
+      },
+      "nextNodes": [
+        "23"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 1,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "22": {
+      "id": "22",
+      "text": {
+        "fr": "Bein, oui, pas le choix toute façon…",
+        "en": ""
+      },
+      "nextNodes": [
+        "23"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "23": {
+      "id": "23",
+      "text": {
+        "fr": "je te demande pas ton avis là",
+        "en": ""
+      },
+      "nextNodes": [
+        "24"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "24": {
+      "id": "24",
+      "text": {
+        "fr": "j'ai commencé à jeter …",
+        "en": ""
+      },
+      "nextNodes": [
+        "25",
+        "26"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "25": {
+      "id": "25",
+      "text": {
+        "fr": "ok, ok, je vais retourner dormir alors",
+        "en": ""
+      },
+      "nextNodes": [
+        "27"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "26": {
+      "id": "26",
+      "text": {
+        "fr": "Dis, le respect, c'est important quand on se parle",
+        "en": ""
+      },
+      "nextNodes": [
+        "33"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 1,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "27": {
+      "id": "27",
+      "text": {
+        "fr": "non, non, sorry, Jon",
+        "en": ""
+      },
+      "nextNodes": [
+        "28"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "28": {
+      "id": "28",
+      "text": {
+        "fr": {
+          "m": "suis méga stressée là",
+          "f": "suis méga stressé là"
+        },
+        "en": ""
+      },
+      "nextNodes": [
+        "29"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "29": {
+      "id": "29",
+      "text": {
+        "fr": "j'ai besoin de toi",
+        "en": ""
+      },
+      "nextNodes": [
+        "30"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "30": {
+      "id": "30",
+      "text": {
+        "fr": "EXCUSE-moi!!!",
+        "en": ""
+      },
+      "nextNodes": [
+        "31"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "31": {
+      "id": "31",
+      "text": {
+        "fr": {
+          "m": "RESTE connecté, please!",
+          "f": "RESTE connectée, please!"
+        },
+        "en": ""
+      },
+      "nextNodes": [
+        "32"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "32": {
+      "id": "32",
+      "text": {
+        "fr": "ok, je reste, t'inquiète pas",
+        "en": ""
+      },
+      "nextNodes": [
+        "40"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "33": {
+      "id": "33",
+      "text": {
+        "fr": "je suis là pour toi, pour t'aider",
+        "en": ""
+      },
+      "nextNodes": [
+        "34"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "34": {
+      "id": "34",
+      "text": {
+        "fr": "donc, parle-moi correctement",
+        "en": ""
+      },
+      "nextNodes": [
+        "35"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "35": {
+      "id": "35",
+      "text": {
+        "fr": "même si t'es en plein stress!!",
+        "en": ""
+      },
+      "nextNodes": [
+        "36"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "36": {
+      "id": "36",
+      "text": {
+        "fr": "oui, t'as raison",
+        "en": ""
+      },
+      "nextNodes": [
+        "37"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "37": {
+      "id": "37",
+      "text": {
+        "fr": "je déconne grave là",
+        "en": ""
+      },
+      "nextNodes": [
+        "38"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "38": {
+      "id": "38",
+      "text": {
+        "fr": "avec le stress",
+        "en": ""
+      },
+      "nextNodes": [
+        "39"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "39": {
+      "id": "39",
+      "text": {
+        "fr": "EXCUSE-moi!!",
+        "en": ""
+      },
+      "nextNodes": [
+        "32"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "40": {
+      "id": "40",
+      "text": {
+        "fr": "J'ai déjà jeté des shoes toutes foutues",
+        "en": ""
+      },
+      "nextNodes": [
+        "41"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "41": {
+      "id": "41",
+      "text": {
+        "fr": "mais quoi d'autre maintenant??",
+        "en": ""
+      },
+      "nextNodes": [
+        "42"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "42": {
+      "id": "42",
+      "text": {
+        "fr": "j'arrive pas à me décider",
+        "en": ""
+      },
+      "nextNodes": [
+        "43"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "43": {
+      "id": "43",
+      "text": {
+        "fr": "et je dois m'enregistrer rapidement",
+        "en": ""
+      },
+      "nextNodes": [
+        "44"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "44": {
+      "id": "44",
+      "text": {
+        "fr": "si je veux avoir cet avion!!!",
+        "en": ""
+      },
+      "nextNodes": [
+        "45",
+        "46",
+        "47"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "45": {
+      "id": "45",
+      "text": {
+        "fr": "tu jettes vite les premiers trucs que t'attrapes",
+        "en": ""
+      },
+      "nextNodes": [
+        "49"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 1,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "46": {
+      "id": "46",
+      "text": {
+        "fr": "tu regardes bien tout ce que t'as puis tu choisis",
+        "en": ""
+      },
+      "nextNodes": [
+        "49"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 1
+      }
+    },
+    "47": {
+      "id": "47",
+      "text": {
+        "fr": "c'est à toi de gérer, à faire les bons choix!",
+        "en": ""
+      },
+      "nextNodes": [
+        "48"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 1,
+        "explorateur": 0
+      }
+    },
+    "48": {
+      "id": "48",
+      "text": {
+        "fr": "compliqué de le faire à ta place …",
+        "en": ""
+      },
+      "nextNodes": [
+        "49"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "49": {
+      "id": "49",
+      "text": {
+        "fr": "ok, je fais ça, je fais vite",
+        "en": ""
+      },
+      "nextNodes": [
+        "50"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "50": {
+      "id": "50",
+      "text": {
+        "fr": "bizz",
+        "en": ""
+      },
+      "nextNodes": [
+        "51"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "51": {
+      "id": "51",
+      "text": {
+        "fr": {
+          "m": "[Arya déconnectée]",
+          "f": "[Jon déconnecté]"
+        },
+        "en": ""
+      },
+      "nextNodes": [],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    }
+  }
+}
