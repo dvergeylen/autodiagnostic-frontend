@@ -23,3 +23,7 @@ export const currentChapterId: Readable<string> = derived(
   gameState,
   $gameState => Object.keys($gameState.nodes).reduce((id, k) => k > id ? k : id, "1"),
 );
+export const sortedPlayerAttributions = derived(
+  gameState,
+  $gameState => Object.entries($gameState.attribution).sort(([keyA, scoreA], [keyB, scoreB]) => scoreB - scoreA),
+);

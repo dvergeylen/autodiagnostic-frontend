@@ -1,7 +1,7 @@
 
 <script lang="ts">
   import { onMount } from "svelte";
-  import { gameState } from './stores/gameState';
+  import { gameState, sortedPlayerAttributions } from './stores/gameState';
   import Leader from './profiles/Planificateur.svelte';
   import Planificateur from './profiles/Planificateur.svelte';
   import Bricoleur from './profiles/Bricoleur.svelte';
@@ -80,16 +80,13 @@
 
   <div id="description">
     <div class="has-text-centered">
-      <select bind:value={selectedProfile}>
-        <option value="leader">Le Planificateur [{$gameState.attribution.leader}]</option>
-        <option value="bricoleur">Le Bricoleur [{$gameState.attribution.bricoleur}]</option>
-        <option value="coequipier">Le Coequipier [{$gameState.attribution.coequipier}]</option>
-        <option value="planificateur">Le Planificateur [{$gameState.attribution.planificateur}]</option>
-        <option value="idealiste">L'Idéaliste [{$gameState.attribution.idealiste}]</option>
-        <option value="creatif">Le Créatif [{$gameState.attribution.creatif}]</option>
-        <option value="audacieux">L'Audacieux [{$gameState.attribution.audacieux}]</option>
-        <option value="explorateur">L'Explorateur [{$gameState.attribution.explorateur}]</option>
-      </select>
+      <div id="profile-select">
+        <select bind:value={selectedProfile}>
+          {#each $sortedPlayerAttributions as [profile, score], i (i)}
+            <option value="{profile}">{profiles[profile].name} [{score}]</option>
+          {/each}
+        </select>
+      </div>
       <p class="caption">Clique sur les autres profils pour voir leur description</p>
     </div>
     <svelte:component this={profiles[selectedProfile].component}/>
@@ -132,6 +129,70 @@
     font-style: italic;
     margin-bottom: 2em;
     margin-top: 0;
+  }
+
+  select {
+    // A reset of styles, including removing the default dropdown arrow
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    cursor: inherit;
+
+    // Stack above custom arrow
+    z-index: 1;
+
+    // Remove dropdown arrow in IE10 & IE11
+    // @link https://www.filamentgroup.com/lab/select-css.html
+    &::-ms-expand {
+      display: none;
+    }
+
+    // Remove focus outline, will add on alternate element
+    outline: none;
+  }
+
+  #profile-select {
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    position: relative;
+    margin: auto;
+    margin-bottom: 0.5em;
+
+    select,
+    &::after {
+      grid-area: select;
+    }
+
+    min-width: 15ch;
+    max-width: 30ch;
+
+    border: 1px solid #800000;
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+
+    // Optional styles
+    // remove for transparency
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+
+    // Custom arrow
+    &::after {
+      content: "";
+      justify-self: end;
+      width: 0.8em;
+      height: 0.5em;
+      background-color: #800000;
+      clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    }
   }
 
   // Commons
