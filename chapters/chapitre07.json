@@ -549,7 +549,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "https://gph.is/g/4VyVjQe"
+      "imagePath": "/assets/images/chapter7_loose.gif"
     },
     "26": {
       "id": "26",
@@ -613,7 +613,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "https://gph.is/2SkQ4VZ"
+      "imagePath": "/assets/images/chapter7_teamwork.gif"
     },
     "29": {
       "id": "29",
@@ -1638,13 +1638,13 @@
       "id": "77",
       "text": {
         "fr": {
-          "m": "[Arya déconnectée]",
-          "f": "[Jon déconnecté]"
+          "m": "Arya s'est déconnectée",
+          "f": "Jon s'est déconnecté"
         },
         "en": ""
       },
       "nextNodes": [],
-      "character": "NPC1",
+      "character": "Narrator",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
