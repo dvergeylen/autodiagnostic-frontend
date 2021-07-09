@@ -21,7 +21,7 @@ const newGame: GameState = {
 export const gameState: Writable<GameState> = writable(newGame);
 export const currentChapterId: Readable<string> = derived(
   gameState,
-  $gameState => Object.keys($gameState.nodes).reduce((id, k) => k > id ? k : id, "1"),
+  $gameState => Object.keys($gameState.nodes).reduce((id, k) => Number(k) > Number(id) ? k : id, "1"),
 );
 export const sortedPlayerAttributions = derived(
   gameState,
