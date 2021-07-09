@@ -1,15 +1,15 @@
 {
   "metadata": {
     "part": "I",
-    "chapter": "5"
+    "chapter": "7"
   },
   "dialogNodes": {
     "1": {
       "id": "1",
       "text": {
         "fr": {
-          "m": "Arya?",
-          "f": "Jon?"
+          "m": "Ma chouquette, t'es là??",
+          "f": "Mon chou, t'es là??"
         }
       },
       "nextNodes": [
@@ -30,16 +30,13 @@
     "2": {
       "id": "2",
       "text": {
-        "fr": {
-          "m": "Bien arrivée à Kyoto?",
-          "f": "Bien arrivé à Kyoto?"
-        },
+        "fr": "…",
         "en": ""
       },
       "nextNodes": [
         "3"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -54,7 +51,7 @@
     "3": {
       "id": "3",
       "text": {
-        "fr": "…",
+        "fr": "yes!",
         "en": ""
       },
       "nextNodes": [
@@ -76,8 +73,8 @@
       "id": "4",
       "text": {
         "fr": {
-          "m": "ah, t'es connecté aussi",
-          "f": "ah, t'es connectée aussi"
+          "m": "Tout roule, Jon?",
+          "f": "Tout roule, Arya?"
         },
         "en": ""
       },
@@ -99,13 +96,16 @@
     "5": {
       "id": "5",
       "text": {
-        "fr": "oui, oui, c'est bon",
+        "fr": {
+          "m": "un peu stressé en fait!!",
+          "f": "un peu stressée en fait!!"
+        },
         "en": ""
       },
       "nextNodes": [
         "6"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -120,7 +120,7 @@
     "6": {
       "id": "6",
       "text": {
-        "fr": "Suis dans TA super ville!!",
+        "fr": "Qu'est-ce qui t'arrive?",
         "en": ""
       },
       "nextNodes": [
@@ -141,13 +141,13 @@
     "7": {
       "id": "7",
       "text": {
-        "fr": "où a été signé l'accord de Kyoto ",
+        "fr": "l'école m'envoie 2 jours à Berlin",
         "en": ""
       },
       "nextNodes": [
         "8"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -162,7 +162,7 @@
     "8": {
       "id": "8",
       "text": {
-        "fr": "pour une planète moins polluée",
+        "fr": "what?",
         "en": ""
       },
       "nextNodes": [
@@ -183,7 +183,7 @@
     "9": {
       "id": "9",
       "text": {
-        "fr": "que chaque pays fasse attention",
+        "fr": "trop cool ça!!",
         "en": ""
       },
       "nextNodes": [
@@ -204,7 +204,7 @@
     "10": {
       "id": "10",
       "text": {
-        "fr": "et BlaBlaBla … ",
+        "fr": "pour faire quoi?",
         "en": ""
       },
       "nextNodes": [
@@ -225,14 +225,16 @@
     "11": {
       "id": "11",
       "text": {
-        "fr": "Je t'entends d'ici",
+        "fr": {
+          "m": "une mission comme délégué …",
+          "f": "une mission comme déléguée …"
+        },
         "en": ""
       },
       "nextNodes": [
-        "12",
-        "17"
+        "12"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -247,7 +249,7 @@
     "12": {
       "id": "12",
       "text": {
-        "fr": "Un enjeu qui m'est cher, c'est clair!",
+        "fr": "je représente l'école sur place",
         "en": ""
       },
       "nextNodes": [
@@ -259,7 +261,7 @@
         "bricoleur": 0,
         "coequipier": 0,
         "planificateur": 0,
-        "idealiste": 1,
+        "idealiste": 0,
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
@@ -268,13 +270,13 @@
     "13": {
       "id": "13",
       "text": {
-        "fr": "Tu milites toujours?",
+        "fr": "durant une cérémonie",
         "en": ""
       },
       "nextNodes": [
         "14"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -289,13 +291,13 @@
     "14": {
       "id": "14",
       "text": {
-        "fr": "avec Youth for climate?",
+        "fr": "réunissant plusieurs écoles",
         "en": ""
       },
       "nextNodes": [
         "15"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -310,7 +312,7 @@
     "15": {
       "id": "15",
       "text": {
-        "fr": "A fond! On est hyper mobilisé …",
+        "fr": "agissant pour la paix dans le monde",
         "en": ""
       },
       "nextNodes": [
@@ -331,13 +333,16 @@
     "16": {
       "id": "16",
       "text": {
-        "fr": "Au fait, j'ai chatté hier avec Clem",
+        "fr": "et, tu me connais …",
         "en": ""
       },
       "nextNodes": [
-        "18"
+        "17",
+        "18",
+        "19",
+        "20"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -352,99 +357,11 @@
     "17": {
       "id": "17",
       "text": {
-        "fr": "J'aime bien t'embêter avec ça!",
+        "fr": "J'adore parler en public!",
         "en": ""
       },
       "nextNodes": [
-        "16"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "18": {
-      "id": "18",
-      "text": {
-        "fr": {
-          "m": "Parait que t'es devenu délégué!!",
-          "f": "Parait que t'es devenue délégué!!"
-        },
-        "en": ""
-      },
-      "nextNodes": [
-        "19"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "19": {
-      "id": "19",
-      "text": {
-        "fr": "de toute ton année !!",
-        "en": ""
-      },
-      "nextNodes": [
-        "20"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "20": {
-      "id": "20",
-      "text": {
-        "fr": "T'a pris du galon-là 😜",
-        "en": ""
-      },
-      "nextNodes": [
-        "21",
-        "23"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "21": {
-      "id": "21",
-      "text": {
-        "fr": "Ben oui, tu me connais 📣",
-        "en": ""
-      },
-      "nextNodes": [
-        "22"
+        "21"
       ],
       "character": "Player",
       "attribution": {
@@ -458,14 +375,104 @@
         "explorateur": 0
       }
     },
-    "22": {
-      "id": "22",
+    "18": {
+      "id": "18",
       "text": {
-        "fr": "C'est les autre étudiants",
+        "fr": "La cause me parle!",
         "en": ""
       },
       "nextNodes": [
-        "25"
+        "21"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 1,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "19": {
+      "id": "19",
+      "text": {
+        "fr": "Suis curieux de tout!",
+        "en": ""
+      },
+      "nextNodes": [
+        "21"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 1,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "20": {
+      "id": "20",
+      "text": {
+        "fr": "Un nouveau défi comme je les aime!",
+        "en": ""
+      },
+      "nextNodes": [
+        "21"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 1,
+        "explorateur": 0
+      }
+    },
+    "21": {
+      "id": "21",
+      "text": {
+        "fr": {
+          "m": "Trop contente pour toi 😊",
+          "f": "Trop content pour toi 😊"
+        },
+        "en": ""
+      },
+      "nextNodes": [
+        "22"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "22": {
+      "id": "22",
+      "text": {
+        "fr": {
+          "m": "T'y vas seul?",
+          "f": "T'y vas seule?"
+        },
+        "en": ""
+      },
+      "nextNodes": [
+        "23"
       ],
       "character": "NPC1",
       "attribution": {
@@ -482,10 +489,7 @@
     "23": {
       "id": "23",
       "text": {
-        "fr": {
-          "m": "Un peu forcé en fait 😕",
-          "f": "Un peu forcée en fait 😕"
-        },
+        "fr": "non, y aura plusieurs délégués",
         "en": ""
       },
       "nextNodes": [
@@ -506,11 +510,12 @@
     "24": {
       "id": "24",
       "text": {
-        "fr": "ah, bon, mince …",
+        "fr": "Et ca va aller avec les autres?",
         "en": ""
       },
       "nextNodes": [
-        "22"
+        "25",
+        "28"
       ],
       "character": "NPC1",
       "attribution": {
@@ -527,12 +532,33 @@
     "25": {
       "id": "25",
       "text": {
-        "fr": "qui te l'ont demandé?",
+        "fr": "",
         "en": ""
       },
       "nextNodes": [
-        "26",
-        "30"
+        "26"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      },
+      "imagePath": "https://gph.is/g/4VyVjQe"
+    },
+    "26": {
+      "id": "26",
+      "text": {
+        "fr": "Tu feras un effort!!",
+        "en": ""
+      },
+      "nextNodes": [
+        "27"
       ],
       "character": "NPC1",
       "attribution": {
@@ -546,35 +572,14 @@
         "explorateur": 0
       }
     },
-    "26": {
-      "id": "26",
-      "text": {
-        "fr": "Yes! Ils savaient que ce serait oui!",
-        "en": ""
-      },
-      "nextNodes": [
-        "27"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 1,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
     "27": {
       "id": "27",
       "text": {
-        "fr": "t'ont bien cerné !!",
+        "fr": "et tu vas faire quoi durant 2 jours?",
         "en": ""
       },
       "nextNodes": [
-        "28"
+        "30"
       ],
       "character": "NPC1",
       "attribution": {
@@ -597,6 +602,28 @@
       "nextNodes": [
         "29"
       ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 1,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      },
+      "imagePath": "https://gph.is/2SkQ4VZ"
+    },
+    "29": {
+      "id": "29",
+      "text": {
+        "fr": "oui, tu vas gérer!",
+        "en": ""
+      },
+      "nextNodes": [
+        "27"
+      ],
       "character": "NPC1",
       "attribution": {
         "leader": 0,
@@ -607,13 +634,55 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      },
-      "imagePath": "/assets/images/chapter5_hello_there.gif"
+      }
     },
-    "29": {
-      "id": "29",
+    "30": {
+      "id": "30",
       "text": {
-        "fr": "Tout à fait autre chose …",
+        "fr": "je sais pas encore vraiment",
+        "en": ""
+      },
+      "nextNodes": [
+        "31",
+        "34"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "31": {
+      "id": "31",
+      "text": {
+        "fr": "J'espère qu'on aura vite le programme détaillé",
+        "en": ""
+      },
+      "nextNodes": [
+        "32"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 1,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "32": {
+      "id": "32",
+      "text": {
+        "fr": "oui, c'est clair!",
         "en": ""
       },
       "nextNodes": [
@@ -631,118 +700,10 @@
         "explorateur": 0
       }
     },
-    "30": {
-      "id": "30",
-      "text": {
-        "fr": "Oui, vachement forcé même …",
-        "en": ""
-      },
-      "nextNodes": [
-        "31"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "31": {
-      "id": "31",
-      "text": {
-        "fr": "les lourds!",
-        "en": ""
-      },
-      "nextNodes": [
-        "32"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "32": {
-      "id": "32",
-      "text": {
-        "fr": "CLAIREMENT",
-        "en": ""
-      },
-      "nextNodes": [
-        "29"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
     "33": {
       "id": "33",
       "text": {
-        "fr": {
-          "m": "La BOUFFE Jon",
-          "f": "La BOUFFE Arya"
-        },
-        "en": ""
-      },
-      "nextNodes": [
-        "34"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "34": {
-      "id": "34",
-      "text": {
-        "fr": "J'en peux plus là",
-        "en": ""
-      },
-      "nextNodes": [
-        "35"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "35": {
-      "id": "35",
-      "text": {
-        "fr": "Les algues le matin",
+        "fr": "moi, j'ai fait un super truc hier!!",
         "en": ""
       },
       "nextNodes": [
@@ -760,16 +721,58 @@
         "explorateur": 0
       }
     },
+    "34": {
+      "id": "34",
+      "text": {
+        "fr": "On vas nous le dire j'imagine …",
+        "en": ""
+      },
+      "nextNodes": [
+        "35"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "35": {
+      "id": "35",
+      "text": {
+        "fr": "oui, tu verras bien",
+        "en": ""
+      },
+      "nextNodes": [
+        "33"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
     "36": {
       "id": "36",
       "text": {
-        "fr": "C'est le pire 🤢",
+        "fr": "ah, quoi??",
         "en": ""
       },
       "nextNodes": [
         "37"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -784,16 +787,13 @@
     "37": {
       "id": "37",
       "text": {
-        "fr": "🤣🤣🤣",
+        "fr": "J'ai été au Meiji-jingu ",
         "en": ""
       },
       "nextNodes": [
-        "38",
-        "42",
-        "44",
-        "46"
+        "38"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -808,7 +808,7 @@
     "38": {
       "id": "38",
       "text": {
-        "fr": "Mon conseil: tout goûter, tout essayer!",
+        "fr": "et en français ste plait?",
         "en": ""
       },
       "nextNodes": [
@@ -823,13 +823,13 @@
         "idealiste": 0,
         "creatif": 0,
         "audacieux": 0,
-        "explorateur": 1
+        "explorateur": 0
       }
     },
     "39": {
       "id": "39",
       "text": {
-        "fr": "TOI, t'es comme ça!",
+        "fr": "🤣 🤣",
         "en": ""
       },
       "nextNodes": [
@@ -850,7 +850,7 @@
     "40": {
       "id": "40",
       "text": {
-        "fr": "Pas MOI!!",
+        "fr": "c'est \"le\" temple shinto ",
         "en": ""
       },
       "nextNodes": [
@@ -871,7 +871,133 @@
     "41": {
       "id": "41",
       "text": {
-        "fr": "Bon, faut dire …",
+        "fr": "où on voit plein de mariages",
+        "en": ""
+      },
+      "nextNodes": [
+        "42"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "42": {
+      "id": "42",
+      "text": {
+        "fr": "en tenue traditionnelle",
+        "en": ""
+      },
+      "nextNodes": [
+        "43"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "43": {
+      "id": "43",
+      "text": {
+        "fr": "un truc de fou!",
+        "en": ""
+      },
+      "nextNodes": [
+        "44"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "44": {
+      "id": "44",
+      "text": {
+        "fr": "genre d'un autre temps …",
+        "en": ""
+      },
+      "nextNodes": [
+        "45"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "45": {
+      "id": "45",
+      "text": {
+        "fr": "ah, oui, j'ai halluciné!",
+        "en": ""
+      },
+      "nextNodes": [
+        "46"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "46": {
+      "id": "46",
+      "text": {
+        "fr": "les mariées sont sublimes …",
+        "en": ""
+      },
+      "nextNodes": [
+        "47"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "47": {
+      "id": "47",
+      "text": {
+        "fr": "kimono blanc à manches longues ",
         "en": ""
       },
       "nextNodes": [
@@ -889,139 +1015,10 @@
         "explorateur": 0
       }
     },
-    "42": {
-      "id": "42",
-      "text": {
-        "fr": "Plan B: aller là où il y a toats/café!",
-        "en": ""
-      },
-      "nextNodes": [
-        "43"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 1,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "43": {
-      "id": "43",
-      "text": {
-        "fr": "des Ptits dej. \"continentaux\"",
-        "en": ""
-      },
-      "nextNodes": [
-        "41"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "44": {
-      "id": "44",
-      "text": {
-        "fr": "L'idée était de découvrir leur culture!",
-        "en": ""
-      },
-      "nextNodes": [
-        "45"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 1,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "45": {
-      "id": "45",
-      "text": {
-        "fr": "et donc aussi le côté algues …",
-        "en": ""
-      },
-      "nextNodes": [
-        "41"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "46": {
-      "id": "46",
-      "text": {
-        "fr": "Planque les algues derrière le riz…",
-        "en": ""
-      },
-      "nextNodes": [
-        "47"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 1,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "47": {
-      "id": "47",
-      "text": {
-        "fr": "astucieux! ",
-        "en": ""
-      },
-      "nextNodes": [
-        "41"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
     "48": {
       "id": "48",
       "text": {
-        "fr": {
-          "m": "La fille qui va au Japon",
-          "f": "Le gars qui va au Japon"
-        },
+        "fr": "et des sandales \"zori\"",
         "en": ""
       },
       "nextNodes": [
@@ -1042,7 +1039,7 @@
     "49": {
       "id": "49",
       "text": {
-        "fr": "mais qui déteste les trucs de mer",
+        "fr": "tout est codifié et précis",
         "en": ""
       },
       "nextNodes": [
@@ -1063,76 +1060,13 @@
     "50": {
       "id": "50",
       "text": {
-        "fr": "TOUS les trucs liés à la mer !!",
+        "fr": "ohh, la lourdeur!",
         "en": ""
       },
       "nextNodes": [
-        "51"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "51": {
-      "id": "51",
-      "text": {
-        "fr": "ouais, c'est clair 🤣",
-        "en": ""
-      },
-      "nextNodes": [
-        "52"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "52": {
-      "id": "52",
-      "text": {
-        "fr": {
-          "m": "T'es servie chouquette",
-          "f": "T'es servie chou"
-        },
-        "en": ""
-      },
-      "nextNodes": [
-        "53"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "53": {
-      "id": "53",
-      "text": {
-        "fr": "Au fait, et ton job ?",
-        "en": ""
-      },
-      "nextNodes": [
+        "51",
+        "52",
+        "53",
         "54"
       ],
       "character": "Player",
@@ -1147,18 +1081,81 @@
         "explorateur": 0
       }
     },
-    "54": {
-      "id": "54",
+    "51": {
+      "id": "51",
       "text": {
-        "fr": "….",
+        "fr": "Tu peux pas être créatif, ni original, l'horreur!",
         "en": ""
       },
       "nextNodes": [
         "55"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 1,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "52": {
+      "id": "52",
+      "text": {
+        "fr": "Tu peux rien improviser, c'est nul!",
+        "en": ""
+      },
+      "nextNodes": [
+        "55"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 1,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "53": {
+      "id": "53",
+      "text": {
+        "fr": "J'aime les trucs planifiés, mais là c'est trop!",
+        "en": ""
+      },
+      "nextNodes": [
+        "55"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 1,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "54": {
+      "id": "54",
+      "text": {
+        "fr": "Impossible pour moi, j'aime trop décider!",
+        "en": ""
+      },
+      "nextNodes": [
+        "55"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 1,
         "bricoleur": 0,
         "coequipier": 0,
         "planificateur": 0,
@@ -1171,7 +1168,7 @@
     "55": {
       "id": "55",
       "text": {
-        "fr": "Ca a marché!!",
+        "fr": "non, suis pas d'accord",
         "en": ""
       },
       "nextNodes": [
@@ -1192,7 +1189,7 @@
     "56": {
       "id": "56",
       "text": {
-        "fr": "Accueil de touristes anglophones",
+        "fr": "tu verrais, ça …",
         "en": ""
       },
       "nextNodes": [
@@ -1213,7 +1210,7 @@
     "57": {
       "id": "57",
       "text": {
-        "fr": "Dans un Ryokan",
+        "fr": "c'est splendide!",
         "en": ""
       },
       "nextNodes": [
@@ -1234,14 +1231,11 @@
     "58": {
       "id": "58",
       "text": {
-        "fr": "tu sais, les logements traditionnels",
+        "fr": "Et quand t'y penses",
         "en": ""
       },
       "nextNodes": [
-        "59",
-        "61",
-        "62",
-        "63"
+        "59"
       ],
       "character": "NPC1",
       "attribution": {
@@ -1258,20 +1252,17 @@
     "59": {
       "id": "59",
       "text": {
-        "fr": {
-          "m": "Trop content pour toi!!",
-          "f": "Trop contente pour toi!!"
-        },
+        "fr": "Nous aussi, on suit des règles…",
         "en": ""
       },
       "nextNodes": [
         "60"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
-        "coequipier": 1,
+        "coequipier": 0,
         "planificateur": 0,
         "idealiste": 0,
         "creatif": 0,
@@ -1282,13 +1273,13 @@
     "60": {
       "id": "60",
       "text": {
-        "fr": "Et je gagne pas trop mal",
+        "fr": "c'est pas faux",
         "en": ""
       },
       "nextNodes": [
-        "64"
+        "61"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -1303,15 +1294,15 @@
     "61": {
       "id": "61",
       "text": {
-        "fr": "Ah, t'as bien fait de m'écouter, donc ",
+        "fr": "robe blanche",
         "en": ""
       },
       "nextNodes": [
-        "60"
+        "62"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
-        "leader": 1,
+        "leader": 0,
         "bricoleur": 0,
         "coequipier": 0,
         "planificateur": 0,
@@ -1324,13 +1315,13 @@
     "62": {
       "id": "62",
       "text": {
-        "fr": "Ne rien lâcher! Toujours y croire!!",
+        "fr": "lancé du bouquet",
         "en": ""
       },
       "nextNodes": [
-        "60"
+        "63"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -1345,18 +1336,19 @@
     "63": {
       "id": "63",
       "text": {
-        "fr": "T'avais bien préparé ça, et ça paie!",
+        "fr": "et tout et tout quoi",
         "en": ""
       },
       "nextNodes": [
-        "60"
+        "64",
+        "65"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
         "coequipier": 0,
-        "planificateur": 1,
+        "planificateur": 0,
         "idealiste": 0,
         "creatif": 0,
         "audacieux": 0,
@@ -1366,16 +1358,13 @@
     "64": {
       "id": "64",
       "text": {
-        "fr": "en plus 💰💰",
+        "fr": "oui, t'as raison, on a aussi nos traditions…",
         "en": ""
       },
       "nextNodes": [
-        "65",
-        "68",
-        "71",
-        "73"
+        "68"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -1390,7 +1379,7 @@
     "65": {
       "id": "65",
       "text": {
-        "fr": "Dis, ne dépense pas tout! ",
+        "fr": "Je déteste ces traditions, j'adore l'aventure!",
         "en": ""
       },
       "nextNodes": [
@@ -1398,20 +1387,20 @@
       ],
       "character": "Player",
       "attribution": {
-        "leader": 1,
+        "leader": 0,
         "bricoleur": 0,
         "coequipier": 0,
         "planificateur": 0,
         "idealiste": 0,
         "creatif": 0,
         "audacieux": 0,
-        "explorateur": 0
+        "explorateur": 1
       }
     },
     "66": {
       "id": "66",
       "text": {
-        "fr": "Pas trop vite en tous cas …",
+        "fr": "les imprévus …",
         "en": ""
       },
       "nextNodes": [
@@ -1432,13 +1421,13 @@
     "67": {
       "id": "67",
       "text": {
-        "fr": "ces yen gagnés durement",
+        "fr": "la liberté!!",
         "en": ""
       },
       "nextNodes": [
-        "75"
+        "68"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -1453,7 +1442,10 @@
     "68": {
       "id": "68",
       "text": {
-        "fr": "Economise un peu au cas où, non?",
+        "fr": {
+          "m": "Tu vas te trouver un japonais",
+          "f": "Tu vas te trouver une japonaise"
+        },
         "en": ""
       },
       "nextNodes": [
@@ -1464,7 +1456,7 @@
         "leader": 0,
         "bricoleur": 0,
         "coequipier": 0,
-        "planificateur": 1,
+        "planificateur": 0,
         "idealiste": 0,
         "creatif": 0,
         "audacieux": 0,
@@ -1474,13 +1466,13 @@
     "69": {
       "id": "69",
       "text": {
-        "fr": "au cas où quoi?",
+        "fr": "Pour avoir droit au mariage shinto?",
         "en": ""
       },
       "nextNodes": [
         "70"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -1495,13 +1487,16 @@
     "70": {
       "id": "70",
       "text": {
-        "fr": "bein, un coup dur, un imprévu!",
+        "fr": {
+          "m": "T'es lourd!",
+          "f": "T'es lourde!"
+        },
         "en": ""
       },
       "nextNodes": [
-        "67"
+        "71"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -1516,17 +1511,17 @@
     "71": {
       "id": "71",
       "text": {
-        "fr": "C'est bien mérité te connnaissant 💪",
+        "fr": "bon, je file …",
         "en": ""
       },
       "nextNodes": [
         "72"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
-        "coequipier": 1,
+        "coequipier": 0,
         "planificateur": 0,
         "idealiste": 0,
         "creatif": 0,
@@ -1537,11 +1532,11 @@
     "72": {
       "id": "72",
       "text": {
-        "fr": "ah, ça, je bossse !!",
+        "fr": "Mariane m'a préparé des frites!!!",
         "en": ""
       },
       "nextNodes": [
-        "67"
+        "73"
       ],
       "character": "NPC1",
       "attribution": {
@@ -1558,7 +1553,7 @@
     "73": {
       "id": "73",
       "text": {
-        "fr": "De quoi réaliser ton autre rêve!!",
+        "fr": "ah, y a des priorités dans la vie!!!",
         "en": ""
       },
       "nextNodes": [
@@ -1567,7 +1562,7 @@
       "character": "Player",
       "attribution": {
         "leader": 0,
-        "bricoleur": 1,
+        "bricoleur": 0,
         "coequipier": 0,
         "planificateur": 0,
         "idealiste": 0,
@@ -1579,13 +1574,13 @@
     "74": {
       "id": "74",
       "text": {
-        "fr": "Oui, justement ✨ 😍",
+        "fr": "😁",
         "en": ""
       },
       "nextNodes": [
-        "67"
+        "75"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -1600,7 +1595,7 @@
     "75": {
       "id": "75",
       "text": {
-        "fr": "c'est mon billet pour …",
+        "fr": "OUI bises ",
         "en": ""
       },
       "nextNodes": [
@@ -1621,16 +1616,13 @@
     "76": {
       "id": "76",
       "text": {
-        "fr": {
-          "m": "un séjour de princesse",
-          "f": "un séjour de prince"
-        },
+        "fr": "bizz",
         "en": ""
       },
       "nextNodes": [
         "77"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -1645,157 +1637,10 @@
     "77": {
       "id": "77",
       "text": {
-        "fr": "au Ryokan",
-        "en": ""
-      },
-      "nextNodes": [
-        "78"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "78": {
-      "id": "78",
-      "text": {
-        "fr": "Yado Kiramachi !!!!",
-        "en": ""
-      },
-      "nextNodes": [
-        "79"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "79": {
-      "id": "79",
-      "text": {
-        "fr": "le top du top du ryokan, Jon!!",
-        "en": ""
-      },
-      "nextNodes": [
-        "80",
-        "81"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "80": {
-      "id": "80",
-      "text": {
-        "fr": "",
-        "en": ""
-      },
-      "nextNodes": [
-        "82"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 1,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      },
-      "imagePath": "/assets/images/chapter5_enjoy.gif"
-    },
-    "81": {
-      "id": "81",
-      "text": {
-        "fr": "",
-        "en": ""
-      },
-      "nextNodes": [
-        "82"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      },
-      "imagePath": "/assets/images/chapter5_so.gif"
-    },
-    "82": {
-      "id": "82",
-      "text": {
-        "fr": "Je dois aller bosser",
-        "en": ""
-      },
-      "nextNodes": [
-        "83"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "83": {
-      "id": "83",
-      "text": {
-        "fr": "Je file",
-        "en": ""
-      },
-      "nextNodes": [
-        "84"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "84": {
-      "id": "84",
-      "text": {
-        "fr": "Bizzzz",
+        "fr": {
+          "m": "[Arya déconnectée]",
+          "f": "[Jon déconnecté]"
+        },
         "en": ""
       },
       "nextNodes": [],

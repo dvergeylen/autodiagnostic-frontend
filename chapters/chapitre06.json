@@ -319,7 +319,7 @@
       "nextNodes": [
         "16"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -1420,7 +1420,10 @@
     "67": {
       "id": "67",
       "text": {
-        "fr": "TOUJOURS! La clé chouquette!",
+        "fr": {
+          "m": "TOUJOURS! La clé chouquette!",
+          "f": "TOUJOURS! La clé chou!"
+        },
         "en": ""
       },
       "nextNodes": [
