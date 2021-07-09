@@ -366,7 +366,7 @@
     "18": {
       "id": "18",
       "text": {
-        "fr": "http://gph.is/257jnsD",
+        "fr": "/assets/images/chapter8_anger.gif",
         "en": ""
       },
       "nextNodes": [
@@ -387,7 +387,7 @@
     "19": {
       "id": "19",
       "text": {
-        "fr": "http://gph.is/1ULUxvz",
+        "fr": "",
         "en": ""
       },
       "nextNodes": [
@@ -403,7 +403,8 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      }
+      },
+      "imagePath": "/assets/images/chapter8_girly_cat_typing.gif"
     },
     "20": {
       "id": "20",
@@ -530,7 +531,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "https://gph.is/g/aQQgODO"
+      "imagePath": "/assets/images/chapter8_tasting.gif"
     },
     "26": {
       "id": "26",
@@ -1017,7 +1018,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "https://gph.is/2qXNOmM"
+      "imagePath": "/assets/images/chapter8_dancing.gif"
     },
     "49": {
       "id": "49",
@@ -1233,7 +1234,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "http://gph.is/1T6S9hN"
+      "imagePath": "/assets/images/chapter8_hug_selfie.gif"
     },
     "59": {
       "id": "59",
