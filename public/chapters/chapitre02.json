@@ -1,7 +1,15 @@
 {
   "metadata": {
     "part": "I",
-    "chapter": "2"
+    "chapter": "2",
+    "mapMarker": {
+      "longitude": 50.63799,
+      "latitude": 5.56918,
+      "zoom": 7,
+      "label": {
+        "fr": "Début du Voyage !"
+      }
+    }
   },
   "dialogNodes": {
     "1": {

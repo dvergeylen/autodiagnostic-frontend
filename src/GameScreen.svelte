@@ -1,10 +1,15 @@
 <script lang="ts">
+  import { displayMap } from './stores/appStatus';
   import GameScreenDialogHeader from './GameScreenDialogHeader.svelte';
   import GameScreenDialogNodes from './GameScreenDialogNodes.svelte';
+  import Map from './Map.svelte';
 </script>
 
 <main>
   <GameScreenDialogHeader />
+  {#if $displayMap}
+    <Map />
+  {/if}
   <GameScreenDialogNodes />
 </main>
 

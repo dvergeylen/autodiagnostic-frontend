@@ -1,9 +1,7 @@
 /// <reference types="svelte" />
 
 interface ScenarioHash {
-  [chapterId: string]: {
-    [dialogNodeId: string]: DialogNode,
-  },
+  [chapterId: string]: Scenario,
 }
 
 interface GameState {
@@ -53,6 +51,15 @@ interface Scenario {
   metadata: {
     part: string,
     chapter: string,
+    mapMarker: {
+      longitude: number,
+      latitude: number,
+      zoom: number,
+      label: {
+        fr: string,
+        en?: string,
+      }
+    }
   };
   dialogNodes: {
     [id: string]: DialogNode,

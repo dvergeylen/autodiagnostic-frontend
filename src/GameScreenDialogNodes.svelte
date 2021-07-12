@@ -37,11 +37,11 @@
 
   function displayNextDialogNode(parentNodeId: string | undefined, isRootNode: boolean = false) {
     // '1' is nextNode is there is no previous node (e.g: chapter root node)
-    const nextNodeIds: Array<string> = isRootNode ? ["1"] : $chapters[$currentChapterId][parentNodeId].nextNodes;
-    const nextNodes: Array<DialogNode> = Object.entries<DialogNode>($chapters[$currentChapterId])
+    const nextNodeIds: Array<string> = isRootNode ? ["1"] : $chapters[$currentChapterId].dialogNodes[parentNodeId].nextNodes;
+    const nextNodes: Array<DialogNode> = Object.entries<DialogNode>($chapters[$currentChapterId].dialogNodes)
       .filter(([_, n]) => nextNodeIds.includes(n.id))
       .map(([_, n]) => n);
-    const previousSpeaker: "Player" | "NPC1" | "Narrator" = $chapters[$currentChapterId][parentNodeId || "1"].character;
+    const previousSpeaker: "Player" | "NPC1" | "Narrator" = $chapters[$currentChapterId].dialogNodes[parentNodeId || "1"].character;
     const currentSpeaker = nextNodes.reduce<"Player" | "NPC1" | "Narrator">((acc, n: DialogNode) => {
       return (acc === "Player") || (n.character === "Player") ? 'Player' : acc;
     }, nextNodes[0]?.character || "NPC1");
@@ -79,11 +79,11 @@
 
     // Display next node, after a random time typing
     } else {
-      const timerIsTyping = Math.floor(Math.random() * (750 - 500 + 1) + 500);
+      const timerIsTyping = 1; //Math.floor(Math.random() * (750 - 500 + 1) + 500);
       setTimeout(() => {
         showIsTyping = true;
 
-        const timerReply = Math.floor(Math.random() * (2000 - 1000 + 1) + 1000);
+        const timerReply = 1; //Math.floor(Math.random() * (2000 - 1000 + 1) + 1000);
         setTimeout(() => {
           showIsTyping = false;
           $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
@@ -103,10 +103,10 @@
     $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), dialogNodeid];
 
     // Update gameState
-    if ($chapters[$currentChapterId][dialogNodeid].character === 'Player') {
+    if ($chapters[$currentChapterId].dialogNodes[dialogNodeid].character === 'Player') {
       $gameState.attribution = Object.entries($gameState.attribution).reduce((acc, [k, v]) => ({
         ...acc,
-        [k]: v + $chapters[$currentChapterId][dialogNodeid].attribution[k],
+        [k]: v + $chapters[$currentChapterId].dialogNodes[dialogNodeid].attribution[k],
       }), {
         leader: 0,
         bricoleur: 0,
@@ -158,19 +158,19 @@
     <div id="dialog-container">
       {#each displayedNodeIds as dialogNodeId (dialogNodeId)}
         <div
-          class:npc1={$chapters[$currentChapterId][dialogNodeId].character === 'NPC1'}
-          class:player={$chapters[$currentChapterId][dialogNodeId].character === 'Player'}
-          class:narrator={$chapters[$currentChapterId][dialogNodeId].character === 'Narrator'}>
-          {#if $chapters[$currentChapterId][dialogNodeId].imagePath}
-            <img src="{$chapters[$currentChapterId][dialogNodeId].imagePath}"
-              alt="{$chapters[$currentChapterId][dialogNodeId].imageAlt}"
+          class:npc1={$chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'NPC1'}
+          class:player={$chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'Player'}
+          class:narrator={$chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'Narrator'}>
+          {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}
+            <img src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}"
+              alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}"
               on:load={updateScrollHeight} />
           {:else}
             <p>
-              {#if $chapters[$currentChapterId][dialogNodeId].text[$gameState.language] instanceof Object}
-                {$chapters[$currentChapterId][dialogNodeId].text[$gameState.language][$gameState.gender]}
+              {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language] instanceof Object}
+                {$chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language][$gameState.gender]}
               {:else}
-                {$chapters[$currentChapterId][dialogNodeId].text[$gameState.language]}
+                {$chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language]}
               {/if}
             </p>
           {/if}
@@ -183,19 +183,19 @@
       </div>
     </div>
     <div id="answer-container">
-      <div class="player" class:is-grid-2x2={answersNodeIds.reduce((acc, id) => acc || $chapters[$currentChapterId][id].imagePath, false)}>
+      <div class="player" class:is-grid-2x2={answersNodeIds.reduce((acc, id) => acc || $chapters[$currentChapterId].dialogNodes[id].imagePath, false)}>
         {#each answersNodeIds as answerDialogNodeId (answerDialogNodeId)}
-            {#if $chapters[$currentChapterId][answerDialogNodeId].imagePath}
-              <img src="{$chapters[$currentChapterId][answerDialogNodeId].imagePath}"
-              alt="{$chapters[$currentChapterId][answerDialogNodeId].imageAlt}"
+            {#if $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}
+              <img src="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}"
+              alt="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imageAlt}"
                on:click={() => addAnswer(answerDialogNodeId)}
                on:load={updateScrollHeight}/>
             {:else}
               <p class="choice" on:click={() => addAnswer(answerDialogNodeId)}>
-                {#if $chapters[$currentChapterId][answerDialogNodeId].text[$gameState.language] instanceof Object}
-                  {$chapters[$currentChapterId][answerDialogNodeId].text[$gameState.language][$gameState.gender]}
+                {#if $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language] instanceof Object}
+                  {$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language][$gameState.gender]}
                 {:else}
-                  {$chapters[$currentChapterId][answerDialogNodeId].text[$gameState.language]}
+                  {$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language]}
                 {/if}
               </p>
             {/if}

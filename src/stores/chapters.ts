@@ -15,11 +15,11 @@ function start(set: Subscriber<{}>): Unsubscriber {
     }
   });
 
-  // Transform Array<Scenario> into an adressable Hash {[scenarioId]: DialogNodes}
+  // Transform Array<Scenario> into an adressable Hash {[scenarioId]: Scenario}
   Promise.all(promises).then((chaptersArray: Array<Scenario>) => {
     const results: ScenarioHash = chaptersArray.reduce((acc: ScenarioHash, scenario: Scenario) => ({
       ...acc,
-      [scenario.metadata.chapter]: scenario.dialogNodes,
+      [scenario.metadata.chapter]: scenario,
     }), {})
 
     set(results);

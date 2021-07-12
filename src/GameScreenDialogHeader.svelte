@@ -1,17 +1,14 @@
 <script lang="ts">
-  import { appStatus } from './stores/appStatus';
+  import { appStatus, displayMap } from './stores/appStatus';
   import { GameStatus } from './enums';
   import { gameState } from './stores/gameState';
-  import MapScreen from "./Map.svelte";
-
-  let displayMap = false;
 
   function goToWelcomeScreen() {
     appStatus.set(GameStatus.PAUSED);
   }
 
   function toggleDisplayMap() {
-    displayMap = !displayMap;
+    displayMap.set(!$displayMap);
   }
 
   // Debug
@@ -29,7 +26,6 @@
       <img src='/assets/images/avatar_jon.jpeg' alt="Jon"/>
       <p>Jon</p>
     {/if}
-    <p class:is-hidden={!displayMap}>Display map</p>
   </div>
 
   <div id="settings">
@@ -56,6 +52,7 @@
     position: sticky;
     top: 0;
     text-align: left;
+    height: 3.5em;
 
     display: grid;
     grid-template-columns: auto auto;
