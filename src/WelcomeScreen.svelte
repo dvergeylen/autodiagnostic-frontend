@@ -29,7 +29,7 @@
   <h1>Voyage au bout du monde</h1>
   <h3>Une aventure d'introspection</h3>
   <div class="is-grid">
-    {#if isNewGame && isGenderConfigured }
+    {#if !isNewGame && isGenderConfigured }
       <button class:pressed={!newGamePressed} on:click={startGame}>
         Continuer
     </button>
