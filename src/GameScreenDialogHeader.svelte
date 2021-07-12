@@ -92,7 +92,4 @@
     vertical-align: middle;
     cursor: pointer;
   }
-  .is-hidden {
-    display: none;
-  }
 </style>
