@@ -1,11 +1,9 @@
 <script lang="ts">
-  import GameScreenNavbar from './GameScreenNavbar.svelte';
   import GameScreenDialogHeader from './GameScreenDialogHeader.svelte';
   import GameScreenDialogNodes from './GameScreenDialogNodes.svelte';
 </script>
 
 <main>
-  <GameScreenNavbar />
   <GameScreenDialogHeader />
   <GameScreenDialogNodes />
 </main>
