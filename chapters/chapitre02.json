@@ -7,8 +7,8 @@
     },
     "date": "2021-09-02T00:00:00Z",
     "mapMarker": {
-      "longitude": 48.8741975,
-      "latitude": 2.7830023,
+      "longitude": 2.7830023,
+      "latitude": 48.8741975,
       "zoom": 7,
       "label": {
         "fr": "Marne-La-Vallée"
