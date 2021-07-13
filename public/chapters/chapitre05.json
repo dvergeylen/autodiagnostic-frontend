@@ -7,8 +7,8 @@
     },
     "date": "2021-12-15T00:00:00Z",
     "mapMarker": {
-      "longitude": 35.0477465,
-      "latitude": 135.6766117,
+      "longitude": 135.6766117,
+      "latitude": 35.0477465,
       "zoom": 7,
       "label": {
         "fr": "Kyoto"

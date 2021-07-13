@@ -7,8 +7,8 @@
     },
     "date": "2022-08-29T00:00:00Z",
     "mapMarker": {
-      "longitude": 35.771991,
-      "latitude": 140.3906614,
+      "longitude": 140.3906614,
+      "latitude": 35.771991,
       "zoom": 7,
       "label": {
         "fr": "Tokyo, Aéroport Narita"
