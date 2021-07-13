@@ -119,6 +119,9 @@
       });
     }
 
+    console.log('Nouvelles attributions:');
+    console.log($gameState.attribution)
+
     // Continue dialog, if any
     displayNextDialogNode(dialogNodeid);
   }
