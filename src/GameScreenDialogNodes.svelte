@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount, onDestroy, afterUpdate, tick } from 'svelte';
   import { fade } from 'svelte/transition';
-  import { appStatus } from './stores/appStatus';
+  import { appStatus, displayMap } from './stores/appStatus';
   import { GameStatus } from './enums';
   import { gameState, currentChapterId } from './stores/gameState';
   import { chapters } from './stores/chapters';
@@ -99,6 +99,9 @@
   }
 
   function addAnswer(dialogNodeid: string) {
+    // Clear Map, if any
+    displayMap.set(false);
+
     // Clear AnswerDialogBox
     answersNodeIds = [];
 
