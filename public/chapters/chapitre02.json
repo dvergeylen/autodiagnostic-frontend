@@ -2,6 +2,10 @@
   "metadata": {
     "part": "I",
     "chapter": "2",
+    "title": {
+      "fr": "Jour du départ"
+    },
+    "date": "2021-09-02T00:00:00Z",
     "mapMarker": {
       "longitude": 48.8741975,
       "latitude": 2.7830023,
