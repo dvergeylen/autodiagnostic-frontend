@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount, afterUpdate, tick } from 'svelte';
+  import { onMount, onDestroy, afterUpdate, tick } from 'svelte';
   import { fade } from 'svelte/transition';
   import { appStatus } from './stores/appStatus';
   import { GameStatus } from './enums';
@@ -15,6 +15,8 @@
   let npc1Typing: boolean = false;
   let playerTyping: boolean = false;
   let narratorTyping: boolean = false;
+  let timerReplyCb: NodeJS.Timeout;
+  let timerIsTypingCb: NodeJS.Timeout;
 
   // Display error screen if unable to load chapters
   $: if (Object.keys($chapters).includes('error')) {
@@ -67,7 +69,7 @@
     // - when Player and multiple nextNodes
     } else if (currentSpeaker === 'Player' && (nextNodes.length > 1)) {
       const timerReply = 1000;
-      setTimeout(() => {
+      timerReplyCb = setTimeout(() => {
         displayAnswerDialogBox(nextNodeIds);
       }, timerReply);
 
@@ -81,7 +83,7 @@
     // Display next node, after a random time typing
     } else {
       const timerIsTyping = 1; //Math.floor(Math.random() * (750 - 500 + 1) + 500);
-      setTimeout(() => {
+      timerIsTypingCb = setTimeout(() => {
         showIsTyping = true;
 
         const timerReply = 1; //Math.floor(Math.random() * (2000 - 1000 + 1) + 1000);
@@ -145,9 +147,14 @@
     window.scrollTo(0,document.body.scrollHeight);
   }
 
-  onMount(async () => {
+  onMount(() => {
     waitStoresToLoad();
   });
+
+  onDestroy(() => {
+    clearInterval(timerReplyCb);
+    clearInterval(timerIsTypingCb);
+  })
 
   afterUpdate(() => {
     window.scrollTo(0,document.body.scrollHeight);
