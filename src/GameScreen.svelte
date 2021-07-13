@@ -1,16 +1,41 @@
 <script lang="ts">
-  import { displayMap } from './stores/appStatus';
+  import { onMount, onDestroy } from 'svelte';
+  import { displayMap, appStatus } from './stores/appStatus';
+  import { GameStatus } from './enums';
   import GameScreenDialogHeader from './GameScreenDialogHeader.svelte';
   import GameScreenDialogNodes from './GameScreenDialogNodes.svelte';
   import Map from './Map.svelte';
+  import IntroScreen from './IntroScreen.svelte';
+
+  let timer: NodeJS.Timeout;
+
+  function resumeGame() {
+    timer = setTimeout(() => {
+      appStatus.set(GameStatus.ONGOING);
+    }, 2000);
+  }
+
+  onMount(resumeGame);
+
+  onDestroy(() => {
+    clearInterval(timer);
+  });
+
+  $: if ($appStatus === GameStatus.INTRO) {
+    resumeGame();
+  }
 </script>
 
 <main>
-  <GameScreenDialogHeader />
-  {#if $displayMap}
-    <Map />
+  {#if $appStatus === GameStatus.INTRO}
+    <IntroScreen />
+  {:else}
+    <GameScreenDialogHeader />
+    {#if $displayMap}
+      <Map />
+    {/if}
+    <GameScreenDialogNodes />
   {/if}
-  <GameScreenDialogNodes />
 </main>
 
 <style lang="scss">

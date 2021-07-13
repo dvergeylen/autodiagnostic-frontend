@@ -51,6 +51,10 @@ interface Scenario {
   metadata: {
     part: string,
     chapter: string,
+    title: {
+      fr: string,
+      en?: string,
+    }
     mapMarker: {
       longitude: number,
       latitude: number,

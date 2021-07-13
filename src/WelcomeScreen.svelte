@@ -12,7 +12,7 @@
   }
 
   function startGame() {
-    $appStatus = GameStatus.ONGOING;
+    $appStatus = GameStatus.INTRO;
   }
 
   function startNewGame(gender: 'm' | 'f') {

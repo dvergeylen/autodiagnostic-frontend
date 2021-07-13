@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount, afterUpdate, tick } from 'svelte';
+  import { fade } from 'svelte/transition';
   import { appStatus } from './stores/appStatus';
   import { GameStatus } from './enums';
   import { gameState, currentChapterId } from './stores/gameState';
@@ -28,7 +29,7 @@
     $gameState.nodes[String(nextChapterId)] = [];
     displayNextChapterBox = false;
     await tick();
-    displayNextDialogNode(undefined, true);
+    appStatus.set(GameStatus.INTRO);
   }
 
   function displayAnswerDialogBox(nextNodeIds: Array<string>) {
@@ -156,7 +157,7 @@
 </script>
 
 
-<div id="dialog-container-background">
+<div id="dialog-container-background" in:fade>
   {#if $chapters[$currentChapterId]}
     <div id="dialog-container">
       {#each displayedNodeIds as dialogNodeId (dialogNodeId)}

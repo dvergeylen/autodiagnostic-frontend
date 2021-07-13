@@ -21,7 +21,7 @@
   });
 
   // Svelte doesn't give access to Typescript out of <script> tag
-  $: showGameScreen = ($appStatus === GameStatus.ONGOING);
+  $: showGameScreen = ($appStatus === GameStatus.ONGOING || $appStatus === GameStatus.INTRO);
   $: showResultScreen = ($appStatus === GameStatus.FINISHED);
   $: showErrorScreen = ($appStatus === GameStatus.ERROR);
 </script>
