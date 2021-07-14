@@ -520,7 +520,10 @@
     "24": {
       "id": "24",
       "text": {
-        "fr": "Ça … suis content",
+        "fr": {
+          "m": "Ça … suis content",
+          "f": "Ça … suis contente"
+        },
         "en": ""
       },
       "nextNodes": [
@@ -2535,7 +2538,7 @@
     "119": {
       "id": "119",
       "text": {
-        "fr": "D'ailleurs, faut que j'te dises",
+        "fr": "D'ailleurs, faut que j'te dise",
         "en": ""
       },
       "nextNodes": [

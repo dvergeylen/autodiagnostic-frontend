@@ -620,7 +620,7 @@
         "40",
         "44"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -1187,7 +1187,10 @@
     "56": {
       "id": "56",
       "text": {
-        "fr": "tant mieux, je dois filer, chouquette",
+        "fr": {
+          "m": "tant mieux, je dois filer, chouquette",
+          "f": "tant mieux, je dois filer, chou"
+        },
         "en": ""
       },
       "nextNodes": [

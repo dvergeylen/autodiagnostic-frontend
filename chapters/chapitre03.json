@@ -336,7 +336,10 @@
     "16": {
       "id": "16",
       "text": {
-        "fr": "Mariane m'a branchée sur un gars",
+        "fr": {
+          "m": "Mariane m'a branché sur un gars",
+          "f": "Mariane m'a branchée sur un gars"
+        },
         "en": ""
       },
       "nextNodes": [

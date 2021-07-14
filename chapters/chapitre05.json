@@ -387,7 +387,7 @@
       "text": {
         "fr": {
           "m": "Parait que t'es devenu délégué!!",
-          "f": "Parait que t'es devenue délégué!!"
+          "f": "Parait que t'es devenue déléguée!!"
         },
         "en": ""
       },
@@ -430,7 +430,7 @@
     "20": {
       "id": "20",
       "text": {
-        "fr": "T'a pris du galon-là 😜",
+        "fr": "T'a pris du galon, là 😜",
         "en": ""
       },
       "nextNodes": [
@@ -1119,7 +1119,7 @@
       "text": {
         "fr": {
           "m": "T'es servie chouquette",
-          "f": "T'es servie chou"
+          "f": "T'es servi chou"
         },
         "en": ""
       },
@@ -1635,7 +1635,7 @@
       "text": {
         "fr": {
           "m": "un séjour de princesse",
-          "f": "un séjour de prince"
+          "f": "un séjour de roi"
         },
         "en": ""
       },
@@ -1699,7 +1699,10 @@
     "79": {
       "id": "79",
       "text": {
-        "fr": "le top du top du ryokan, Jon!!",
+        "fr": {
+          "m": "le top du top du ryokan, Jon!!",
+          "f": "le top du top du ryokan, Arya!!"
+        },
         "en": ""
       },
       "nextNodes": [
