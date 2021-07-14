@@ -12,7 +12,7 @@
   function resumeGame() {
     timer = setTimeout(() => {
       appStatus.set(GameStatus.ONGOING);
-    }, 2000);
+    }, 4000);
   }
 
   onMount(resumeGame);
