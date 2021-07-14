@@ -301,7 +301,7 @@
 
       div.player, div.npc1 {
         img {
-          max-width: 7.5em;
+          max-width: 9.5em;
           margin: auto;
           cursor: pointer;
           max-height: 10em;
@@ -318,6 +318,7 @@
         grid-gap: 1em;
         margin: 0;
         padding: 0.5em;
+        max-width: none !important;
       }
 
       @keyframes fadeIn {
