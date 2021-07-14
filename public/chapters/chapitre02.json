@@ -1000,7 +1000,10 @@
     "47": {
       "id": "47",
       "text": {
-        "fr": "ah, t'es trop forte! ",
+        "fr": {
+          "m": "ah, t'es trop forte!",
+          "f": "ah, t'es trop fort!"
+        },
         "en": ""
       },
       "nextNodes": [

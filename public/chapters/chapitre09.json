@@ -570,7 +570,10 @@
     "27": {
       "id": "27",
       "text": {
-        "fr": "non, non, sorry, Jon",
+        "fr": {
+          "m": "non, non, sorry, Jon",
+          "f": "non, non, sorry, Arya"
+        },
         "en": ""
       },
       "nextNodes": [
