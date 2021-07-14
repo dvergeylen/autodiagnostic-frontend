@@ -378,7 +378,7 @@
     "18": {
       "id": "18",
       "text": {
-        "fr": "/assets/images/chapter8_anger.gif",
+        "fr": "",
         "en": ""
       },
       "nextNodes": [
@@ -394,7 +394,8 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      }
+      },
+      "imagePath": "/assets/images/chapter8_anger.gif"
     },
     "19": {
       "id": "19",
@@ -1166,7 +1167,7 @@
     "55": {
       "id": "55",
       "text": {
-        "fr": "j'ai de nouveau la pêche en tous cas!",
+        "fr": "j'ai de nouveau la pêche en tout cas!",
         "en": ""
       },
       "nextNodes": [
