@@ -2,7 +2,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { gameState, sortedPlayerAttributions } from './stores/gameState';
-  import Leader from './profiles/Planificateur.svelte';
+  import Leader from './profiles/Leader.svelte';
   import Planificateur from './profiles/Planificateur.svelte';
   import Bricoleur from './profiles/Bricoleur.svelte';
   import Coequipier from './profiles/Coequipier.svelte';
