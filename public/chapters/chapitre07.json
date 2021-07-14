@@ -1285,7 +1285,7 @@
     "60": {
       "id": "60",
       "text": {
-        "fr": "c'est pas faux",
+        "fr": "",
         "en": ""
       },
       "nextNodes": [
@@ -1301,7 +1301,8 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      }
+      },
+      "imagePath": "/assets/images/hapter7_kamelott_cest_pas_faux.gif"
     },
     "61": {
       "id": "61",

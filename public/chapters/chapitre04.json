@@ -655,7 +655,7 @@
       "nextNodes": [
         "29"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,

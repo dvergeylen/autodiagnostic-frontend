@@ -105,7 +105,7 @@
     "5": {
       "id": "5",
       "text": {
-        "fr": "le décallage horaire me tue!",
+        "fr": "le décalage horaire me tue!",
         "en": ""
       },
       "nextNodes": [
@@ -406,8 +406,7 @@
         "en": ""
       },
       "nextNodes": [
-        "20",
-        "22"
+        "20"
       ],
       "character": "NPC1",
       "attribution": {
@@ -428,7 +427,8 @@
         "en": ""
       },
       "nextNodes": [
-        "21"
+        "21",
+        "22"
       ],
       "character": "Player",
       "attribution": {
