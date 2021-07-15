@@ -3,7 +3,7 @@
     "part": "I",
     "chapter": "2",
     "title": {
-      "fr": "Jour du départ"
+      "fr": "Juste au milieu de nulle part"
     },
     "date": "2021-09-02T00:00:00Z",
     "mapMarker": {
@@ -11,7 +11,7 @@
       "latitude": 48.8741975,
       "zoom": 7,
       "label": {
-        "fr": "Marne-La-Vallée"
+        "fr": "Marne-la-Vallée, ligne TGV"
       }
     }
   },
