@@ -28,7 +28,7 @@
   <div id="titles">
     <h1>CHAPITRE {twoDigitsChapterId} :</h1>
     {#if storesLoaded}
-      <h3>{$chapters[$currentChapterId].metadata.title[$gameState.language]}</h3>
+      <h3>{@html $chapters[$currentChapterId].metadata.title[$gameState.language]}</h3>
       <h5 id="date">{chapterDate}</h5>
       <progress max="10" value="{$currentChapterId}"> {Number($currentChapterId) * 10}% </progress>
     {/if}

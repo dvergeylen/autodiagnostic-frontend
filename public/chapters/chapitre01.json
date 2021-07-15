@@ -3,7 +3,7 @@
     "part": "I",
     "chapter": "1",
     "title": {
-      "fr": "Veille du départ"
+      "fr": "<i>Une valise, on dirait que c'est la liberté qu'on a dans la main.</i> (Albert Londres)"
     },
     "date": "2021-09-01T00:00:00Z",
     "mapMarker": {
@@ -11,7 +11,7 @@
       "latitude": 50.63799,
       "zoom": 7,
       "label": {
-        "fr": "Liège, début du Voyage !"
+        "fr": "Centre-ville de Liège"
       }
     }
   },
@@ -46,7 +46,7 @@
         "en": ""
       },
       "nextNodes": [
-        "82"
+        "3"
       ],
       "character": "NPC1",
       "attribution": {
@@ -280,10 +280,7 @@
         "en": ""
       },
       "nextNodes": [
-        "14",
-        "20",
-        "22",
-        "25"
+        "82"
       ],
       "character": "NPC1",
       "attribution": {
@@ -1749,7 +1746,10 @@
         "en": ""
       },
       "nextNodes": [
-        "3"
+        "14",
+        "20",
+        "22",
+        "25"
       ],
       "character": "Narrator",
       "attribution": {
