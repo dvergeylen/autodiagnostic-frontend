@@ -20,8 +20,8 @@
 <div class="header">
   <div id="npc-avatar">
     {#if $gameState.gender === 'm'}
-      <img src='/assets/images/avatar_ayra.jpeg' alt="Ayra"/>
-      <p>Ayra</p>
+      <img src='/assets/images/avatar_ayra.jpeg' alt="Arya"/>
+      <p>Arya</p>
     {:else}
       <img src='/assets/images/avatar_jon.jpeg' alt="Jon"/>
       <p>Jon</p>
