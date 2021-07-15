@@ -220,7 +220,7 @@
     "10": {
       "id": "10",
       "text": {
-        "fr": "C'est plein de défis, de projets👍",
+        "fr": "C'est plein de défis, de projets 👍",
         "en": ""
       },
       "nextNodes": [
@@ -283,7 +283,7 @@
     "13": {
       "id": "13",
       "text": {
-        "fr": "Ça peut aller …",
+        "fr": "Ça peut aller 😋",
         "en": ""
       },
       "nextNodes": [
@@ -1285,7 +1285,7 @@
     "60": {
       "id": "60",
       "text": {
-        "fr": "J'ai confiance; ça va aller!!",
+        "fr": "J'ai confiance; ça va aller 👍",
         "en": ""
       },
       "nextNodes": [
@@ -1436,8 +1436,8 @@
       "id": "67",
       "text": {
         "fr": {
-          "m": "TOUJOURS! La clé chouquette!",
-          "f": "TOUJOURS! La clé chou!"
+          "m": "TOUJOURS! La clé chouquette 😉",
+          "f": "TOUJOURS! La clé chou 😉"
         },
         "en": ""
       },
