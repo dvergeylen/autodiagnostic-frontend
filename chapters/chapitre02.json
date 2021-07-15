@@ -22,7 +22,7 @@
         "fr": "T'en es où, là?"
       },
       "nextNodes": [
-        "2"
+        "57"
       ],
       "character": "Player",
       "attribution": {
@@ -1204,6 +1204,27 @@
         "en": "Jon s'est déconnecté"
       },
       "nextNodes": [],
+      "character": "Narrator",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "57": {
+      "id": "57",
+      "text": {
+        "fr": "Cliquer sur une zone neutre affiche les dialogues immédiatement",
+        "en": ""
+      },
+      "nextNodes": [
+        "2"
+      ],
       "character": "Narrator",
       "attribution": {
         "leader": 0,
