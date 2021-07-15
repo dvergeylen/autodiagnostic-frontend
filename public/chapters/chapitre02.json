@@ -9,7 +9,7 @@
     "mapMarker": {
       "longitude": 2.7830023,
       "latitude": 48.8741975,
-      "zoom": 7,
+      "zoom": 8,
       "label": {
         "fr": "Marne-la-Vallée, ligne TGV"
       }
@@ -824,6 +824,14 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
+      },
+      "mapMarker": {
+        "longitude": 2.5457773,
+        "latitude": 49.0096739,
+        "zoom": 7,
+        "label": {
+          "fr": "Aéroport CDG, Roissy"
+        }
       }
     },
     "39": {

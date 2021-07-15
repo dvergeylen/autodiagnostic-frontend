@@ -45,6 +45,15 @@ interface DialogNode {
     explorateur?: number,
   }
   imagePath?: string,
+  mapMarker?: {
+    longitude: number,
+    latitude: number,
+    zoom: number,
+    label: {
+      fr: string,
+      en?: string,
+    }
+  }
 }
 
 interface Scenario {

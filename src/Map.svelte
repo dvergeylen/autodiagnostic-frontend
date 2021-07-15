@@ -13,12 +13,23 @@
 
     const zoom = $chapters[$currentChapterId].metadata.mapMarker.zoom;
     const maxZoom = Math.min(18, zoom + 10);
-    const mapMarkers = [...Array(Number($currentChapterId)).keys()].map((i) => {
-      const index = i + 1; // Array starts at index 0
 
-      return new L.LatLng($chapters[index].metadata?.mapMarker.latitude,
-      $chapters[index].metadata.mapMarker.longitude);
-    });
+    // MapMarkers set by Chapters + Additional MapMarkers,
+    // set by DialogNodes within Chapters!
+    const mapMarkers = Object.keys($gameState.nodes).reduce((acc, chapterId) => ([
+      ...acc,
+      new L.LatLng($chapters[chapterId].metadata?.mapMarker.latitude,
+      $chapters[chapterId].metadata.mapMarker.longitude), // chapters MapMarkers
+      ...$gameState.nodes[chapterId].reduce((chapterAcc, nodeId) => {
+        return $chapters[chapterId].dialogNodes[nodeId].mapMarker ? [
+          ...chapterAcc,
+          new L.LatLng($chapters[chapterId].dialogNodes[nodeId].mapMarker.latitude,
+            $chapters[chapterId].dialogNodes[nodeId].mapMarker.longitude), // Additional DialogNode MapMarker
+        ] : chapterAcc;
+      }, []),
+    ]), []);
+
+
     const mymap = L.map('mapid').setView(mapMarkers[mapMarkers.length - 1], zoom);
 
     // add the OpenStreetMap tiles
