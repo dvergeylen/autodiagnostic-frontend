@@ -93,6 +93,7 @@
     padding: 1em;
     border: 1px solid black;
     max-width: 80%;
+    margin: auto;
   }
 
   button {
