@@ -1,11 +1,16 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import { onMount, createEventDispatcher } from 'svelte';
   import { currentChapterId, gameState } from './stores/gameState';
   import { chapters } from './stores/chapters';
 
+  const dispatch = createEventDispatcher();
   let twoDigitsChapterId: string;
   let storesLoaded: boolean = false;
   let chapterDate: string;
+
+  function abortTimer() {
+    dispatch('abortTimer', {});
+  }
 
   function waitStoresToLoad() {
     // Stores fully loaded
@@ -24,7 +29,7 @@
   $: twoDigitsChapterId = $currentChapterId.padStart(2, '0');
 </script>
 
-<div id="intro">
+<div id="intro" on:click={abortTimer}>
   <div id="titles">
     <h1>CHAPITRE {twoDigitsChapterId} :</h1>
     {#if storesLoaded}

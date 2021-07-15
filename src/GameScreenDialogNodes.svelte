@@ -15,8 +15,7 @@
   let npc1Typing: boolean = false;
   let playerTyping: boolean = false;
   let narratorTyping: boolean = false;
-  let timerReplyCb: NodeJS.Timeout;
-  let timerIsTypingCb: NodeJS.Timeout;
+  let timerId: NodeJS.Timeout;
 
   // Display error screen if unable to load chapters
   $: if (Object.keys($chapters).includes('error')) {
@@ -25,6 +24,11 @@
 
   function displayResultsScreen() {
     appStatus.set(GameStatus.FINISHED);
+  }
+
+  function clearTimer() {
+    clearTimeout(timerId);
+    waitStoresToLoad(true);
   }
 
   async function startNextChapter() {
@@ -38,7 +42,7 @@
     answersNodeIds = nextNodeIds;
   }
 
-  function displayNextDialogNode(parentNodeId: string | undefined, isRootNode: boolean = false) {
+  function displayNextDialogNode(parentNodeId: string | undefined, isRootNode: boolean = false, skipTimer: boolean = false) {
     // '1' is nextNode is there is no previous node (e.g: chapter root node)
     const nextNodeIds: Array<string> = isRootNode ? ["1"] : $chapters[$currentChapterId].dialogNodes[parentNodeId].nextNodes;
     const nextNodes: Array<DialogNode> = Object.entries<DialogNode>($chapters[$currentChapterId].dialogNodes)
@@ -69,9 +73,9 @@
     // - when Player and multiple nextNodes
     } else if (currentSpeaker === 'Player' && (nextNodes.length > 1)) {
       const timerReply = 1000;
-      timerReplyCb = setTimeout(() => {
+      timerId = setTimeout(() => {
         displayAnswerDialogBox(nextNodeIds);
-      }, timerReply);
+      }, skipTimer ? 0 : timerReply);
 
     // Narrator, display node immediately
     } else if (currentSpeaker === 'Narrator') {
@@ -82,19 +86,19 @@
 
     // Display next node, after a random time typing
     } else {
-      const timerIsTyping = 1; //Math.floor(Math.random() * (750 - 500 + 1) + 500);
-      timerIsTypingCb = setTimeout(() => {
+      const timerIsTyping = Math.floor(Math.random() * (750 - 500 + 1) + 500);
+      timerId = setTimeout(() => {
         showIsTyping = true;
 
-        const timerReply = 1; //Math.floor(Math.random() * (2000 - 1000 + 1) + 1000);
-        setTimeout(() => {
+        const timerReply = Math.floor(Math.random() * (1500 - 1000 + 1) + 1000);
+        timerId = setTimeout(() => {
           showIsTyping = false;
           $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
 
           // Call recursively
           displayNextDialogNode(nextNodeIds[0]);
-        }, timerReply);
-      }, timerIsTyping);
+        },  skipTimer ? 0 : timerReply);
+      },  skipTimer ? 0 : timerIsTyping);
     }
   }
 
@@ -129,11 +133,11 @@
     displayNextDialogNode(dialogNodeid);
   }
 
-  function waitStoresToLoad() {
+  function waitStoresToLoad(skipTimer = false) {
     // Stores fully loaded
     if (Object.keys($chapters).length > 0) {
       const parentNodeId = displayedNodeIds[displayedNodeIds.length - 1];
-      displayNextDialogNode(parentNodeId, (parentNodeId === undefined)); // Display next Dialog box or append DialogNodes
+      displayNextDialogNode(parentNodeId, (parentNodeId === undefined), skipTimer); // Display next Dialog box or append DialogNodes
 
     // Stores not fully loaded, yet
     } else {
@@ -152,8 +156,7 @@
   });
 
   onDestroy(() => {
-    clearInterval(timerReplyCb);
-    clearInterval(timerIsTypingCb);
+    clearTimeout(timerId);
   })
 
   afterUpdate(() => {
@@ -164,7 +167,7 @@
 </script>
 
 
-<div id="dialog-container-background" in:fade>
+<div id="dialog-container-background" on:click={clearTimer} in:fade>
   {#if $chapters[$currentChapterId]}
     <div id="dialog-container">
       {#each displayedNodeIds as dialogNodeId (dialogNodeId)}

@@ -9,6 +9,11 @@
 
   let timer: NodeJS.Timeout;
 
+  function abortTimer() {
+    clearTimeout(timer);
+    appStatus.set(GameStatus.ONGOING);
+  }
+
   function resumeGame() {
     timer = setTimeout(() => {
       appStatus.set(GameStatus.ONGOING);
@@ -18,7 +23,7 @@
   onMount(resumeGame);
 
   onDestroy(() => {
-    clearInterval(timer);
+    clearTimeout(timer);
   });
 
   $: if ($appStatus === GameStatus.INTRO) {
@@ -28,7 +33,7 @@
 
 <main>
   {#if $appStatus === GameStatus.INTRO}
-    <IntroScreen />
+    <IntroScreen on:abortTimer={abortTimer}/>
   {:else}
     <GameScreenDialogHeader />
     {#if $displayMap}
