@@ -106,6 +106,7 @@
     border: 1px solid #800000;
     border-radius: 0.25em;
     max-width: 35em;
+    margin: auto;
 
     // Phones
     @media (max-width: 769px) {
