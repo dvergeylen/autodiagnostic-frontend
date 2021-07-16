@@ -1133,6 +1133,70 @@
         "en": ""
       },
       "nextNodes": [
+        "50",
+        "54"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "54": {
+      "id": "54",
+      "text": {
+        "fr": "mais je vais me débrouiller",
+        "en": ""
+      },
+      "nextNodes": [
+        "55"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "55": {
+      "id": "55",
+      "text": {
+        "fr": "jeter les premiers trucs que je trouve",
+        "en": ""
+      },
+      "nextNodes": [
+        "56"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "56": {
+      "id": "56",
+      "text": {
+        "fr": "je te laisse",
+        "en": ""
+      },
+      "nextNodes": [
         "50"
       ],
       "character": "NPC1",
