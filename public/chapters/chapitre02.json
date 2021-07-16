@@ -1200,8 +1200,11 @@
     "56": {
       "id": "56",
       "text": {
-        "fr": "Arya s'est déconnectée",
-        "en": "Jon s'est déconnecté"
+        "fr": {
+          "m": "Arya s'est déconnectée",
+          "f": "Jon s'est déconnecté"
+        },
+        "en": ""
       },
       "nextNodes": [],
       "character": "Narrator",

@@ -546,7 +546,7 @@
         "en": ""
       },
       "nextNodes": [
-        "26"
+        "52"
       ],
       "character": "Player",
       "attribution": {
@@ -988,7 +988,10 @@
     "46": {
       "id": "46",
       "text": {
-        "fr": "Ben oui, suis trop fort 🤩",
+        "fr": {
+          "m": "Ben oui, suis trop fort 🤩",
+          "f": "Ben oui, suis trop forte 🤩"
+        },
         "en": ""
       },
       "nextNodes": [
@@ -1101,6 +1104,27 @@
       },
       "nextNodes": [],
       "character": "Narrator",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "52": {
+      "id": "52",
+      "text": {
+        "fr": "ben, non, j’ai rien dit",
+        "en": ""
+      },
+      "nextNodes": [
+        "26"
+      ],
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
