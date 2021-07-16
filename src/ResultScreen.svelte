@@ -14,6 +14,20 @@
   let mainProfile: string;
   let selectedProfile: string;
 
+  // Arbitrary order in which the profiles
+  // have to be computed on the graph to match
+  // labels in background svgs symbol
+  const profilesOrdered = [
+    "creatif",
+    "audacieux",
+    "leader",
+    "explorateur",
+    "bricoleur",
+    "planificateur",
+    "idealiste",
+    "coequipier"
+  ];
+
   const profiles = {
     leader:  {
       name: 'Le Leader',
@@ -49,6 +63,17 @@
     },
   };
 
+  // Width, height depends on screen resolution, hence fetch them dynamically
+  let width = 500;  // px
+  let height = 500; // px
+
+  // 'y' coordinates points to bottom ↓, hence the minus sign
+  const coordinates = profilesOrdered.map((profile, i) => ({
+    x: Math.floor(((width  / 2) + (0.85 * (width  / 2) / 10) * $gameState.attribution[profile] * Math.cos(2 * Math.PI * i * (1 / 8)))),
+    y: Math.floor(((height / 2) - (0.85 * (height / 2) / 10) * $gameState.attribution[profile] * Math.sin(2 * Math.PI * i * (1 / 8)))),
+  }));
+  const path = coordinates.reduce((acc, coord, i) => i === 0 ? acc + `M${coord.x} ${coord.y}`: acc + ` L${coord.x} ${coord.y}`, '');
+
   onMount(() => {
     window.scrollTo(0, 0);
   });
@@ -74,8 +99,16 @@
     <h2>{profiles[mainProfile].name}</h2>
   </div>
 
-  <div id="graph">
-    <img src="/assets/profile_results.svg" alt="Graphe des résultats"/>
+  <div id="graph-container">
+    <svg id="graph" viewBox="0 0 500 500">
+      <use href='assets/sprite_results.svg#results-background'/>
+      <path d="{path} Z" stroke="#800000" stroke-width="3" fill="#FF505099"/>
+      {#each profilesOrdered as profile, i (i)}
+        <circle cx="{coordinates[i].x}" cy="{coordinates[i].y}" r="5" fill="#FF5050"/>
+      {/each}
+
+      Votre navigateur ne permet pas d'afficher le graphe des résultats.
+    </svg>
   </div>
 
   <div id="description">
@@ -110,11 +143,9 @@
     }
   }
 
-  #graph {
-    img {
-      width: 80%;
-      max-width: 25em;
-    }
+  #graph-container {
+    max-width: 25em;
+    margin: auto;
   }
 
   #description {
