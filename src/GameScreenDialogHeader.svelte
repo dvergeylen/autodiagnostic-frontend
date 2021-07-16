@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { appStatus, displayMap } from './stores/appStatus';
+  import { appStatus, displayMapStore } from './stores/appStatus';
   import { GameStatus } from './enums';
   import { gameState } from './stores/gameState';
 
@@ -7,8 +7,8 @@
     appStatus.set(GameStatus.PAUSED);
   }
 
-  function toggleDisplayMap() {
-    displayMap.set(!$displayMap);
+  function toggledisplayMapStore() {
+    displayMapStore.set(!$displayMapStore);
   }
 
   // Debug
@@ -33,7 +33,7 @@
     <svg on:click={goToResultScreen} class="icon map">
       <use href='assets/sprite_icons.svg#award' />
     </svg>
-    <svg on:click={toggleDisplayMap} class="icon map">
+    <svg on:click={toggledisplayMapStore} class="icon map">
       <use href='assets/sprite_icons.svg#map-marked-alt' />
     </svg>
     <svg on:click={goToWelcomeScreen} class="icon home">

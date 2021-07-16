@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
-  import { displayMap, appStatus } from './stores/appStatus';
+  import { displayMapStore, appStatus } from './stores/appStatus';
   import { GameStatus } from './enums';
   import GameScreenDialogHeader from './GameScreenDialogHeader.svelte';
   import GameScreenDialogNodes from './GameScreenDialogNodes.svelte';
@@ -36,7 +36,7 @@
     <IntroScreen on:abortTimer={abortTimer}/>
   {:else}
     <GameScreenDialogHeader />
-    {#if $displayMap}
+    {#if $displayMapStore}
       <Map />
     {/if}
     <GameScreenDialogNodes />

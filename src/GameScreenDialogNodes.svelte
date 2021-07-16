@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount, onDestroy, afterUpdate, tick } from 'svelte';
   import { fade } from 'svelte/transition';
-  import { appStatus, displayMap } from './stores/appStatus';
+  import { appStatus, displayMapStore } from './stores/appStatus';
   import { GameStatus } from './enums';
   import { gameState, currentChapterId } from './stores/gameState';
   import { chapters } from './stores/chapters';
@@ -15,6 +15,7 @@
   let npc1Typing: boolean = false;
   let playerTyping: boolean = false;
   let narratorTyping: boolean = false;
+  let displayMap: boolean = false;
   let timerId: NodeJS.Timeout;
 
   // Display error screen if unable to load chapters
@@ -104,7 +105,7 @@
 
   function addAnswer(dialogNodeid: string) {
     // Clear Map, if any
-    displayMap.set(false);
+    displayMapStore.set(false);
 
     // Clear AnswerDialogBox
     answersNodeIds = [];
@@ -157,10 +158,20 @@
 
   onDestroy(() => {
     clearTimeout(timerId);
+    displayMapUnsubscribe();
   })
 
   afterUpdate(() => {
     window.scrollTo(0,document.body.scrollHeight);
+  });
+
+  const displayMapUnsubscribe = displayMapStore.subscribe(newVal => {
+    if (newVal && !displayMap) {
+      clearTimeout(timerId);
+    } else if (newVal == false && displayMap === true) {
+      waitStoresToLoad();
+    }
+    displayMap = newVal;
   });
 
   $: displayedNodeIds = ($gameState.nodes[$currentChapterId] || []);
