@@ -2,6 +2,7 @@
   import { gameState } from './stores/gameState';
   import { appStatus } from './stores/appStatus';
   import { GameStatus } from './enums';
+  import { afterUpdate } from 'svelte';
 
   let newGamePressed: boolean = false;
   let isNewGame = false;
@@ -20,6 +21,10 @@
     $gameState.nodes = {};
     startGame();
   }
+
+  afterUpdate(() => {
+    window.scrollTo(0,document.body.scrollHeight);
+  });
 
   $: isNewGame = (Object.entries($gameState.nodes).length === 0);
   $: isGenderConfigured = ($gameState?.gender?.length || 0) > 0;
