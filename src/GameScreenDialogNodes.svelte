@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount, onDestroy, afterUpdate, tick } from 'svelte';
   import { fade } from 'svelte/transition';
+  import { sendTelemetry } from './telemetry';
   import { appStatus, displayMapStore } from './stores/appStatus';
   import { GameStatus } from './enums';
   import { gameState, currentChapterId } from './stores/gameState';
@@ -128,6 +129,13 @@
         audacieux: 0,
         explorateur: 0
       });
+
+      // Update Stats (TODO: if user permitted it)
+      const attributions = Object.entries<number>($chapters[$currentChapterId].dialogNodes[dialogNodeid].attribution)
+                                 .filter(([k, v]) => v !== 0);
+      if (attributions.length > 0) {
+        sendTelemetry('1', $currentChapterId, dialogNodeid, attributions[0][0], attributions[0][1]);
+      }
     }
 
     // Continue dialog, if any
