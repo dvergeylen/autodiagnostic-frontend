@@ -37,14 +37,14 @@
   <div id="intro-text">
     <p>Bienvenue !</p>
     <p>
-      Tu as décidé de tester ton niveau actuel de compétences … <br />Et ça démarre maintenant.
+      Tu as décidé de tester ton niveau actuel de compétences…<br />Et ça démarre maintenant.
     </p>
     <p>
       Tu vas assister aux échanges de SMS entre Arya et Jon.<br />
       Ces deux-là sont les meilleurs amis du monde …<br />
       Mais la vie les sépare pour 1 an. 12 longs mois !<br />
-      Le temps d’une seconde rhéto au Japon pour l’un.<br />
-      Pendant que l’autre reste en Belgique.<br />
+      Le temps d'un séjour au Japon pour l'un.<br />
+      Pendant que l'autre reste en Belgique.<br />
       Mais, ils restent connectés.<br />
       Ils se soutiennent dans des péripéties que tu vas découvrir au fil de leurs échanges de textos.
     </p>
@@ -61,7 +61,7 @@
       (Environ dans 20 minutes)
     </p>
     <p>
-      C’est parti !
+      C'est parti !
     </p>
 
     <div id="buttons-container" class="is-grid">
