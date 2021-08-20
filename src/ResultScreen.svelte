@@ -1,7 +1,8 @@
 
 <script lang="ts">
   import { onMount } from "svelte";
-  import { gameState, sortedPlayerAttributions } from './stores/gameState';
+  import { currentChapterId, gameState, sortedPlayerAttributions } from './stores/gameState';
+  import { sendResultsTelemetry } from './telemetry';
   import Leader from './profiles/Leader.svelte';
   import Planificateur from './profiles/Planificateur.svelte';
   import Bricoleur from './profiles/Bricoleur.svelte';
@@ -76,6 +77,10 @@
 
   onMount(() => {
     window.scrollTo(0, 0);
+
+    if ($currentChapterId === '10') { // otherwise game did not finish
+      sendResultsTelemetry($gameState.attribution);
+    }
   });
 
   $: mainProfile = Object.entries($gameState.attribution).reduce((acc: string, [role, score]) => (
