@@ -93,10 +93,6 @@
 </main>
 
 <style lang="scss">
-  .is-bold {
-    font-weight: bold;
-  }
-
   .protagoniste {
     padding: 1em;
     border: 1px solid black;
@@ -132,5 +128,9 @@
   div#buttons-container {
     margin-top: 1em;
     margin-bottom: 1em;
+  }
+
+  svg.icon {
+    fill: var(--anthracite);
   }
 </style>
