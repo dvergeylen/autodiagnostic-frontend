@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'GothamNarrow';
+  src: url('./assets/fonts/GothamNarrow/GothamNarrow-Ultra.woff2') format('woff2'); /* Modern Browsers */
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamNarrow';
+  src: url('./assets/fonts/GothamNarrow/GothamNarrow-UltraItalic.woff2') format('woff2'); /* Modern Browsers */
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GothamNarrow';
+  src: url('./assets/fonts/GothamNarrow/GothamNarrow-Bold.woff2') format('woff2'); /* Modern Browsers */
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamNarrow';
+  src: url('./assets/fonts/GothamNarrow/GothamNarrow-BoldItalic.woff2') format('woff2'); /* Modern Browsers */
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GothamNarrow';
+  src: url('./assets/fonts/GothamNarrow/GothamNarrow-Book.woff2') format('woff2'); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamNarrow';
+  src: url('./assets/fonts/GothamNarrow/GothamNarrow-BookItalic.woff2') format('woff2'); /* Modern Browsers */
+  font-weight: normal;
+  font-style: italic;
+}
