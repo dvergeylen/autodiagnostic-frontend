@@ -7,7 +7,7 @@ html, body {
 body {
 	display: flex;
 	flex-direction: column;
-	color: #333;
+	color: var(--anthracite);
 	margin: 0;
 	padding: 8px;
   padding-top: 0;
@@ -47,7 +47,7 @@ input:disabled {
 }
 
 button {
-	color: #333;
+	color: var(--anthracite);
 	background-color: #f4f4f4;
 	outline: none;
 }
