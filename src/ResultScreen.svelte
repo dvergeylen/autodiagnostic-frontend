@@ -106,7 +106,7 @@
 
   <div id="graph-container">
     <svg id="graph" viewBox="0 0 500 500">
-      <use href='assets/sprite_results.svg#results-background'/>
+      <use href='assets/sprite_results.svg#results-background' xlink:href='assets/sprite_results.svg#results-background' />
       <path d="{path} Z" stroke="#800000" stroke-width="3" fill="#FF505099"/>
       {#each profilesOrdered as profile, i (i)}
         <circle cx="{coordinates[i].x}" cy="{coordinates[i].y}" r="5" fill="#FF5050"/>
@@ -149,8 +149,13 @@
   }
 
   #graph-container {
+    width: 100%;
     max-width: 25em;
     margin: auto;
+  }
+
+  #graph {
+    width: 100%;
   }
 
   #description {
