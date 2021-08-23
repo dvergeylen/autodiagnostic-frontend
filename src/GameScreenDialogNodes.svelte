@@ -257,7 +257,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    background-color: #E0E0E0;
+    background-color: var(--light-grey);
     padding-bottom: 1em;
 
     #dialog-container, #answer-container {
@@ -298,7 +298,7 @@
       }
 
       div.player {
-        background: #e1ffc7;
+        background: var(--color01-lighter);
         border-radius: 0.5em 0.5em 0 0.5em; /* top-left corner, top-right corner, bottom-right corner, bottom-left corner */
         margin-right: 0.5em;
         text-align: right;
@@ -310,11 +310,12 @@
         width: fit-content;
 
         p.choice {
-          color: #2577e1;
+          color: var(--anthracite);
           cursor: pointer;
           margin: 0;
           padding-top: 0.3em;
           padding-bottom: 0.3em;
+          font-weight: 500;
         }
         p.choice:not(:last-child) {
           border-bottom: solid 1px lightgray;

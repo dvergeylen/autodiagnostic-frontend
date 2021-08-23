@@ -35,8 +35,8 @@
   <h3>Une aventure d'introspection</h3>
 
   <div id="intro-text">
-    <p>Bienvenue !</p>
-    <p>
+    <p class="is-bold">Bienvenue !</p>
+    <p class="is-bold">
       Tu as décidé de tester ton niveau actuel de compétences…<br />Et ça démarre maintenant.
     </p>
     <p>
@@ -93,6 +93,9 @@
 </main>
 
 <style lang="scss">
+  .is-bold {
+    font-weight: bold;
+  }
 
   .protagoniste {
     padding: 1em;
@@ -109,10 +112,11 @@
   div#intro-text {
     text-align: left;
     padding: 0.5em;
-    border: 1px solid #800000;
+    border: 1px solid var(--color08);
     border-radius: 0.25em;
     max-width: 35em;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 
     // Phones
     @media (max-width: 769px) {

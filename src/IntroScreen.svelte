@@ -48,7 +48,7 @@
     flex-grow: 1;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: var(--color10);
+    background-color: var(--color08);
     height: 100%;
 
     // Phones
@@ -66,8 +66,8 @@
 
 
   #titles {
-    background-color: var(--color10);
-    opacity: 0.75;
+    background-color: var(--color08);
+    opacity: 0.85;
     padding-top: 1em;
     padding-bottom: 1em;
 
