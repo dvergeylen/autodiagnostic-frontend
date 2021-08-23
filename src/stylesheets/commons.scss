@@ -1,0 +1,52 @@
+// Commons
+h1 {
+  color: #a10000;
+  font-size: 4em;
+  font-weight: 100;
+}
+
+main {
+  text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+  // Phones
+  @media (max-width: 768px) {
+    max-width: 50em;
+  }
+
+  // Tablets
+  @media (min-width: 769px) and (max-width: 1023px) {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 90%;
+  }
+
+  // Desktops
+  @media (min-width: 1024px) {
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 50%;
+  }
+}
+
+.is-grid {
+  display: grid;
+}
+.is-hidden {
+  display: none !important;
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  color: #1F1F1F;
+  fill: white;
+  vertical-align: middle;
+  cursor: pointer;
+}
+button.pressed {
+  background-color: #a10000;
+  color: white;
+}

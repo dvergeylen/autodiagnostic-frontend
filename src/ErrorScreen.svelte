@@ -30,24 +30,4 @@
     border: #a10000 solid 1px;
     border-radius: 0.3em;
   }
-
-  // Commons
-  h1 {
-    color: #a10000;
-    font-size: 4em;
-    font-weight: 100;
-  }
-
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
-  }
-
-  main {
-    text-align: center;
-    padding: 1em;
-    max-width: 50em;
-    margin: 0 auto;
-  }
 </style>

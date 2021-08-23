@@ -66,13 +66,13 @@
 
   #titles {
     background-color: #800000AA;
-    color: white;
     padding-top: 1em;
     padding-bottom: 1em;
     margin-top: 40em;
 
     h1, h3, h5{
       margin: 0;
+      color: white;
     }
     h5#date {
       margin-top: 0.5em;

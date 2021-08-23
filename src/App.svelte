@@ -35,3 +35,9 @@
 {:else}
   <WelcomeScreen />
 {/if}
+
+<style lang="scss">
+  :global {
+    @import './stylesheets/commons.scss';
+  }
+</style>

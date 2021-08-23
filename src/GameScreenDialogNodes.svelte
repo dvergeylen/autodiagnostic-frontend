@@ -368,9 +368,4 @@
       animation-name: fadeIn;
       animation-duration: 2s;
   }
-
-  // Commons
-  .is-hidden {
-    display: none !important;
-  }
 </style>

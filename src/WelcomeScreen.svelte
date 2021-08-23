@@ -129,41 +129,4 @@
     margin-top: 1em;
     margin-bottom: 1em;
   }
-
-  // Commons
-  h1 {
-    color: #a10000;
-    font-size: 4em;
-    font-weight: 100;
-  }
-
-  @media (min-width: 769px) {
-    main {
-      max-width: none;
-      padding: 1em;
-    }
-  }
-
-  main {
-    text-align: center;
-    padding: 0.5em;
-    max-width: 50em;
-    margin: 0 auto;
-  }
-  .is-grid {
-    display: grid;
-  }
-  .is-hidden {
-    display: none;
-  }
-  .icon {
-    width: 1em;
-    height: 1em;
-    color: #1F1F1F;
-    vertical-align: middle;
-  }
-  button.pressed {
-    background-color: #a10000;
-    color: white;
-  }
 </style>

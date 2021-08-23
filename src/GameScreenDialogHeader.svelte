@@ -83,13 +83,4 @@
       margin-right: 1em;
     }
   }
-
-  // Commons
-  .icon {
-    width: 1.2em;
-    height: 1.2em;
-    fill: white;
-    vertical-align: middle;
-    cursor: pointer;
-  }
 </style>
