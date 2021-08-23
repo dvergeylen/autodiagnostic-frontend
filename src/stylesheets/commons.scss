@@ -1,6 +1,22 @@
 // Commons
+
+:root {
+  --color01: #F7D763;
+  --color02: #FAB439;
+  --color03: #F49835;
+  --color04: #F6A145;
+  --color05: #F08332;
+  --color06: #ED6E2A;
+  --color07: #EA5628;
+  --color08: #B33623;
+  --color09: #CA181A;
+  --color10: #921B23;
+
+  --anthracite: #323334;
+}
+
 h1 {
-  color: #a10000;
+  color: var(--color09);
   font-size: 4em;
   font-weight: 100;
 }
@@ -38,15 +54,18 @@ main {
 .is-hidden {
   display: none !important;
 }
+.has-text-centered {
+  text-align: center;
+}
 .icon {
   width: 1em;
   height: 1em;
-  color: #1F1F1F;
+  color: var(--anthracite);
   fill: white;
   vertical-align: middle;
   cursor: pointer;
 }
 button.pressed {
-  background-color: #a10000;
+  background-color: var(--color09);
   color: white;
 }
