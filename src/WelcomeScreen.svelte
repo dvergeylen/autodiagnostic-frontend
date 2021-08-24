@@ -3,6 +3,7 @@
   import { appStatus } from './stores/appStatus';
   import { GameStatus } from './enums';
   import { afterUpdate } from 'svelte';
+  import Footer from "./Footer.svelte";
 
   let newGamePressed: boolean = false;
   let isNewGame = false;
@@ -91,6 +92,8 @@
     </div>
   </div>
 </main>
+
+<Footer />
 
 <style lang="scss">
   .protagoniste {

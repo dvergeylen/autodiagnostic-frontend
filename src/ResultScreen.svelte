@@ -11,6 +11,7 @@
   import Creatif from './profiles/Creatif.svelte';
   import Audacieux from './profiles/Audacieux.svelte';
   import Explorateur from './profiles/Explorateur.svelte';
+  import Footer from "./Footer.svelte";
 
   let mainProfile: string;
   let selectedProfile: string;
@@ -130,6 +131,8 @@
     <svelte:component this={profiles[selectedProfile].component}/>
   </div>
 </main>
+
+<Footer />
 
 <style lang="scss">
 
