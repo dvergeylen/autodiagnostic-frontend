@@ -2,7 +2,7 @@
   import { onMount, onDestroy, afterUpdate, tick } from 'svelte';
   import { fade } from 'svelte/transition';
   import { sendTimestampTelemetry } from './telemetry';
-  import { appStatus, displayMapStore } from './stores/appStatus';
+  import { appStatus, displayMapStore, playSoundsStore } from './stores/appStatus';
   import { GameStatus } from './enums';
   import { gameState, currentChapterId } from './stores/gameState';
   import { chapters } from './stores/chapters';
@@ -207,6 +207,9 @@
               {/if}
             </p>
           {/if}
+          <audio id="notification-sound" src="/assets/sounds/message.mp3" autoplay muted={!$playSoundsStore}>
+            <track kind="captions">
+          </audio>
         </div>
       {/each}
       <div id="typing-container" class:is-hidden={!showIsTyping} class:npc1={npc1Typing} class:player={playerTyping}>

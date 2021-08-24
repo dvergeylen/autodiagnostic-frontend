@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { appStatus, displayMapStore } from './stores/appStatus';
+  import { appStatus, displayMapStore, playMusicStore, playSoundsStore } from './stores/appStatus';
   import { GameStatus } from './enums';
   import { gameState } from './stores/gameState';
 
@@ -9,6 +9,14 @@
 
   function toggledisplayMapStore() {
     displayMapStore.set(!$displayMapStore);
+  }
+
+  function toggleMusic() {
+    playMusicStore.set(!$playMusicStore);
+  }
+
+  function toggleSounds() {
+    playSoundsStore.set(!$playSoundsStore);
   }
 
   // Debug
@@ -29,6 +37,24 @@
   </div>
 
   <div id="settings">
+    {#if $playMusicStore}
+      <svg on:click={toggleMusic} class="icon map">
+        <use href='assets/sprite_icons.svg#music' />
+      </svg>
+    {:else}
+      <svg on:click={toggleMusic} class="icon map">
+        <use href='assets/sprite_icons.svg#music-slash' />
+      </svg>
+    {/if}
+    {#if $playSoundsStore}
+      <svg on:click={toggleSounds} class="icon map">
+        <use href='assets/sprite_icons.svg#volume' />
+      </svg>
+    {:else}
+      <svg on:click={toggleSounds} class="icon map">
+        <use href='assets/sprite_icons.svg#volume-slash' />
+      </svg>
+    {/if}
     <!-- Debug to go to result screen -->
     <svg on:click={goToResultScreen} class="icon map">
       <use href='assets/sprite_icons.svg#award' />
