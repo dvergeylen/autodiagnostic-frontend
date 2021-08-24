@@ -298,7 +298,7 @@
       }
 
       div.player {
-        background: var(--color01-lighter);
+        background: var(--color04);
         border-radius: 0.5em 0.5em 0 0.5em; /* top-left corner, top-right corner, bottom-right corner, bottom-left corner */
         margin-right: 0.5em;
         text-align: right;

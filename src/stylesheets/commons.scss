@@ -17,14 +17,16 @@
   --color01-lighter: #ffe587;
 }
 
+h1, h3 {
+  color: var(--color06);
+}
+
 h1 {
-  color: var(--color09);
   font-size: 3em;
   font-weight: 900;
 }
 
 h3 {
-  color: var(--color09);
   font-size: 2em;
   font-weight: bold;
 }
@@ -81,6 +83,6 @@ main {
   cursor: pointer;
 }
 button.pressed {
-  background-color: var(--color09);
+  background-color: var(--color06);
   color: white;
 }
