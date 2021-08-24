@@ -4,7 +4,7 @@
       <img id="sowalfin-creation" src="/assets/images/logo_sowalfin_creation.svg" alt="Sowalfin Création"/>
     </div>
     <div>
-      <p class="is-uppercase">'Voyage au bout du monde' est un outil développé <a href="https://www.sowalfin.be">Sowalfin group</a>.</p>
+      <p class="is-uppercase">'Voyage au bout du monde' est un outil développé le groupe <a href="https://www.sowalfin.be">Sowalfin</a>.</p>
     </div>
   </div>
 </footer>
