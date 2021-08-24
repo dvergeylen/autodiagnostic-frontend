@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { appStatus, displayMapStore, playMusicStore, playSoundsStore } from './stores/appStatus';
+  import { appStatus, displayMapStore, playSoundsStore } from './stores/appStatus';
   import { GameStatus } from './enums';
   import { gameState } from './stores/gameState';
 
@@ -9,10 +9,6 @@
 
   function toggledisplayMapStore() {
     displayMapStore.set(!$displayMapStore);
-  }
-
-  function toggleMusic() {
-    playMusicStore.set(!$playMusicStore);
   }
 
   function toggleSounds() {
@@ -37,15 +33,6 @@
   </div>
 
   <div id="settings">
-    {#if $playMusicStore}
-      <svg on:click={toggleMusic} class="icon map">
-        <use href='assets/sprite_icons.svg#music' />
-      </svg>
-    {:else}
-      <svg on:click={toggleMusic} class="icon map">
-        <use href='assets/sprite_icons.svg#music-slash' />
-      </svg>
-    {/if}
     {#if $playSoundsStore}
       <svg on:click={toggleSounds} class="icon map">
         <use href='assets/sprite_icons.svg#volume' />

@@ -32,15 +32,15 @@
 
 {#if showGameScreen}
   <GameScreen />
-  <audio id="background-music" src="/assets/sounds/watermarked_Sounds_Like_Sander_When_Stars_Collide_instrumental_3_49.mp3" autoplay loop bind:muted={muteMusic}>
-    <track kind="captions">
-  </audio>
 {:else if showResultScreen}
   <ResultScreen />
 {:else if showErrorScreen}
   <ErrorScreen />
 {:else}
   <WelcomeScreen />
+  <audio id="background-music" src="/assets/sounds/watermarked_Sounds_Like_Sander_When_Stars_Collide_instrumental_3_49.mp3" autoplay loop bind:muted={muteMusic}>
+    <track kind="captions">
+  </audio>
 {/if}
 
 <style lang="scss">

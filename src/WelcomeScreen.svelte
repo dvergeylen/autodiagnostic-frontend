@@ -1,6 +1,6 @@
 <script lang="ts">
   import { gameState } from './stores/gameState';
-  import { appStatus } from './stores/appStatus';
+  import { appStatus, playMusicStore } from './stores/appStatus';
   import { GameStatus } from './enums';
   import { afterUpdate } from 'svelte';
   import Footer from "./Footer.svelte";
@@ -9,8 +9,15 @@
   let isNewGame = false;
   let isGenderConfigured: boolean;
 
+  function toggleMusic() {
+    playMusicStore.set(!$playMusicStore);
+  }
+
   function toggleNewGamePressed() {
     newGamePressed = !newGamePressed;
+    if (newGamePressed) {
+      window.scrollTo(0,document.body.scrollHeight);
+    }
   }
 
   function startGame() {
@@ -23,10 +30,6 @@
     startGame();
   }
 
-  afterUpdate(() => {
-    window.scrollTo(0,document.body.scrollHeight);
-  });
-
   $: isNewGame = (Object.entries($gameState.nodes).length === 0);
   $: isGenderConfigured = ($gameState?.gender?.length || 0) > 0;
 </script>
@@ -35,8 +38,22 @@
   <h1>Voyage au bout du monde</h1>
   <h3>Une aventure d'introspection</h3>
 
+
   <div id="intro-text">
-    <p class="is-bold">Bienvenue !</p>
+    <div class="is-flex">
+      <p class="is-bold">Bienvenue !</p>
+      <div id="music-settings-wrapper">
+        {#if $playMusicStore}
+          <svg on:click={toggleMusic} class="icon map">
+            <use href='assets/sprite_icons.svg#music' />
+          </svg>
+        {:else}
+          <svg on:click={toggleMusic} class="icon map">
+            <use href='assets/sprite_icons.svg#music-slash' />
+          </svg>
+        {/if}
+      </div>
+    </div>
     <p class="is-bold">
       Tu as décidé de tester ton niveau actuel de compétences…<br />Et ça démarre maintenant.
     </p>
@@ -131,6 +148,11 @@
   div#buttons-container {
     margin-top: 1em;
     margin-bottom: 1em;
+  }
+
+  div#music-settings-wrapper {
+    text-align: right;
+    flex-grow: 1;
   }
 
   svg.icon {
