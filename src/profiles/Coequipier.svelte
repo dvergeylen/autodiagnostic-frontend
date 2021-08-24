@@ -1,3 +1,7 @@
+<script lang="ts">
+  export let showBadgee = false;
+</script>
+
 <h4>🎯 Points forts :</h4>
 <ul class="strengths">
   <li># Goût pour « faire équipe » avec les autres</li>
@@ -5,6 +9,11 @@
   <li># Sens de l'autre (écoute, soutien, réconfort)</li>
   <li># Moteur pour l'équipe et son dynamisme</li>
 </ul>
+
+<div class="share-container" class:is-hidden={!showBadgee}>
+  <a href="https://www.badgee.net" target="_blank" rel="noopener noreferrer">Valorise ces compétences avec Badg'ee</a>
+</div>
+
 <h4>📜 Description :</h4>
 <p>
   Toi, tu es « comme un poisson dans l'eau » quand tu es dans un collectif. Être avec les autres, mais aussi et surtout, faire en sorte qu'ensemble, vous « fassiez équipe », voilà ce qui te motive. Et tu peux d'ailleurs jouer différents rôles, prendre différentes casquettes dans l'équipe pour qu'elle atteigne les objectifs qu'elle s'est fixés.
@@ -34,6 +43,23 @@
     }
     li:not(:last-child) {
       margin-bottom: 0.3em;
+    }
+  }
+
+  .share-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      margin: auto;
+      padding: 1em;
+      border: 1px solid #ccc;
+      color: var(--anthracite);
+      outline: none;
+      background-color: #f4f4f4;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 </style>

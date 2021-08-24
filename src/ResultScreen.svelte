@@ -128,7 +128,7 @@
       </div>
       <p class="caption">Clique sur les autres profils pour voir leur description</p>
     </div>
-    <svelte:component this={profiles[selectedProfile].component}/>
+    <svelte:component this={profiles[selectedProfile].component} showBadgee={selectedProfile === mainProfile}/>
   </div>
 </main>
 
@@ -148,6 +148,7 @@
       color: white;
     }
     h3 {
+      margin-top: 0.5em;
       margin-bottom: 0;
       color: white;
     }

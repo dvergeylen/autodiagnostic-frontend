@@ -1,3 +1,7 @@
+<script lang="ts">
+  export let showBadgee = false;
+</script>
+
 <h4>🎯 Points forts :</h4>
 <ul class="strengths">
   <li># Débrouillardise, inventivité</li>
@@ -5,6 +9,11 @@
   <li># Agilité, flexibilité</li>
   <li># Goût pour l'action, les défis</li>
 </ul>
+
+<div class="share-container" class:is-hidden={!showBadgee}>
+  <a href="https://www.badgee.net" target="_blank" rel="noopener noreferrer">Valorise ces compétences avec Badg'ee</a>
+</div>
+
 <h4>📜 Description :</h4>
 <p>
   Alors toi, on peut dire que tu es débrouillard ! Tout ce que tu as, à portée de main, tu l'utilises pour en faire quelque chose. Bref, rien ne se perd, tout peut servir … Te servir, en l'occurrence, car tu es une personne motivée, passionnée, qui se lance volontiers dans les nouveaux défis. Et tu avances, par essai-erreur, avec les ressources dont tu disposes et en n'hésitant pas non plus à faire appel à toute autre personne qui pourrait t'aider utilement dans tes projets. 
@@ -31,6 +40,23 @@
     }
     li:not(:last-child) {
       margin-bottom: 0.3em;
+    }
+  }
+
+  .share-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      margin: auto;
+      padding: 1em;
+      border: 1px solid #ccc;
+      color: var(--anthracite);
+      outline: none;
+      background-color: #f4f4f4;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 </style>

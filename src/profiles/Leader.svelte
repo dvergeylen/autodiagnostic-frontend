@@ -1,3 +1,7 @@
+<script lang="ts">
+  export let showBadgee = false;
+</script>
+
 <h4>🎯 Points forts :</h4>
 <ul class="strengths">
   <li># Inspirant, charismatique</li>
@@ -5,6 +9,11 @@
   <li># Sens des responsabilités</li>
   <li># Aptitude à motiver les autres</li>
 </ul>
+
+<div class="share-container" class:is-hidden={!showBadgee}>
+  <a href="https://www.badgee.net" target="_blank" rel="noopener noreferrer">Valorise ces compétences avec Badg'ee</a>
+</div>
+
 <h4>📜 Description :</h4>
 <p>
   On dit de toi que tu es inspirant et motivant ! Et oui, qui d'autre que toi pour guider les autres qui, assez spontanément, t'écoutent et te suivent. Ton dynamisme et ta motivation donnent les impulsions nécessaires pour que se forme autour de toi une équipe véritablement engagée dans les actions ou le projet que tu portes.
@@ -34,6 +43,23 @@
     }
     li:not(:last-child) {
       margin-bottom: 0.3em;
+    }
+  }
+
+  .share-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      margin: auto;
+      padding: 1em;
+      border: 1px solid #ccc;
+      color: var(--anthracite);
+      outline: none;
+      background-color: #f4f4f4;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 </style>

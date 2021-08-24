@@ -1,3 +1,7 @@
+<script lang="ts">
+  export let showBadgee = false;
+</script>
+
 <h4>🎯 Points forts :</h4>
 <ul class="strengths">
   <li># Idéalisme, sens des valeurs</li>
@@ -5,6 +9,11 @@
   <li># Engagement, voire militantisme</li>
   <li># Goût pour les échanges, le débat</li>
 </ul>
+
+<div class="share-container" class:is-hidden={!showBadgee}>
+  <a href="https://www.badgee.net" target="_blank" rel="noopener noreferrer">Valorise ces compétences avec Badg'ee</a>
+</div>
+
 <h4>📜 Description :</h4>
 <p>
   S'il y a bien quelqu'un qui a des convictions, c'est toi ! Différentes causes dans ce monde en transition te sont chères et tu n'hésites pas à l'afficher, à le revendiquer même parfois lorsque ton engagement se mue en véritable militantisme. Il s'agit pour toi de ne pas rester les bras croisés, mais d'agir pour défendre ou mener des combats qui permettront un avenir meilleur, un avenir que tu juges souhaitable. Tu apprécies d'ailleurs les échanges qui permettent de débattre de ces changements provoqués par l'action humaine et donc des enjeux de durabilité. 
@@ -32,6 +41,23 @@
     }
     li:not(:last-child) {
       margin-bottom: 0.3em;
+    }
+  }
+
+  .share-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      margin: auto;
+      padding: 1em;
+      border: 1px solid #ccc;
+      color: var(--anthracite);
+      outline: none;
+      background-color: #f4f4f4;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 </style>

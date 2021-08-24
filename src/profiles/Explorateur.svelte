@@ -1,3 +1,7 @@
+<script lang="ts">
+  export let showBadgee = false;
+</script>
+
 <h4>🎯 Points forts :</h4>
 <ul class="strengths">
   <li># Goût de l'aventure</li>
@@ -5,6 +9,11 @@
   <li># Capacités à rebondir après un échec</li>
   <li># Sens de l'évaluation, de l'analyse</li>
 </ul>
+
+<div class="share-container" class:is-hidden={!showBadgee}>
+  <a href="https://www.badgee.net" target="_blank" rel="noopener noreferrer">Valorise ces compétences avec Badg'ee</a>
+</div>
+
 <h4>📜 Description :</h4>
 <p>
   Le moins que l'on puisse dire est que tu es quelqu'un d'attentif, de vigilant. Tu observes minutieusement les autres, les choses, bref l'environnement et les situations dans lesquelles tu te trouves. Cela te permet de voir, comprendre, et de décrypter beaucoup d'informations. Ces observations, leur fine évaluation, mais aussi ton intuition te conduisent à repérer les opportunités qui se présentent sur ton chemin (projets, défis, rencontres, idées, etc.) et à les saisir !
@@ -36,6 +45,23 @@
     }
     li:not(:last-child) {
       margin-bottom: 0.3em;
+    }
+  }
+
+  .share-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      margin: auto;
+      padding: 1em;
+      border: 1px solid #ccc;
+      color: var(--anthracite);
+      outline: none;
+      background-color: #f4f4f4;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 </style>

@@ -1,3 +1,7 @@
+<script lang="ts">
+  export let showBadgee = false;
+</script>
+
 <h4>🎯 Points forts :</h4>
 <ul class="strengths">
   <li># Sens de la réflexion, de l'analyse</li>
@@ -5,6 +9,11 @@
   <li># Scénarisation fine des actions</li>
   <li># Goût pour l'anticipation et l'évaluation</li>
 </ul>
+
+<div class="share-container" class:is-hidden={!showBadgee}>
+  <a href="https://www.badgee.net" target="_blank" rel="noopener noreferrer">Valorise ces compétences avec Badg'ee</a>
+</div>
+
 <h4>📜 Description :</h4>
 <p>
   S'il y a bien quelqu'un qui sait où il va, et comment il va y aller, c'est toi ! Et oui, avant d'agir, tu réfléchis, tu imagines, tu projettes les choses pour qu'elles se déroulent comme tu le souhaiterais. Que me faudra-t-il avoir ? Qui pourra m'aider ? Que dois-je savoir ou savoir faire ? Etc. Cela veut dire que tu as d'abord déterminé, de façon précise, ton ou tes objectifs. S'ensuit la mise au point d'un plan balisé en quelques grandes étapes. Bref, tu mets au point une véritable scénarisation de tes actions. Et tu définis souvent plusieurs scenarii (plan A, B, C …) pour t'assurer de tout anticiper, tout maîtriser. 
@@ -31,6 +40,23 @@
     }
     li:not(:last-child) {
       margin-bottom: 0.3em;
+    }
+  }
+
+  .share-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      margin: auto;
+      padding: 1em;
+      border: 1px solid #ccc;
+      color: var(--anthracite);
+      outline: none;
+      background-color: #f4f4f4;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 </style>
