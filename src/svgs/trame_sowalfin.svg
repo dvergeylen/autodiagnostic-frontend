@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -61,22 +61,22 @@
        id="g1134"
        transform="matrix(1.4492677,0,0,1.4492677,-22.859678,-32.791802)">
       <path
-         style="fill:#ed6e2a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="fill:#cc1e26;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 54.79592,72.989455 h 2.37859 l 4.05863,8.34815 v 4.42294 z"
          id="path113"
          sodipodi:nodetypes="ccccc" />
       <path
-         style="fill:#ed6e2a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="fill:#cc1e26;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 67.67036,72.989455 h -2.37859 l -4.05863,8.34815 v 4.42294 z"
          id="path113-5"
          sodipodi:nodetypes="ccccc" />
       <path
-         style="fill:#ed6e2a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="fill:#cc1e26;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 57.31931,85.760545 h -2.37859 l -4.05863,-8.34815 v -4.42294 z"
          id="path113-3"
          sodipodi:nodetypes="ccccc" />
       <path
-         style="fill:#ed6e2a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="fill:#cc1e26;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 65.14498,85.760545 h 2.37859 l 4.05863,-8.34815 v -4.42294 z"
          id="path113-3-5"
          sodipodi:nodetypes="ccccc" />
