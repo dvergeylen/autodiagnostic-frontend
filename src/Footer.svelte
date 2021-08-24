@@ -14,14 +14,10 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 3em;
+    margin-top: 2em;
 
     div {
       text-align: center;
-    }
-
-    // Phones
-    @media (max-width: 767px) {
-      margin-top: 2em;
     }
 
     // Tablets, Desktops
