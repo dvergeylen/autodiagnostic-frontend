@@ -108,7 +108,7 @@
   div#intro-text {
     text-align: left;
     padding: 0.5em;
-    border: 1px solid var(--color06);
+    border: 1px solid var(--color-primary);
     border-radius: 0.25em;
     max-width: 35em;
     margin-left: auto;

@@ -45,7 +45,7 @@
 <style lang="scss">
   .header {
     flex-grow: 1;
-    background: var(--color06);
+    background: var(--color-primary);
     padding-left: 1em;
     color: white;
     font-style: bold;

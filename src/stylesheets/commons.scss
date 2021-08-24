@@ -14,11 +14,11 @@
 
   --anthracite: #323334;
   --light-grey: #F4F4F4;
-  --color01-lighter: #ffe587;
+  --color-primary: var(--color06);
 }
 
 h1, h3 {
-  color: var(--color06);
+  color: var(--color-primary);
 }
 
 h1 {
@@ -83,6 +83,6 @@ main {
   cursor: pointer;
 }
 button.pressed {
-  background-color: var(--color06);
+  background-color: var(--color-primary);
   color: white;
 }

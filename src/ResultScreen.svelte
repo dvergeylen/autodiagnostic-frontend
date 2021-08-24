@@ -107,7 +107,7 @@
   <div id="graph-container">
     <svg id="graph" viewBox="0 0 500 500">
       <use href='assets/sprite_results.svg#results-background' xlink:href='assets/sprite_results.svg#results-background' />
-      <path d="{path} Z" stroke="var(--color09)" stroke-width="3" fill="#FF505099"/>
+      <path d="{path} Z" stroke="var(--color-primary)" stroke-width="3" fill="#FF505099"/>
       {#each profilesOrdered as profile, i (i)}
         <circle cx="{coordinates[i].x}" cy="{coordinates[i].y}" r="5" fill="#FF5050"/>
       {/each}
@@ -135,7 +135,7 @@
 
   #profile {
     color: white;
-    background-color: var(--color09);
+    background-color: var(--color-primary);
     margin-top: 1em;
     margin-bottom: 2em;
     h2 {
@@ -214,7 +214,7 @@
     min-width: 15ch;
     max-width: 30ch;
 
-    border: 1px solid var(--color09);
+    border: 1px solid var(--color-primary);
     border-radius: 0.25em;
     padding: 0.25em 0.5em;
 
@@ -233,7 +233,7 @@
       justify-self: end;
       width: 0.8em;
       height: 0.5em;
-      background-color: var(--color09);
+      background-color: var(--color-primary);
       clip-path: polygon(100% 0%, 0 0%, 50% 100%);
     }
   }

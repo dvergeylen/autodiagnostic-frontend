@@ -23,7 +23,7 @@
     padding-left: 0.25em;
 
     li {
-      background-color: var(--color09);
+      background-color: var(--color-primary);
       padding: 0.25em 0.5em 0.25em 0.5em;
       color: white;
       border-radius: 1em;
