@@ -18,6 +18,7 @@
   let playerTyping: boolean = false;
   let narratorTyping: boolean = false;
   let displayMap: boolean = false;
+  let userClickedOnAnswer: boolean = false;
   let timerId: NodeJS.Timeout;
 
   // Display error screen if unable to load chapters
@@ -30,8 +31,12 @@
   }
 
   function clearTimer() {
-    clearTimeout(timerId);
-    waitStoresToLoad(true);
+    if (!userClickedOnAnswer) {
+      clearTimeout(timerId);
+      waitStoresToLoad(true);
+    } else {
+      userClickedOnAnswer = false;
+    }
   }
 
   async function startNextChapter() {
@@ -72,7 +77,7 @@
       }
 
     // Display Answer DialogNode div:
-    // - when transitioning from NPCx → Player (event if 1 choice)
+    // - when transitioning from NPCx → Player (even if 1 choice)
     // - when Player and multiple nextNodes
     } else if (currentSpeaker === 'Player' && (nextNodes.length > 1)) {
       const timerReply = 1000;
@@ -114,6 +119,9 @@
 
     // Clear AnswerDialogBox
     answersNodeIds = [];
+
+    // Prevent click on answer being interpreted as clearTimer
+    userClickedOnAnswer = true;
 
     // Append to displayedNodeIds
     $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), dialogNodeid];
