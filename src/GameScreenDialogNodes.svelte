@@ -126,6 +126,9 @@
     // Append to displayedNodeIds
     $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), dialogNodeid];
 
+    // Play sound
+    dispatch('playSound', {});
+
     // Update gameState
     if ($chapters[$currentChapterId].dialogNodes[dialogNodeid].character === 'Player') {
       $gameState.attribution = Object.entries($gameState.attribution).reduce((acc, [k, v]) => ({
