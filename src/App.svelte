@@ -12,7 +12,14 @@
   let showResultScreen: boolean = false;
   let showErrorScreen: boolean = false;
   let muteMusic: boolean = false;
-  let muteSounds: boolean = false;
+  let soundPlayer;
+
+  function playSound() {
+    if ($playSoundsStore) {
+      console.log('play');
+      soundPlayer.play();
+    }
+  }
 
   onMount(() => {
     const localStorage = window.localStorage;
@@ -27,11 +34,10 @@
   $: showResultScreen = ($appStatus === GameStatus.FINISHED);
   $: showErrorScreen = ($appStatus === GameStatus.ERROR);
   $: muteMusic = !$playMusicStore;
-  $: muteSounds = !$playSoundsStore;
 </script>
 
 {#if showGameScreen}
-  <GameScreen />
+  <GameScreen  on:playSound={playSound}/>
 {:else if showResultScreen}
   <ResultScreen />
 {:else if showErrorScreen}
@@ -42,6 +48,10 @@
     <track kind="captions">
   </audio>
 {/if}
+
+<audio bind:this={soundPlayer} id="notification-sound" src="/assets/sounds/message.mp3">
+  <track kind="captions">
+</audio>
 
 <style lang="scss">
   :global {

@@ -39,6 +39,6 @@
     {#if $displayMapStore}
       <Map />
     {/if}
-    <GameScreenDialogNodes />
+    <GameScreenDialogNodes on:playSound />
   {/if}
 </main>

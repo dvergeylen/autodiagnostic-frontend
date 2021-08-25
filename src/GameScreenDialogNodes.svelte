@@ -1,12 +1,13 @@
 <script lang="ts">
-  import { onMount, onDestroy, afterUpdate, tick } from 'svelte';
+  import { onMount, onDestroy, afterUpdate, tick, createEventDispatcher } from 'svelte';
   import { fade } from 'svelte/transition';
   import { sendTimestampTelemetry } from './telemetry';
-  import { appStatus, displayMapStore, playSoundsStore } from './stores/appStatus';
+  import { appStatus, displayMapStore } from './stores/appStatus';
   import { GameStatus } from './enums';
   import { gameState, currentChapterId } from './stores/gameState';
   import { chapters } from './stores/chapters';
 
+  const dispatch = createEventDispatcher();
   let displayedNodeIds: Array<string>;
   let displayNextChapterBox: boolean = false;
   let displayResultsBox: boolean = false;
@@ -96,6 +97,9 @@
         timerId = setTimeout(() => {
           showIsTyping = false;
           $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
+
+          // Play sound
+          dispatch('playSound', {});
 
           // Call recursively
           displayNextDialogNode(nextNodeIds[0]);
@@ -207,9 +211,6 @@
               {/if}
             </p>
           {/if}
-          <audio id="notification-sound" src="/assets/sounds/message.mp3" autoplay muted={!$playSoundsStore}>
-            <track kind="captions">
-          </audio>
         </div>
       {/each}
       <div id="typing-container" class:is-hidden={!showIsTyping} class:npc1={npc1Typing} class:player={playerTyping}>
