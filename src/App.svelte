@@ -16,7 +16,6 @@
 
   function playSound() {
     if ($playSoundsStore) {
-      console.log('play');
       soundPlayer.play();
     }
   }
@@ -33,7 +32,7 @@
   $: showGameScreen = ($appStatus === GameStatus.ONGOING || $appStatus === GameStatus.INTRO);
   $: showResultScreen = ($appStatus === GameStatus.FINISHED);
   $: showErrorScreen = ($appStatus === GameStatus.ERROR);
-  $: muteMusic = !$playMusicStore;
+  $: muteMusic = !$playMusicStore || ($appStatus !== GameStatus.UNSTARTED);
 </script>
 
 {#if showGameScreen}
