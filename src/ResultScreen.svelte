@@ -101,10 +101,26 @@
   </div>
 
   <div id="profile">
-    <h3>Ton profil:</h3>
+    <h3>Ton profil dominant :</h3>
     <h2>{profiles[mainProfile].name}</h2>
   </div>
 
+
+  <div id="profile-avatar-container">
+    <picture>
+       <source srcset="assets/images/profiles/Idealiste_{$gameState.gender}_Large.png"
+            media="(min-width: 1024px)">
+       <source srcset="assets/images/profiles/Idealiste_{$gameState.gender}_Medium.png"
+            media="(min-width: 769px)">
+       <source srcset="assets/images/profiles/Idealiste_{$gameState.gender}_Small.png"
+            media="(max-width: 768px)">
+      <img src="assets/images/profiles/Idealiste_{$gameState.gender}_Small.png" alt="Idéaliste" />
+    </picture>
+  </div>
+
+  <p>
+    Voici les toutes les composantes de ton profil :
+  </p>
   <div id="graph-container">
     <svg id="graph" viewBox="0 0 500 500">
       <use href='assets/sprite_results.svg#results-background' xlink:href='assets/sprite_results.svg#results-background' />
@@ -151,6 +167,16 @@
       margin-top: 0.5em;
       margin-bottom: 0;
       color: white;
+    }
+  }
+
+  #profile-avatar-container {
+    max-width: 90%;
+    margin: auto;
+
+    picture {
+      height: 100%;
+      width: 100%;
     }
   }
 
