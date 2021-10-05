@@ -5,7 +5,7 @@ interface ScenarioHash {
 }
 
 interface GameState {
-  gender: 'm' | 'f' | '',
+  gender: 'M' | 'F' | '',
   language: 'fr' | 'en',
   attribution: {
     leader: number,

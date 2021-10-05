@@ -2,7 +2,6 @@
   import { gameState } from './stores/gameState';
   import { appStatus, playMusicStore } from './stores/appStatus';
   import { GameStatus } from './enums';
-  import { afterUpdate } from 'svelte';
   import Footer from "./Footer.svelte";
 
   let newGamePressed: boolean = false;
@@ -24,7 +23,7 @@
     $appStatus = GameStatus.INTRO;
   }
 
-  function startNewGame(gender: 'm' | 'f') {
+  function startNewGame(gender: 'M' | 'F') {
     $gameState.gender = gender;
     $gameState.nodes = {};
     startGame();
@@ -94,13 +93,13 @@
     </div>
     <div class:is-hidden={!newGamePressed} class="is-grid protagoniste">
       Protagoniste:
-      <button on:click={() => startNewGame('m')}>
+      <button on:click={() => startNewGame('M')}>
         <svg class="icon" >
           <use href='assets/sprite_icons.svg#mars' />
         </svg>
         Masculin
       </button>
-      <button on:click={() => startNewGame('f')}>
+      <button on:click={() => startNewGame('F')}>
         <svg class="icon" >
           <use href='assets/sprite_icons.svg#venus' />
         </svg>
