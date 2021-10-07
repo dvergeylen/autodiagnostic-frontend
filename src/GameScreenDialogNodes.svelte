@@ -216,7 +216,7 @@
           {:else}
             <p>
               {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language] instanceof Object}
-                {$chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language][$gameState.gender]}
+                {$chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language][$gameState.gender.toLowerCase()]}
               {:else}
                 {$chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language]}
               {/if}
@@ -241,7 +241,7 @@
             {:else}
               <p class="choice" on:click={() => addAnswer(answerDialogNodeId)}>
                 {#if $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language] instanceof Object}
-                  {$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language][$gameState.gender]}
+                  {$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language][$gameState.gender.toLowerCase()]}
                 {:else}
                   {$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language]}
                 {/if}
