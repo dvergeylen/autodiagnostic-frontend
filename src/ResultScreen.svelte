@@ -34,34 +34,42 @@
     leader:  {
       name: 'Le Leader',
       component: Leader,
+      avatarName: 'Leader',
     },
     bricoleur: {
       name: 'Le Bricoleur',
       component: Bricoleur,
+      avatarName: 'Bricoleur',
     },
     coequipier: {
       name: 'Le Coéquipier',
       component: Coequipier,
+      avatarName: 'Coequipier',
     },
     planificateur: {
       name: 'Le Planificateur',
       component: Planificateur,
+      avatarName: 'Planificateur',
     },
     idealiste: {
       name: 'L\'Idéaliste',
       component: Idealiste,
+      avatarName: 'Idealiste',
     },
     creatif: {
       name: 'Le Créatif',
       component: Creatif,
+      avatarName: 'Creatif',
     },
     audacieux: {
       name: 'L\'Audacieux',
       component: Audacieux,
+      avatarName: 'Audacieux',
     },
     explorateur: {
       name: 'L\'Explorateur',
       component: Explorateur,
+      avatarName: 'Explorateur',
     },
   };
 
@@ -108,13 +116,13 @@
 
   <div id="profile-avatar-container">
     <picture>
-       <source srcset="assets/images/profiles/Idealiste_{$gameState.gender}_Large.png"
+       <source srcset="assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Large.png"
             media="(min-width: 1024px)">
-       <source srcset="assets/images/profiles/Idealiste_{$gameState.gender}_Medium.png"
+       <source srcset="assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Medium.png"
             media="(min-width: 769px)">
-       <source srcset="assets/images/profiles/Idealiste_{$gameState.gender}_Small.png"
+       <source srcset="assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Small.png"
             media="(max-width: 768px)">
-      <img src="assets/images/profiles/Idealiste_{$gameState.gender}_Small.png" alt="Idéaliste" />
+      <img src="assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Small.png" alt="{profiles[mainProfile].name}" />
     </picture>
   </div>
 
