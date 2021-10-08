@@ -116,8 +116,6 @@
 
   <div id="profile-avatar-container">
     <picture>
-       <source srcset="assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Large.png"
-            media="(min-width: 1024px)">
        <source srcset="assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Medium.png"
             media="(min-width: 769px)">
        <source srcset="assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Small.png"
@@ -182,9 +180,11 @@
     max-width: 90%;
     margin: auto;
 
-    picture {
-      height: 100%;
+    img {
+      height: auto;
       width: 100%;
+      max-width: 25em;
+      max-height: 25em;
     }
   }
 
