@@ -27,9 +27,12 @@
   onMount(waitStoresToLoad);
 
   $: twoDigitsChapterId = $currentChapterId.padStart(2, '0');
+  const url_smartphone = `url('/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Jon' : 'Arya'}_Ratio2-5.png')`;
+  const url_tablet = `url('/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Jon' : 'Arya'}_Ratio2.png')`;
+  const url_desktop = `url('/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Jon' : 'Arya'}_Ratio1-6.png')`;
 </script>
 
-<div id="intro" on:click={abortTimer}>
+<div id="intro" on:click={abortTimer} style="--url-smartphone: {url_smartphone};--url-tablet: {url_tablet}; --url-desktop: {url_desktop};">
   <div id="titles">
     <h1>CHAPITRE {twoDigitsChapterId} :</h1>
     {#if storesLoaded}
@@ -53,13 +56,24 @@
 
     // Phones
     @media (max-width: 767px) {
-      background-image: url('/assets/images/intros/chapitre01_portrait.jpg');
+      background-image: var(--url-smartphone);
       background-size: cover;
     }
 
-    // Tablets, Desktops
-    @media (min-width: 768px) {
-      background-image: url('/assets/images/intros/chapitre01_landscape.jpg');
+    // Tablets
+    @media (min-width: 768px) and (max-width: 1024px) {
+      background-image: var(--url-tablet);
+      background-size: cover;
+    }
+
+    // Desktops
+    @media (min-width: 1024px) {
+      background-image: var(--url-desktop);
+      background-size: cover;
+    }
+
+    // Wide Desktops
+    @media (min-width: 1280px) {
       background-size: contain;
     }
   }
@@ -70,16 +84,8 @@
     opacity: 0.85;
     padding-top: 1em;
     padding-bottom: 1em;
-
-    // Phones
-    @media (max-width: 767px) {
-      margin-top: 100%;
-    }
-
-    // Tablets, Desktops
-    @media (min-width: 768px) {
-      margin-top: 40em;
-    }
+    position: relative;
+    top: 68%;
 
     h1 {
       font-size: x-large;
