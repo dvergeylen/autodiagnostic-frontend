@@ -34,20 +34,25 @@
 </script>
 
 <main>
-  <h1>Voyage au bout du monde</h1>
-  <h3>Une aventure d'introspection</h3>
+  <div class="h1-wrapper">
+    <h1>VOYAGE AU BOUT DU MONDE</h1>
+  </div>
+  <h3>UNE AVENTURE D'INTROSPECTION</h3>
 
+  <div id="warning-dev">
+    <p>🚧 Version en Développement</p>
+  </div>
 
   <div id="intro-text">
     <div class="is-flex">
-      <p class="is-bold">Bienvenue !</p>
+      <h4 class="is-bold">Bienvenue !</h4>
       <div id="music-settings-wrapper">
         {#if $playMusicStore}
-          <svg on:click={toggleMusic} class="icon map">
+          <svg on:click={toggleMusic} class="icon music">
             <use href='assets/sprite_icons.svg#music' />
           </svg>
         {:else}
-          <svg on:click={toggleMusic} class="icon map">
+          <svg on:click={toggleMusic} class="icon music">
             <use href='assets/sprite_icons.svg#music-slash' />
           </svg>
         {/if}
@@ -81,30 +86,34 @@
       C'est parti !
     </p>
 
-    <div id="buttons-container" class="is-grid">
-      {#if !isNewGame && isGenderConfigured }
-        <button class:pressed={!newGamePressed} on:click={startGame}>
-          Continuer
-      </button>
-      {/if}
-      <button on:click={toggleNewGamePressed} class:pressed={newGamePressed}>
-        Nouvelle Partie
-      </button>
-    </div>
-    <div class:is-hidden={!newGamePressed} class="is-grid protagoniste">
-      Protagoniste:
-      <button on:click={() => startNewGame('M')}>
-        <svg class="icon" >
-          <use href='assets/sprite_icons.svg#mars' />
-        </svg>
-        Masculin
-      </button>
-      <button on:click={() => startNewGame('F')}>
-        <svg class="icon" >
-          <use href='assets/sprite_icons.svg#venus' />
-        </svg>
-        Féminin
-      </button>
+    <div id="buttons-wrapper">
+      <div id="buttons-settings" class="is-grid">
+        {#if !isNewGame && isGenderConfigured }
+          <button class:pressed={!newGamePressed} on:click={startGame} class="is-uppercase">
+            Continuer
+        </button>
+        {/if}
+        <button on:click={toggleNewGamePressed} class:pressed={newGamePressed} class="is-uppercase">
+          Nouvelle Partie
+        </button>
+      </div>
+      <div class:is-hidden={!newGamePressed} class="buttons-protagoniste">
+        <p class="is-uppercase">
+          Protagoniste :
+        </p>
+        <div class="is-flex">
+          <div on:click={() => startNewGame('F')}>
+              <div class="is-button is-uppercase">
+                Féminin
+              </div>
+          </div>
+          <div on:click={() => startNewGame('M')}>
+              <div class="is-button is-uppercase">
+                Masculin
+              </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </main>
@@ -112,23 +121,43 @@
 <Footer />
 
 <style lang="scss">
-  .protagoniste {
-    padding: 1em;
-    border: 1px solid black;
-    max-width: 80%;
-    margin: auto;
+  div.h1-wrapper {
+    background-color: var(--color-primary);
+    margin-top: 1em;
+    margin-bottom: 0.25em;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    h1 {
+      color: white;
+      font-size: 2.5em;
+      margin-bottom: 0;
+      margin-top: 0.5em;
+      margin-left: 1em;
+      margin-right: 1em;
+    }
   }
 
-  button {
-    width: 15em;
-    margin: 1em auto auto auto; /* top right bottom left */
+  .h1-wrapper::after {
+    content: "";
+    height: 1em;
+    background: url("/assets/images/trame_sowalfin_color_06.svg");
+    background-repeat: repeat-x;
+    display: inline-block;
+    width: 100%;
+  }
+
+  h3 {
+    margin-top: 0.5em;
+    color: var(--color-primary);
+    font-weight: 900;
+    font-size: 1.5em;
   }
 
   div#intro-text {
     text-align: left;
-    padding: 0.5em;
-    border: 1px solid var(--color-primary);
-    border-radius: 0.25em;
     max-width: 35em;
     margin-left: auto;
     margin-right: auto;
@@ -136,17 +165,94 @@
     // Phones
     @media (max-width: 769px) {
       font-size: 0.9em;
-    line-height: 1.4em;
+      line-height: 1.4em;
     }
 
-    p:first-child{
+    h4 {
       margin-top: 0;
+    }
+    h4::after {
+      content: "";
+      height: 0.5em;
+      background: url("/assets/images/horizontal_bar_subtitle.svg");
+      background-repeat: repeat-x;
+      display: inline-block;
+      width: 75%;
     }
   }
 
-  div#buttons-container {
-    margin-top: 1em;
-    margin-bottom: 1em;
+  div#buttons-wrapper {
+    background-color: var(--color06);
+    padding: 1em;
+    border-radius: 0.25em;
+
+    div#buttons-settings {
+      button, .is-button {
+        margin: auto;
+        color: white;
+        border: 1.5px solid white;
+        border-radius: 0.25em;
+        background-color: rgba(255, 255, 255, 0.25);
+        font-weight: bold;
+        font-size: 0.7em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        width: 100%;
+        max-width: 25em;
+      }
+      button + button {
+        margin-top: 1em;
+      }
+    }
+
+    .buttons-protagoniste {
+      margin: auto;
+      margin-top: 1em;
+      color: white;
+      border: 1.5px solid white;
+      border-radius: 0.25em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      padding-left: 1em;
+      padding-right: 1em;
+      max-width: 20em;
+      text-align: center;
+      font-weight: 700;
+      background-color: rgba(255, 255, 255, 0.25);
+      p {
+        margin-top: 0;
+        margin-bottom: 0.5em;
+      }
+      div {
+        width: 100%;
+        div {
+          width: 50%;
+          cursor: pointer;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+
+          .is-button {
+            padding-top: 0.25em;
+            padding-bottom: 0.25em;
+            border: 1.5px solid white;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            border-radius: 0.15em;
+            background-color: rgba(255,255,255,0.25);
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+  div#buttons-wrapper::after {
+    content: "";
+    height: 1em;
+    background: url("/assets/images/trame_sowalfin_color_06.svg");
+    background-repeat: repeat-x;
+    display: inline-block;
+    width: 100%;
   }
 
   div#music-settings-wrapper {
@@ -154,7 +260,17 @@
     flex-grow: 1;
   }
 
-  svg.icon {
-    fill: var(--anthracite);
+  svg.music {
+    fill: var(--color09);
+  }
+
+  div#warning-dev {
+    background: #fdcccc;
+    border: 1px solid red;
+    max-width: 35em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    align-self: center;
+    width: 90%;
   }
 </style>
