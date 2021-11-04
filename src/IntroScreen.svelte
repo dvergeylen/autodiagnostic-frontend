@@ -27,9 +27,9 @@
   onMount(waitStoresToLoad);
 
   $: twoDigitsChapterId = $currentChapterId.padStart(2, '0');
-  const url_smartphone = `url('/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Jon' : 'Arya'}_Ratio2-5.png')`;
-  const url_tablet = `url('/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Jon' : 'Arya'}_Ratio2.png')`;
-  const url_desktop = `url('/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Jon' : 'Arya'}_Ratio1-6.png')`;
+  const url_smartphone = `url('/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Arya' : 'Jon'}_Ratio2-5.png')`;
+  const url_tablet = `url('/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Arya' : 'Jon'}_Ratio2.png')`;
+  const url_desktop = `url('/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Arya' : 'Jon'}_Ratio1-6.png')`;
 </script>
 
 <div id="intro" on:click={abortTimer} style="--url-smartphone: {url_smartphone};--url-tablet: {url_tablet}; --url-desktop: {url_desktop};">
