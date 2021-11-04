@@ -20,8 +20,8 @@
       "id": "1",
       "text": {
         "fr": {
-          "m": "Ca y est, Jon !",
-          "f": "Ca y est, Arya !"
+          "m": "Ca y est, Jon ! C'est demain 😉",
+          "f": "Ca y est, Arya ! C'est demain 😉"
         }
       },
       "nextNodes": [
@@ -37,37 +37,18 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      }
+      },
+      "incomingNodes": [],
+      "imagePath": ""
     },
     "2": {
       "id": "2",
       "text": {
-        "fr": "C'est demain 😉",
+        "fr": "Oui, purée! 1 an sans toi 😭",
         "en": ""
       },
       "nextNodes": [
         "3"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "3": {
-      "id": "3",
-      "text": {
-        "fr": "Yes...",
-        "en": ""
-      },
-      "nextNodes": [
-        "4"
       ],
       "character": "Player",
       "attribution": {
@@ -79,12 +60,40 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      }
+      },
+      "incomingNodes": [
+        "6"
+      ],
+      "imagePath": ""
+    },
+    "3": {
+      "id": "3",
+      "text": {
+        "fr": "Mais suis encore sur ma valise là !",
+        "en": ""
+      },
+      "nextNodes": [
+        "4"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      },
+      "incomingNodes": [
+        "7"
+      ]
     },
     "4": {
       "id": "4",
       "text": {
-        "fr": "Heu, non, quoi",
+        "fr": "Dessus ??",
         "en": ""
       },
       "nextNodes": [
@@ -100,37 +109,19 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      }
+      },
+      "incomingNodes": [
+        "8"
+      ]
     },
     "5": {
       "id": "5",
       "text": {
-        "fr": "1 an sans toi 😭",
+        "fr": "Ben, à la faire quoi!",
         "en": ""
       },
       "nextNodes": [
         "6"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "6": {
-      "id": "6",
-      "text": {
-        "fr": "Suis encore sur ma valise …",
-        "en": ""
-      },
-      "nextNodes": [
-        "7"
       ],
       "character": "NPC1",
       "attribution": {
@@ -142,18 +133,51 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      }
+      },
+      "incomingNodes": [
+        "9"
+      ]
+    },
+    "6": {
+      "id": "6",
+      "text": {
+        "fr": "Ah, oui! T'as bien tout?",
+        "en": ""
+      },
+      "nextNodes": [
+        "7"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      },
+      "incomingNodes": [
+        "10"
+      ]
     },
     "7": {
       "id": "7",
       "text": {
-        "fr": "Dessus ??",
+        "fr": {
+          "m": "Justement ! Pas certain! Je suis vraiement perdue …",
+          "f": "Justement ! Pas certain! Je suis vraiement perdu …"
+        },
         "en": ""
       },
       "nextNodes": [
-        "8"
+        "8",
+        "11",
+        "13",
+        "15"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -168,11 +192,35 @@
     "8": {
       "id": "8",
       "text": {
-        "fr": "Ben, à la faire quoi !",
+        "fr": {
+          "m": "Courage, tu vas y arriver ! T'es le meilleur!",
+          "f": "Courage, tu vas y arriver ! T'es la meilleure!"
+        },
         "en": ""
       },
       "nextNodes": [
         "9"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 1,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "9": {
+      "id": "9",
+      "text": {
+        "fr": "T'es chou de m'encourager 😊 Merci",
+        "en": ""
+      },
+      "nextNodes": [
+        "10"
       ],
       "character": "NPC1",
       "attribution": {
@@ -184,39 +232,19 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      }
-    },
-    "9": {
-      "id": "9",
-      "text": {
-        "fr": "Ah, oui",
-        "en": ""
       },
-      "nextNodes": [
-        "10"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
+      "imagePath": ""
     },
     "10": {
       "id": "10",
       "text": {
-        "fr": "T'as tout ??!!",
+        "fr": "Dis, tu sais qu'on doit être pieds nus pour entrer dans les temples",
         "en": ""
       },
       "nextNodes": [
-        "11"
+        "17"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -231,18 +259,18 @@
     "11": {
       "id": "11",
       "text": {
-        "fr": "Justement !",
+        "fr": "T’as fait une liste j’imagine pour t'organiser un peu, non?",
         "en": ""
       },
       "nextNodes": [
         "12"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
         "coequipier": 0,
-        "planificateur": 0,
+        "planificateur": 1,
         "idealiste": 0,
         "creatif": 0,
         "audacieux": 0,
@@ -252,11 +280,11 @@
     "12": {
       "id": "12",
       "text": {
-        "fr": "C'est pas certain là",
+        "fr": "heu, bof, pas vraiment, en fait! ",
         "en": ""
       },
       "nextNodes": [
-        "13"
+        "10"
       ],
       "character": "NPC1",
       "attribution": {
@@ -273,18 +301,15 @@
     "13": {
       "id": "13",
       "text": {
-        "fr": {
-          "m": "Suis perdue !",
-          "f": "Suis perdu !"
-        },
+        "fr": "Tu prends le strict nécessaire et rien d'autre!",
         "en": ""
       },
       "nextNodes": [
-        "82"
+        "14"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
-        "leader": 0,
+        "leader": 1,
         "bricoleur": 0,
         "coequipier": 0,
         "planificateur": 0,
@@ -297,32 +322,11 @@
     "14": {
       "id": "14",
       "text": {
-        "fr": "Courage, tu vas y arriver",
+        "fr": "oui, chef!!",
         "en": ""
       },
       "nextNodes": [
-        "15"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 1,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "15": {
-      "id": "15",
-      "text": {
-        "fr": "Tu m'aides pas là !",
-        "en": ""
-      },
-      "nextNodes": [
-        "16"
+        "10"
       ],
       "character": "NPC1",
       "attribution": {
@@ -336,16 +340,37 @@
         "explorateur": 0
       }
     },
-    "16": {
-      "id": "16",
+    "15": {
+      "id": "15",
       "text": {
-        "fr": "ben si!",
+        "fr": "Tes amis là-bas te prêteront! Les gens s'entraident tu sais …",
         "en": ""
       },
       "nextNodes": [
-        "17"
+        "16"
       ],
       "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 2,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "16": {
+      "id": "16",
+      "text": {
+        "fr": "oui,  t'as raison",
+        "en": ""
+      },
+      "nextNodes": [
+        "10"
+      ],
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -360,13 +385,13 @@
     "17": {
       "id": "17",
       "text": {
-        "fr": "je te soutiens",
+        "fr": "C'est chaud, je vais devoir sans cesse enlever mes sneakers!!",
         "en": ""
       },
       "nextNodes": [
         "18"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -381,11 +406,14 @@
     "18": {
       "id": "18",
       "text": {
-        "fr": "oui, t'es chou 😊",
+        "fr": "J'y pense trop! T'as pas une idée pour régler ce souci?",
         "en": ""
       },
       "nextNodes": [
-        "19"
+        "19",
+        "26",
+        "30",
+        "31"
       ],
       "character": "NPC1",
       "attribution": {
@@ -402,11 +430,32 @@
     "19": {
       "id": "19",
       "text": {
-        "fr": "de rien …",
+        "fr": "Heu, j'ai jamais beaucoup d'idées, moi🤔 Mon kif, c'est diriger, guider les autres",
         "en": ""
       },
       "nextNodes": [
-        "32"
+        "20"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 3,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "20": {
+      "id": "20",
+      "text": {
+        "fr": "Demande à ta mère… Elle, elle sait toujours!!",
+        "en": ""
+      },
+      "nextNodes": [
+        "21"
       ],
       "character": "Player",
       "attribution": {
@@ -420,37 +469,16 @@
         "explorateur": 0
       }
     },
-    "20": {
-      "id": "20",
-      "text": {
-        "fr": "T'as fait une liste j'imagine",
-        "en": ""
-      },
-      "nextNodes": [
-        "21"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 1,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
     "21": {
       "id": "21",
       "text": {
-        "fr": "heu, bof, quoi",
+        "fr": "Alors?",
         "en": ""
       },
       "nextNodes": [
-        "32"
+        "22"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -465,15 +493,15 @@
     "22": {
       "id": "22",
       "text": {
-        "fr": "Prends bien ton chargeur !",
+        "fr": "…",
         "en": ""
       },
       "nextNodes": [
         "23"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
-        "leader": 1,
+        "leader": 0,
         "bricoleur": 0,
         "coequipier": 0,
         "planificateur": 0,
@@ -486,7 +514,7 @@
     "23": {
       "id": "23",
       "text": {
-        "fr": "oui, chef!!",
+        "fr": "Elle dit de prendre des sandales super légères à glisser dans mon sac à dos!",
         "en": ""
       },
       "nextNodes": [
@@ -507,11 +535,11 @@
     "24": {
       "id": "24",
       "text": {
-        "fr": "je t'aide, je t'aide ...",
+        "fr": "et bein voilà …",
         "en": ""
       },
       "nextNodes": [
-        "32"
+        "25"
       ],
       "character": "Player",
       "attribution": {
@@ -528,19 +556,19 @@
     "25": {
       "id": "25",
       "text": {
-        "fr": "Tes amis là-bas te prêteront! ",
+        "fr": "Allez, je finirai cette valise après le souper! J'ai la dalle!!",
         "en": ""
       },
       "nextNodes": [
-        "26"
+        "32"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
         "coequipier": 0,
         "planificateur": 0,
-        "idealiste": 1,
+        "idealiste": 0,
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
@@ -549,41 +577,42 @@
     "26": {
       "id": "26",
       "text": {
-        "fr": "oui, tu as raison",
+        "fr": "Oui, tu sais que j'ai 1000 idées à la minute 💪",
         "en": ""
       },
       "nextNodes": [
         "27"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
         "coequipier": 0,
         "planificateur": 0,
         "idealiste": 0,
-        "creatif": 0,
+        "creatif": 3,
         "audacieux": 0,
         "explorateur": 0
-      }
+      },
+      "imagePath": ""
     },
     "27": {
       "id": "27",
       "text": {
-        "fr": "ils ont tout chez eux",
+        "fr": "Tu prends des sandales super légères à glisser dans ton sac à dos",
         "en": ""
       },
       "nextNodes": [
         "28"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
         "coequipier": 0,
         "planificateur": 0,
         "idealiste": 0,
-        "creatif": 0,
+        "creatif": 1,
         "audacieux": 0,
         "explorateur": 0
       }
@@ -591,7 +620,7 @@
     "28": {
       "id": "28",
       "text": {
-        "fr": "au pire, c'est pas grave",
+        "fr": "T'es un génie j'te dis!!",
         "en": ""
       },
       "nextNodes": [
@@ -612,11 +641,55 @@
     "29": {
       "id": "29",
       "text": {
-        "fr": "si j'oublie trop de trucs",
+        "fr": "oui, oui, je sais!! 🤣",
         "en": ""
       },
       "nextNodes": [
-        "30"
+        "25"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      },
+      "imagePath": "https://listemoji.com/img/emoji/1f602.png"
+    },
+    "30": {
+      "id": "30",
+      "text": {
+        "fr": "Mon truc, c'est plutôt de planifier les choses, les anticiper, pas trop d'avoir des idées! Tu le sais 🤣",
+        "en": ""
+      },
+      "nextNodes": [
+        "25"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 2,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      },
+      "imagePath": ""
+    },
+    "31": {
+      "id": "31",
+      "text": {
+        "fr": "Des idées, non, assez peu, mais des rêves à réaliser et de grands projets en tête, ça oui, plein!! ✨",
+        "en": ""
+      },
+      "nextNodes": [
+        "25"
       ],
       "character": "NPC1",
       "attribution": {
@@ -626,56 +699,14 @@
         "planificateur": 0,
         "idealiste": 0,
         "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "30": {
-      "id": "30",
-      "text": {
-        "fr": "bon, pas des papiers",
-        "en": ""
-      },
-      "nextNodes": [
-        "31"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "31": {
-      "id": "31",
-      "text": {
-        "fr": "par contre!!",
-        "en": ""
-      },
-      "nextNodes": [
-        "32"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
+        "audacieux": 1,
         "explorateur": 0
       }
     },
     "32": {
       "id": "32",
       "text": {
-        "fr": "Tu sais que pour les temples",
+        "fr": "En plus j'ai demandé des frites maison! Du gras avant l'overdose de sushis🤣",
         "en": ""
       },
       "nextNodes": [
@@ -696,13 +727,13 @@
     "33": {
       "id": "33",
       "text": {
-        "fr": "on entre à pieds nus …",
+        "fr": "ouais, d'office, les frites bien dorées de ta mère! PROFITE!!",
         "en": ""
       },
       "nextNodes": [
         "34"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -717,13 +748,13 @@
     "34": {
       "id": "34",
       "text": {
-        "fr": "ah, oui, juste!",
+        "fr": "d'office! Bon j'avoue que je stresse à fond là ",
         "en": ""
       },
       "nextNodes": [
         "35"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -738,7 +769,7 @@
     "35": {
       "id": "35",
       "text": {
-        "fr": "Je vais devoir sans cesse",
+        "fr": "J'angoisse. Si jamais ça se passait mal là-bas. Si loin!!",
         "en": ""
       },
       "nextNodes": [
@@ -759,13 +790,16 @@
     "36": {
       "id": "36",
       "text": {
-        "fr": "enlever mes sneakers",
+        "fr": "mais, non, ça va être TOP tu verras",
         "en": ""
       },
       "nextNodes": [
-        "37"
+        "37",
+        "39",
+        "40",
+        "41"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -780,17 +814,17 @@
     "37": {
       "id": "37",
       "text": {
-        "fr": "chaud ça!",
+        "fr": "Faut faire en sorte de rencontrer un max. de gens, créer des liens!",
         "en": ""
       },
       "nextNodes": [
         "38"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
-        "coequipier": 0,
+        "coequipier": 1,
         "planificateur": 0,
         "idealiste": 0,
         "creatif": 0,
@@ -801,11 +835,11 @@
     "38": {
       "id": "38",
       "text": {
-        "fr": "t'as pas une idée?",
+        "fr": "oui, t'as raison! Allez, je file aux frites, moi! BIZZ",
         "en": ""
       },
       "nextNodes": [
-        "39"
+        "42"
       ],
       "character": "NPC1",
       "attribution": {
@@ -822,801 +856,11 @@
     "39": {
       "id": "39",
       "text": {
-        "fr": {
-          "m": "Monsieur le génie!!",
-          "f": "Madame le génie!!"
-        },
+        "fr": "Faut te dire que ce pays est très sûr et les japonais des gens bien",
         "en": ""
       },
       "nextNodes": [
-        "40"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "40": {
-      "id": "40",
-      "text": {
-        "fr": {
-          "m": "Mister 10 idées à la minute",
-          "f": "Miss 10 idées à la minute"
-        },
-        "en": ""
-      },
-      "nextNodes": [
-        "41",
-        "51"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "41": {
-      "id": "41",
-      "text": {
-        "fr": "Heu, non, sais pas 🤔",
-        "en": ""
-      },
-      "nextNodes": [
-        "42"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "42": {
-      "id": "42",
-      "text": {
-        "fr": "Ta mère dit quoi?",
-        "en": ""
-      },
-      "nextNodes": [
-        "43"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "43": {
-      "id": "43",
-      "text": {
-        "fr": "Demande lui, non?",
-        "en": ""
-      },
-      "nextNodes": [
-        "44"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "44": {
-      "id": "44",
-      "text": {
-        "fr": "…",
-        "en": ""
-      },
-      "nextNodes": [
-        "45"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "45": {
-      "id": "45",
-      "text": {
-        "fr": "Alors?",
-        "en": ""
-      },
-      "nextNodes": [
-        "46"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "46": {
-      "id": "46",
-      "text": {
-        "fr": "Prendre des sandales",
-        "en": ""
-      },
-      "nextNodes": [
-        "47"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "47": {
-      "id": "47",
-      "text": {
-        "fr": "légères",
-        "en": ""
-      },
-      "nextNodes": [
-        "48"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "48": {
-      "id": "48",
-      "text": {
-        "fr": "pour quand je visite!",
-        "en": ""
-      },
-      "nextNodes": [
-        "49"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "49": {
-      "id": "49",
-      "text": {
-        "fr": "et bein voilà …",
-        "en": ""
-      },
-      "nextNodes": [
-        "50"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "50": {
-      "id": "50",
-      "text": {
-        "fr": "Allez, je finirai cette valise",
-        "en": ""
-      },
-      "nextNodes": [
-        "59"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "51": {
-      "id": "51",
-      "text": {
-        "fr": {
-          "m": "Oui, Mr. plein d'idées ste plait 💪",
-          "f": "Oui, Mrs. plein d'idées ste plait 💪"
-        },
-        "en": ""
-      },
-      "nextNodes": [
-        "52"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 1,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "52": {
-      "id": "52",
-      "text": {
-        "fr": "Tu prends des sandales",
-        "en": ""
-      },
-      "nextNodes": [
-        "53"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "53": {
-      "id": "53",
-      "text": {
-        "fr": "qui s'enlèvent vite",
-        "en": ""
-      },
-      "nextNodes": [
-        "54"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "54": {
-      "id": "54",
-      "text": {
-        "fr": "quand tu fais des temples!",
-        "en": ""
-      },
-      "nextNodes": [
-        "55"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "55": {
-      "id": "55",
-      "text": {
-        "fr": "WAW! ",
-        "en": ""
-      },
-      "nextNodes": [
-        "56"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "56": {
-      "id": "56",
-      "text": {
-        "fr": "T'es un génie j'te dis!!",
-        "en": ""
-      },
-      "nextNodes": [
-        "57"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "57": {
-      "id": "57",
-      "text": {
-        "fr": "oui, oui, je sais!!",
-        "en": ""
-      },
-      "nextNodes": [
-        "58"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "58": {
-      "id": "58",
-      "text": {
-        "fr": "🤣",
-        "en": ""
-      },
-      "nextNodes": [
-        "50"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "59": {
-      "id": "59",
-      "text": {
-        "fr": "après avoir mangé …",
-        "en": ""
-      },
-      "nextNodes": [
-        "60"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "60": {
-      "id": "60",
-      "text": {
-        "fr": "J'ai la dalle!!",
-        "en": ""
-      },
-      "nextNodes": [
-        "61"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "61": {
-      "id": "61",
-      "text": {
-        "fr": "J'ai demandé des frites!!",
-        "en": ""
-      },
-      "nextNodes": [
-        "62"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "62": {
-      "id": "62",
-      "text": {
-        "fr": "Avant de me gaver de sushis",
-        "en": ""
-      },
-      "nextNodes": [
-        "63"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "63": {
-      "id": "63",
-      "text": {
-        "fr": "Du bon gras d'ici 🤣",
-        "en": ""
-      },
-      "nextNodes": [
-        "64"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "64": {
-      "id": "64",
-      "text": {
-        "fr": "ouais, d'office",
-        "en": ""
-      },
-      "nextNodes": [
-        "65"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "65": {
-      "id": "65",
-      "text": {
-        "fr": "les frites de ta mère",
-        "en": ""
-      },
-      "nextNodes": [
-        "66"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "66": {
-      "id": "66",
-      "text": {
-        "fr": "bien dorées…",
-        "en": ""
-      },
-      "nextNodes": [
-        "67"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "67": {
-      "id": "67",
-      "text": {
-        "fr": "PROFITE !",
-        "en": ""
-      },
-      "nextNodes": [
-        "68"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "68": {
-      "id": "68",
-      "text": {
-        "fr": "d'office",
-        "en": ""
-      },
-      "nextNodes": [
-        "69"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "69": {
-      "id": "69",
-      "text": {
-        "fr": "dis, tu crois que ça va aller",
-        "en": ""
-      },
-      "nextNodes": [
-        "70"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "70": {
-      "id": "70",
-      "text": {
-        "fr": "je stresse dingue ce soir",
-        "en": ""
-      },
-      "nextNodes": [
-        "71"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "71": {
-      "id": "71",
-      "text": {
-        "fr": "et si c'est cata là-bas …",
-        "en": ""
-      },
-      "nextNodes": [
-        "72"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "72": {
-      "id": "72",
-      "text": {
-        "fr": "trop dur",
-        "en": ""
-      },
-      "nextNodes": [
-        "73"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "73": {
-      "id": "73",
-      "text": {
-        "fr": "mais, non",
-        "en": ""
-      },
-      "nextNodes": [
-        "74"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "74": {
-      "id": "74",
-      "text": {
-        "fr": "ca va être top!!",
-        "en": ""
-      },
-      "nextNodes": [
-        "75",
-        "76",
-        "77",
-        "78"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "75": {
-      "id": "75",
-      "text": {
-        "fr": "Tu vas rencontrer plein de gens !",
-        "en": ""
-      },
-      "nextNodes": [
-        "79"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 1,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "76": {
-      "id": "76",
-      "text": {
-        "fr": "Les japonais sont des gens bien",
-        "en": ""
-      },
-      "nextNodes": [
-        "79"
+        "38"
       ],
       "character": "Player",
       "attribution": {
@@ -1630,14 +874,14 @@
         "explorateur": 0
       }
     },
-    "77": {
-      "id": "77",
+    "40": {
+      "id": "40",
       "text": {
-        "fr": "Tu vas vivre plein de trucs!",
+        "fr": "Faut tout faire pour vivre ça comme une aventure! Bouger, explorer!",
         "en": ""
       },
       "nextNodes": [
-        "79"
+        "38"
       ],
       "character": "Player",
       "attribution": {
@@ -1648,17 +892,17 @@
         "idealiste": 0,
         "creatif": 0,
         "audacieux": 0,
-        "explorateur": 1
+        "explorateur": 3
       }
     },
-    "78": {
-      "id": "78",
+    "41": {
+      "id": "41",
       "text": {
-        "fr": "Faut croire en soi! Et tu vas gérer!",
+        "fr": "Faut croire en soi, se faire confiance et n'avoir peur de rien!",
         "en": ""
       },
       "nextNodes": [
-        "79"
+        "38"
       ],
       "character": "Player",
       "attribution": {
@@ -1668,90 +912,21 @@
         "planificateur": 0,
         "idealiste": 0,
         "creatif": 0,
-        "audacieux": 1,
+        "audacieux": 3,
         "explorateur": 0
       }
     },
-    "79": {
-      "id": "79",
-      "text": {
-        "fr": "oui, t'as raison!",
-        "en": ""
-      },
-      "nextNodes": [
-        "80"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "80": {
-      "id": "80",
-      "text": {
-        "fr": "Allez, je file aux frites, moi!",
-        "en": ""
-      },
-      "nextNodes": [
-        "81"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "81": {
-      "id": "81",
+    "42": {
+      "id": "42",
       "text": {
         "fr": {
-          "m": "Arya s'est déconnectée",
-          "f": "Jon s'est déconnecté"
+          "m": "[Arya déconnectée]",
+          "f": "[Jon déconnecté]"
         },
         "en": ""
       },
       "nextNodes": [],
-      "character": "Narrator",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "82": {
-      "id": "82",
-      "text": {
-        "fr": {
-          "m": "Vous pouvez répondre à Arya en cliquant sur la réplique",
-          "f": "Vous pouvez répondre à Jon en cliquant sur la réplique"
-        },
-        "en": ""
-      },
-      "nextNodes": [
-        "14",
-        "20",
-        "22",
-        "25"
-      ],
-      "character": "Narrator",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,

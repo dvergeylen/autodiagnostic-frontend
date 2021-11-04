@@ -127,7 +127,7 @@
     "6": {
       "id": "6",
       "text": {
-        "fr": "RDV sur \"notre\" banc ",
+        "fr": "RDV sur \"notre\" banc au parc de la Boverie à 14H tapantes!",
         "en": ""
       },
       "nextNodes": [
@@ -148,13 +148,16 @@
     "7": {
       "id": "7",
       "text": {
-        "fr": "au parc de la Boverie",
+        "fr": {
+          "m": "dis, ça va Monsieur \"instructions\"",
+          "f": "dis, ça va Madame \"instructions\""
+        },
         "en": ""
       },
       "nextNodes": [
         "8"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -169,7 +172,7 @@
     "8": {
       "id": "8",
       "text": {
-        "fr": "à 14H",
+        "fr": "J'te taquine, tu viens quand tu peux …",
         "en": ""
       },
       "nextNodes": [
@@ -190,13 +193,13 @@
     "9": {
       "id": "9",
       "text": {
-        "fr": "tapantes",
+        "fr": "Yes! ",
         "en": ""
       },
       "nextNodes": [
         "10"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -211,15 +214,11 @@
     "10": {
       "id": "10",
       "text": {
-        "fr": {
-          "m": "dis, ça va Monsieur \"instructions\"",
-          "f": "dis, ça va Madame \"instructions\""
-        },
+        "fr": "Vivement te retrouver …",
         "en": ""
       },
       "nextNodes": [
-        "11",
-        "16"
+        "11"
       ],
       "character": "NPC1",
       "attribution": {
@@ -236,15 +235,15 @@
     "11": {
       "id": "11",
       "text": {
-        "fr": "Tu me connais, j'adore diriger un peu",
+        "fr": "😘",
         "en": ""
       },
       "nextNodes": [
         "12"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
-        "leader": 1,
+        "leader": 0,
         "bricoleur": 0,
         "coequipier": 0,
         "planificateur": 0,
@@ -257,272 +256,11 @@
     "12": {
       "id": "12",
       "text": {
-        "fr": "ce monde a besoin de leaders en même temps",
-        "en": ""
-      },
-      "nextNodes": [
-        "13"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "13": {
-      "id": "13",
-      "text": {
-        "fr": "non",
-        "en": ""
-      },
-      "nextNodes": [
-        "14"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "14": {
-      "id": "14",
-      "text": {
-        "fr": "?",
-        "en": ""
-      },
-      "nextNodes": [
-        "15"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "15": {
-      "id": "15",
-      "text": {
-        "fr": "Je t'adore, toi!!",
-        "en": ""
-      },
-      "nextNodes": [
-        "20"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "16": {
-      "id": "16",
-      "text": {
-        "fr": "J'te taquine, tu viens quand tu peux …",
-        "en": ""
-      },
-      "nextNodes": [
-        "17"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "17": {
-      "id": "17",
-      "text": {
-        "fr": "J'aime bien aussi",
-        "en": ""
-      },
-      "nextNodes": [
-        "18"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "18": {
-      "id": "18",
-      "text": {
-        "fr": {
-          "m": "quand tu fais le chef!!",
-          "f": "quand tu fais la cheffe!!"
-        },
-        "en": ""
-      },
-      "nextNodes": [
-        "19"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "19": {
-      "id": "19",
-      "text": {
-        "fr": "ahh, bon, bein 14H tapantes alors!!!",
-        "en": ""
-      },
-      "nextNodes": [
-        "15"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "20": {
-      "id": "20",
-      "text": {
-        "fr": {
-          "m": "Mon chef …",
-          "f": "Ma cheffe …"
-        },
-        "en": ""
-      },
-      "nextNodes": [
-        "21"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "21": {
-      "id": "21",
-      "text": {
-        "fr": "Allez, 14H alors",
-        "en": ""
-      },
-      "nextNodes": [
-        "22"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "22": {
-      "id": "22",
-      "text": {
-        "fr": "oui, tapantes!!",
-        "en": ""
-      },
-      "nextNodes": [
-        "23"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "23": {
-      "id": "23",
-      "text": {
-        "fr": "😘",
-        "en": ""
-      },
-      "nextNodes": [
-        "24"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "24": {
-      "id": "24",
-      "text": {
-        "fr": {
-          "m": "Arya s'est déconnectée",
-          "f": "Jon s'est déconnecté"
-        },
+        "fr": "[Arya et Jon déconnectés]",
         "en": ""
       },
       "nextNodes": [],
-      "character": "Narrator",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
