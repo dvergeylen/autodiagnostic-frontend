@@ -84,7 +84,7 @@
     "4": {
       "id": "4",
       "text": {
-        "fr": "Allez, ça va aller!!",
+        "fr": "Allez, ça va aller!! T'inquiète pas",
         "en": ""
       },
       "nextNodes": [
@@ -105,13 +105,13 @@
     "5": {
       "id": "5",
       "text": {
-        "fr": "T'inquiète pas",
+        "fr": "Je suis encore sur ma valise, là",
         "en": ""
       },
       "nextNodes": [
         "6"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -126,13 +126,13 @@
     "6": {
       "id": "6",
       "text": {
-        "fr": "Je suis encore sur ma valise, là",
+        "fr": "T'as fait un tri quand-même?",
         "en": ""
       },
       "nextNodes": [
-        "7"
+        "29"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -147,7 +147,7 @@
     "7": {
       "id": "7",
       "text": {
-        "fr": "T'as fait un tri quand-même",
+        "fr": "Des fringues?? Du Japon?",
         "en": ""
       },
       "nextNodes": [
@@ -168,7 +168,7 @@
     "8": {
       "id": "8",
       "text": {
-        "fr": "Oui, mais j'ai plein de trucs",
+        "fr": "Ben oui, Tokyo, c'est méga branché",
         "en": ""
       },
       "nextNodes": [
@@ -189,13 +189,13 @@
     "9": {
       "id": "9",
       "text": {
-        "fr": "Je ramène des souvenirs quoi!",
+        "fr": "ah, bon, si tu l'dis! T'as pas teint tes cheveux en bleu ou en rose, j'espère?!?",
         "en": ""
       },
       "nextNodes": [
-        "10"
+        "30"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -210,17 +210,17 @@
     "10": {
       "id": "10",
       "text": {
-        "fr": "Plus quelques kdos",
+        "fr": "Etre enfin à nouveau tous ensemble 🥳",
         "en": ""
       },
       "nextNodes": [
-        "11"
+        "12"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
-        "coequipier": 0,
+        "coequipier": 1,
         "planificateur": 0,
         "idealiste": 0,
         "creatif": 0,
@@ -231,13 +231,13 @@
     "11": {
       "id": "11",
       "text": {
-        "fr": "et les fringues que j'ai achetées …",
+        "fr": "De nouvelles aventures t'attendent ici 🤠",
         "en": ""
       },
       "nextNodes": [
-        "12"
+        "15"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -246,19 +246,19 @@
         "idealiste": 0,
         "creatif": 0,
         "audacieux": 0,
-        "explorateur": 0
+        "explorateur": 1
       }
     },
     "12": {
       "id": "12",
       "text": {
-        "fr": "Des fringues??",
+        "fr": "ooooh que oui. vous me manquez tous!!",
         "en": ""
       },
       "nextNodes": [
         "13"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -273,7 +273,93 @@
     "13": {
       "id": "13",
       "text": {
-        "fr": "Du Japon!?",
+        "fr": "🤩",
+        "en": ""
+      },
+      "nextNodes": [
+        "14"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "14": {
+      "id": "14",
+      "text": {
+        "fr": "Je me sens déjà mieux rien qu'à y penser …",
+        "en": ""
+      },
+      "nextNodes": [
+        "20",
+        "21",
+        "22"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "15": {
+      "id": "15",
+      "text": {
+        "fr": "oui, c'est clair!😎",
+        "en": ""
+      },
+      "nextNodes": [
+        "14"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "16": {
+      "id": "16",
+      "text": {
+        "fr": "J'ai plein d'idées pour un accueil original ✨",
+        "en": ""
+      },
+      "nextNodes": [
+        "17"
+      ],
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 2,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "17": {
+      "id": "17",
+      "text": {
+        "fr": "mais je ne t'en dit pas plus!! Wait and see ..",
         "en": ""
       },
       "nextNodes": [
@@ -291,120 +377,35 @@
         "explorateur": 0
       }
     },
-    "14": {
-      "id": "14",
-      "text": {
-        "fr": "Ben oui, Tokyo, c'est méga branché",
-        "en": ""
-      },
-      "nextNodes": [
-        "15"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "15": {
-      "id": "15",
-      "text": {
-        "fr": "ah, bon, si tu l'dis",
-        "en": ""
-      },
-      "nextNodes": [
-        "16"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "16": {
-      "id": "16",
-      "text": {
-        "fr": "T'as pas teint tes cheveux en bleu",
-        "en": ""
-      },
-      "nextNodes": [
-        "17"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "17": {
-      "id": "17",
-      "text": {
-        "fr": "ou en rose j'espère!!",
-        "en": ""
-      },
-      "nextNodes": [
-        "18"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
     "18": {
       "id": "18",
       "text": {
-        "fr": "",
+        "fr": "Ca fait 2 mois que je planche sur un event VIP 💎",
         "en": ""
       },
       "nextNodes": [
         "19"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
         "coequipier": 0,
-        "planificateur": 0,
+        "planificateur": 1,
         "idealiste": 0,
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      },
-      "imagePath": "/assets/images/chapter8_anger.gif"
+      }
     },
     "19": {
       "id": "19",
       "text": {
-        "fr": "",
+        "fr": "je te prépare un retour de star organisé par \"la\" star de l'organisation...",
         "en": ""
       },
       "nextNodes": [
-        "20"
+        "38"
       ],
       "character": "Player",
       "attribution": {
@@ -416,17 +417,16 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      },
-      "imagePath": "/assets/images/chapter8_girly_cat_typing.gif"
+      }
     },
     "20": {
       "id": "20",
       "text": {
-        "fr": "Allez, me réjouis trop de te VOIR!",
+        "fr": "Faut te faire confiance et rester optimiste!",
         "en": ""
       },
       "nextNodes": [
-        "21"
+        "23"
       ],
       "character": "Player",
       "attribution": {
@@ -436,45 +436,45 @@
         "planificateur": 0,
         "idealiste": 0,
         "creatif": 0,
-        "audacieux": 0,
+        "audacieux": 1,
         "explorateur": 0
       }
     },
     "21": {
       "id": "21",
       "text": {
-        "fr": "Yes, moi aussi!",
-        "en": ""
-      },
-      "nextNodes": [
-        "22"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "22": {
-      "id": "22",
-      "text": {
-        "fr": "Mais c'est dur de quitter ici",
+        "fr": "Faut voir cette fin comme le début d'autre chose!",
         "en": ""
       },
       "nextNodes": [
         "23"
       ],
-      "character": "NPC1",
+      "character": "Player",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 1,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 1
+      }
+    },
+    "22": {
+      "id": "22",
+      "text": {
+        "fr": "Et je suis là pour toi si besoin!",
+        "en": ""
+      },
+      "nextNodes": [
+        "23"
+      ],
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
-        "coequipier": 0,
+        "coequipier": 1,
         "planificateur": 0,
         "idealiste": 0,
         "creatif": 0,
@@ -485,7 +485,10 @@
     "23": {
       "id": "23",
       "text": {
-        "fr": "Plein de trucs vont me manquer",
+        "fr": {
+          "m": "Waw, Jon, on devient trop sérieux là",
+          "f": "Waw, Arya, on devient trop sérieux là"
+        },
         "en": ""
       },
       "nextNodes": [
@@ -506,7 +509,7 @@
     "24": {
       "id": "24",
       "text": {
-        "fr": "comme les algues au ptit dej !!!",
+        "fr": "à fond 😂",
         "en": ""
       },
       "nextNodes": [
@@ -527,7 +530,7 @@
     "25": {
       "id": "25",
       "text": {
-        "fr": "",
+        "fr": "j'ai de nouveau la pêche en tout cas!",
         "en": ""
       },
       "nextNodes": [
@@ -543,19 +546,21 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      },
-      "imagePath": "/assets/images/chapter8_tasting.gif"
+      }
     },
     "26": {
       "id": "26",
       "text": {
-        "fr": "non, sérieux, les gens",
+        "fr": {
+          "m": "tant mieux, je dois filer, chouquette. Sorry",
+          "f": "tant mieux, je dois filer, chou. Sorry"
+        },
         "en": ""
       },
       "nextNodes": [
-        "27"
+        null
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -570,7 +575,7 @@
     "27": {
       "id": "27",
       "text": {
-        "fr": "leur zenitude, la langue …",
+        "fr": "",
         "en": ""
       },
       "nextNodes": [
@@ -586,18 +591,20 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      }
+      },
+      "imagePath": "/assets/images/chapter8_hug_selfie.gif"
     },
     "28": {
       "id": "28",
       "text": {
-        "fr": "ça va me manquer grave!",
+        "fr": {
+          "m": "Arya s'est déconnectée",
+          "f": "Jon s'est déconnecté"
+        },
         "en": ""
       },
-      "nextNodes": [
-        "29"
-      ],
-      "character": "NPC1",
+      "nextNodes": [],
+      "character": "Narrator",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -612,16 +619,13 @@
     "29": {
       "id": "29",
       "text": {
-        "fr": "Pense à tous ceux que tu vas retrouver ici!",
+        "fr": "Oui, mais j'ai plein de trucs. Des souvenirs, des Kdos, des fringues",
         "en": ""
       },
       "nextNodes": [
-        "30",
-        "31",
-        "40",
-        "44"
+        "7"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -636,32 +640,33 @@
     "30": {
       "id": "30",
       "text": {
-        "fr": "Etre enfin à nouveau tous ensemble 🥳",
+        "fr": "",
         "en": ""
       },
       "nextNodes": [
-        "32"
+        "31"
       ],
-      "character": "Player",
+      "character": "NPC1",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
-        "coequipier": 1,
+        "coequipier": 0,
         "planificateur": 0,
         "idealiste": 0,
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      }
+      },
+      "imagePath": "http://gph.is/257jnsD"
     },
     "31": {
       "id": "31",
       "text": {
-        "fr": "De nouvelles aventures t'attendent ici 🤠",
+        "fr": "",
         "en": ""
       },
       "nextNodes": [
-        "37"
+        "32"
       ],
       "character": "Player",
       "attribution": {
@@ -672,19 +677,20 @@
         "idealiste": 0,
         "creatif": 0,
         "audacieux": 0,
-        "explorateur": 1
-      }
+        "explorateur": 0
+      },
+      "imagePath": "http://gph.is/1ULUxvz"
     },
     "32": {
       "id": "32",
       "text": {
-        "fr": "ooooh que oui",
+        "fr": "Allez, me réjouis trop de te VOIR!",
         "en": ""
       },
       "nextNodes": [
         "33"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -699,7 +705,7 @@
     "33": {
       "id": "33",
       "text": {
-        "fr": "vous me manquez tous!!",
+        "fr": "Yes, moi aussi! Mais c'est dur de quitter ici. Plein de trucs vont me manquer",
         "en": ""
       },
       "nextNodes": [
@@ -720,13 +726,13 @@
     "34": {
       "id": "34",
       "text": {
-        "fr": "se retrouver!!",
+        "fr": "comme les algues au ptit dej !!!",
         "en": ""
       },
       "nextNodes": [
         "35"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -741,7 +747,7 @@
     "35": {
       "id": "35",
       "text": {
-        "fr": "🤩",
+        "fr": "",
         "en": ""
       },
       "nextNodes": [
@@ -757,16 +763,17 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      }
+      },
+      "imagePath": "https://gph.is/g/aQQgODO"
     },
     "36": {
       "id": "36",
       "text": {
-        "fr": "Je me sens déjà mieux",
+        "fr": "non, sérieux, les gens, leur zenitude, la langue …",
         "en": ""
       },
       "nextNodes": [
-        "49"
+        "37"
       ],
       "character": "NPC1",
       "attribution": {
@@ -783,13 +790,16 @@
     "37": {
       "id": "37",
       "text": {
-        "fr": "oui, c'est clair!",
+        "fr": "Pense à tous ceux que tu vas retrouver ici!",
         "en": ""
       },
       "nextNodes": [
-        "38"
+        "10",
+        "11",
+        "16",
+        "18"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -804,221 +814,11 @@
     "38": {
       "id": "38",
       "text": {
-        "fr": "t'as raison!",
-        "en": ""
-      },
-      "nextNodes": [
-        "39"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "39": {
-      "id": "39",
-      "text": {
-        "fr": "😎",
-        "en": ""
-      },
-      "nextNodes": [
-        "36"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "40": {
-      "id": "40",
-      "text": {
-        "fr": "J'ai plein d'idées pour un accueil original ✨",
-        "en": ""
-      },
-      "nextNodes": [
-        "41"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 1,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "41": {
-      "id": "41",
-      "text": {
-        "fr": "mais je ne t'en dis pas plus!!",
-        "en": ""
-      },
-      "nextNodes": [
-        "42"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "42": {
-      "id": "42",
-      "text": {
-        "fr": "wait and see … ",
-        "en": ""
-      },
-      "nextNodes": [
-        "43"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "43": {
-      "id": "43",
-      "text": {
-        "fr": "🤩",
-        "en": ""
-      },
-      "nextNodes": [
-        "36"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "44": {
-      "id": "44",
-      "text": {
-        "fr": "Ca fait 2 mois que je planche sur un event VIP 💎",
-        "en": ""
-      },
-      "nextNodes": [
-        "45"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 1,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "45": {
-      "id": "45",
-      "text": {
-        "fr": "je te prépare un retour de star ",
-        "en": ""
-      },
-      "nextNodes": [
-        "46"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "46": {
-      "id": "46",
-      "text": {
-        "fr": "organisé par \"la\" star de l'organisation",
-        "en": ""
-      },
-      "nextNodes": [
-        "47"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "47": {
-      "id": "47",
-      "text": {
-        "fr": "c'est dire ce qui t'attend!!",
-        "en": ""
-      },
-      "nextNodes": [
-        "48"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "48": {
-      "id": "48",
-      "text": {
         "fr": "",
         "en": ""
       },
       "nextNodes": [
-        "36"
+        "14"
       ],
       "character": "Player",
       "attribution": {
@@ -1031,248 +831,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "/assets/images/chapter8_dancing.gif"
-    },
-    "49": {
-      "id": "49",
-      "text": {
-        "fr": "rien qu'à y penser …",
-        "en": ""
-      },
-      "nextNodes": [
-        "50",
-        "51",
-        "52"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "50": {
-      "id": "50",
-      "text": {
-        "fr": "Faut te faire confiance et rester optimiste!",
-        "en": ""
-      },
-      "nextNodes": [
-        "53"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 1,
-        "explorateur": 0
-      }
-    },
-    "51": {
-      "id": "51",
-      "text": {
-        "fr": "Faut voir cette fin comme le début d'autre chose!",
-        "en": ""
-      },
-      "nextNodes": [
-        "53"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 1,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 1
-      }
-    },
-    "52": {
-      "id": "52",
-      "text": {
-        "fr": "Et je suis là pour toi si besoin!",
-        "en": ""
-      },
-      "nextNodes": [
-        "53"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 1,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "53": {
-      "id": "53",
-      "text": {
-        "fr": {
-          "m": "Waw, Jon, on devient trop sérieux là",
-          "f": "Waw, Arya, on devient trop sérieux là"
-        },
-        "en": ""
-      },
-      "nextNodes": [
-        "54"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "54": {
-      "id": "54",
-      "text": {
-        "fr": "à fond 😂",
-        "en": ""
-      },
-      "nextNodes": [
-        "55"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "55": {
-      "id": "55",
-      "text": {
-        "fr": "j'ai de nouveau la pêche en tout cas!",
-        "en": ""
-      },
-      "nextNodes": [
-        "56"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "56": {
-      "id": "56",
-      "text": {
-        "fr": {
-          "m": "tant mieux, je dois filer, chouquette",
-          "f": "tant mieux, je dois filer, chou"
-        },
-        "en": ""
-      },
-      "nextNodes": [
-        "57"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "57": {
-      "id": "57",
-      "text": {
-        "fr": "sorry",
-        "en": ""
-      },
-      "nextNodes": [
-        "58"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "58": {
-      "id": "58",
-      "text": {
-        "fr": "",
-        "en": ""
-      },
-      "nextNodes": [
-        "59"
-      ],
-      "character": "NPC1",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      },
-      "imagePath": "/assets/images/chapter8_hug_selfie.gif"
-    },
-    "59": {
-      "id": "59",
-      "text": {
-        "fr": {
-          "m": "Arya s'est déconnectée",
-          "f": "Jon s'est déconnecté"
-        },
-        "en": ""
-      },
-      "nextNodes": [],
-      "character": "Narrator",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
+      "imagePath": "https://gph.is/2qXNOmM"
     }
   }
 }
