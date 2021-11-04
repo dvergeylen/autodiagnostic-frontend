@@ -493,7 +493,7 @@
     "23": {
       "id": "23",
       "text": {
-        "fr": "Réponds à sa place lorsque des choix multiples te sont proposés.",
+        "fr": "Réponds à sa place lorsque des choix multiples te sont proposés. Choisis, sans trop réfléchir, la réponse qui te correspond le plus. Celle que tu donnerais spontanément.",
         "en": ""
       },
       "nextNodes": [
@@ -514,7 +514,7 @@
     "24": {
       "id": "24",
       "text": {
-        "fr": "Choisis, sans trop réfléchir, la réponse qui te correspond le plus. Celle que tu donnerais spontanément.",
+        "fr": "Bref, que ferais-tu/que dirais-tu dans la même situation ? Joue spontanément et honnêtement...",
         "en": ""
       },
       "nextNodes": [
@@ -535,7 +535,7 @@
     "25": {
       "id": "25",
       "text": {
-        "fr": "Bref, que ferais-tu/que dirais-tu dans la même situation ?",
+        "fr": "Et tu découvriras ton profil dominant dès la partie finie 😉 (Environ dans 20 minutes)",
         "en": ""
       },
       "nextNodes": [
@@ -555,69 +555,6 @@
     },
     "26": {
       "id": "26",
-      "text": {
-        "fr": "Joue spontanément et honnêtement...",
-        "en": ""
-      },
-      "nextNodes": [
-        "27"
-      ],
-      "character": "Narrator",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "27": {
-      "id": "27",
-      "text": {
-        "fr": "Et tu découvriras ton profil dominant dès la partie finie 😉",
-        "en": ""
-      },
-      "nextNodes": [
-        "28"
-      ],
-      "character": "Narrator",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "28": {
-      "id": "28",
-      "text": {
-        "fr": "(Environ dans 20 minutes)",
-        "en": ""
-      },
-      "nextNodes": [
-        "29"
-      ],
-      "character": "Narrator",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 0
-      }
-    },
-    "29": {
-      "id": "29",
       "text": {
         "fr": "C’est parti !",
         "en": ""

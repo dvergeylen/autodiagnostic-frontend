@@ -557,9 +557,7 @@
         },
         "en": ""
       },
-      "nextNodes": [
-        null
-      ],
+      "nextNodes": [],
       "character": "Player",
       "attribution": {
         "leader": 0,
@@ -657,7 +655,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "http://gph.is/257jnsD"
+      "imagePath": "/assets/images/chapter8_anger.gif"
     },
     "31": {
       "id": "31",
@@ -679,7 +677,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "http://gph.is/1ULUxvz"
+      "imagePath": "/assets/images/chapter8_girly_cat_typing.gif"
     },
     "32": {
       "id": "32",
@@ -764,7 +762,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "https://gph.is/g/aQQgODO"
+      "imagePath": "/assets/images/chapter8_tasting.gif"
     },
     "36": {
       "id": "36",
@@ -831,7 +829,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "https://gph.is/2qXNOmM"
+      "imagePath": "/assets/images/chapter8_dancing.gif"
     }
   }
 }
