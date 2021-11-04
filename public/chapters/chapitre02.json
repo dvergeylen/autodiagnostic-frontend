@@ -22,7 +22,8 @@
         "fr": "T'en es où, là?"
       },
       "nextNodes": [
-        "2"
+        "2",
+        "30"
       ],
       "character": "Player",
       "attribution": {
@@ -205,8 +206,7 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      },
-      "imagePath": ""
+      }
     },
     "10": {
       "id": "10",
@@ -228,7 +228,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "https://tenor.com/view/be-creative-innovation-imaginative-creative-artistic-gif-12183360"
+      "imagePath": "/assets/images/chapter2_becreative.gif"
     },
     "11": {
       "id": "11",
@@ -274,7 +274,7 @@
         "audacieux": 1,
         "explorateur": 0
       },
-      "imagePath": "https://gph.is/g/E1Y1QqE "
+      "imagePath": "/assets/images/chapter2_you_can_do_it.gif"
     },
     "13": {
       "id": "13",
@@ -296,7 +296,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "https://gph.is/2xzvQh0 "
+      "imagePath": "/assets/images/chapter2_whats_your_plan.gif"
     },
     "14": {
       "id": "14",
@@ -318,7 +318,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "http://gph.is/1aiSNnT"
+      "imagePath": "/assets/images/chapter2_hug.gif"
     },
     "15": {
       "id": "15",
@@ -534,15 +534,14 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      },
-      "imagePath": "https://listemoji.com/img/emoji/1f4aa.png"
+      }
     },
     "25": {
       "id": "25",
       "text": {
         "fr": {
-          "m": "ah, t'es trop fort! Super!!",
-          "f": "ah, t'es trop forte! Super!!"
+          "m": "ah, t'es trop forte! Super!!",
+          "f": "ah, t'es trop fort! Super!!"
         },
         "en": ""
       },
@@ -601,8 +600,7 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      },
-      "imagePath": "https://listemoji.com/img/emoji/1f3b6.png"
+      }
     },
     "28": {
       "id": "28",
@@ -636,6 +634,25 @@
       },
       "nextNodes": [],
       "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "30": {
+      "id": "30",
+      "text": {
+        "fr": "clique sur une zone neutre pour accélérer le rythme des répliques",
+        "en": ""
+      },
+      "nextNodes": [],
+      "character": "Narrator",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,

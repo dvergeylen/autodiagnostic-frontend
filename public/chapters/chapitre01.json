@@ -37,9 +37,7 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      },
-      "incomingNodes": [],
-      "imagePath": ""
+      }
     },
     "2": {
       "id": "2",
@@ -60,11 +58,7 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      },
-      "incomingNodes": [
-        "6"
-      ],
-      "imagePath": ""
+      }
     },
     "3": {
       "id": "3",
@@ -232,8 +226,7 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      },
-      "imagePath": ""
+      }
     },
     "10": {
       "id": "10",
@@ -242,7 +235,8 @@
         "en": ""
       },
       "nextNodes": [
-        "17"
+        "17",
+        "43"
       ],
       "character": "NPC1",
       "attribution": {
@@ -593,8 +587,7 @@
         "creatif": 3,
         "audacieux": 0,
         "explorateur": 0
-      },
-      "imagePath": ""
+      }
     },
     "27": {
       "id": "27",
@@ -657,8 +650,7 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      },
-      "imagePath": "https://listemoji.com/img/emoji/1f602.png"
+      }
     },
     "30": {
       "id": "30",
@@ -679,8 +671,7 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      },
-      "imagePath": ""
+      }
     },
     "31": {
       "id": "31",
@@ -927,6 +918,25 @@
       },
       "nextNodes": [],
       "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      }
+    },
+    "43": {
+      "id": "43",
+      "text": {
+        "fr": "clique sur la réponse qui te correspond le plus ",
+        "en": ""
+      },
+      "nextNodes": [],
+      "character": "Narrator",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,

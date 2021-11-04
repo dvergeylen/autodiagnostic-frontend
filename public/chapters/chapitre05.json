@@ -235,7 +235,10 @@
     "11": {
       "id": "11",
       "text": {
-        "fr": "Au fait, j'ai chatté hier avec Clem. Parait que t'es devenu délégué de toute ton année!!",
+        "fr": {
+          "m": "Au fait, j'ai chatté hier avec Clem. Parait que t'es devenu délégué de toute ton année!!",
+          "f": "Au fait, j'ai chatté hier avec Clem. Parait que t'es devenue déléguée de toute ton année!!"
+        },
         "en": ""
       },
       "nextNodes": [
@@ -278,7 +281,10 @@
     "13": {
       "id": "13",
       "text": {
-        "fr": "Ben oui, tu me connais, être délégué, c'est pour moi 📣",
+        "fr": {
+          "m": "Ben oui, tu me connais, être délégué, c'est pour moi 📣",
+          "f": "Ben oui, tu me connais, être déléguée, c'est pour moi 📣"
+        },
         "en": ""
       },
       "nextNodes": [
@@ -337,7 +343,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "http://gph.is/XMsJtl "
+      "imagePath": "/assets/images/chapter5_hello_there.gif"
     },
     "16": {
       "id": "16",
@@ -1041,7 +1047,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "http://gph.is/2uFgmVv"
+      "imagePath": "/assets/images/chapter5_enjoy.gif"
     },
     "48": {
       "id": "48",
@@ -1063,7 +1069,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "https://gph.is/g/4Lx99vR  "
+      "imagePath": "/assets/images/chapter5_so.gif"
     },
     "49": {
       "id": "49",
