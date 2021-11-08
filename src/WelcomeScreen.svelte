@@ -103,11 +103,14 @@
         </p>
         <div class="is-flex">
           <div on:click={() => startNewGame('F')}>
+
+              <img src='/assets/images/avatar_Arya_intro.png' alt="Arya"/>
               <div class="is-button is-uppercase">
                 Féminin
               </div>
           </div>
           <div on:click={() => startNewGame('M')}>
+              <img src='/assets/images/avatar_Jon_intro.png' alt="Jon"/>
               <div class="is-button is-uppercase">
                 Masculin
               </div>
@@ -228,9 +231,6 @@
         div {
           width: 50%;
           cursor: pointer;
-          justify-content: center;
-          display: flex;
-          align-items: center;
 
           .is-button {
             padding-top: 0.25em;
@@ -241,6 +241,11 @@
             border-radius: 0.15em;
             background-color: rgba(255,255,255,0.25);
             font-size: 0.8em;
+            margin: auto;
+          }
+
+          img {
+            max-width: 7em;
           }
         }
       }
