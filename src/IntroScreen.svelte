@@ -34,12 +34,28 @@
 
 <div id="intro" on:click={abortTimer} style="--url-smartphone: {url_smartphone};--url-tablet: {url_tablet}; --url-desktop: {url_desktop};">
   <div id="titles">
-    <h1>CHAPITRE {twoDigitsChapterId} :</h1>
-    {#if storesLoaded}
-      <p id="subtitle">{@html $chapters[$currentChapterId].metadata.title[$gameState.language]}</p>
-      <p id="date">{chapterDate}</p>
-      <progress max="10" value="{$currentChapterId}"> {Number($currentChapterId) * 10}% </progress>
-    {/if}
+    <fieldset>
+      <legend>{$currentChapterId === '0' ? 'INTRODUCTION' : `CHAPITRE ${twoDigitsChapterId}`}</legend>
+      {#if storesLoaded}
+        <p id="date">
+          <svg class="icon calendar">
+            <use href='assets/sprite_icons.svg#calendar-alt' />
+          </svg>
+          {chapterDate}
+        </p>
+        <p id="subtitle">{ @html $chapters[$currentChapterId].metadata.title[$gameState.language]}</p>
+        {#if Number($currentChapterId) > 1}
+          <p id="progress-motto">Ton profil s'affine, sa précision est actuellement de :</p>
+          <div id="progress-container">
+            <div id="progress" style="--width: {(1 - (Number($currentChapterId) / 10)) * 100}%;--padding-left: {$currentChapterId === '10' ? '0' : '0.5em'};">
+            </div>
+            <p id="progress-score">
+              {Number($currentChapterId) * 10}%
+            </p>
+          </div>
+        {/if}
+      {/if}
+    </fieldset>
   </div>
 </div>
 
@@ -51,7 +67,7 @@
     flex-grow: 1;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: var(--color08);
+    background-color: var(--color-background-intro);
     height: 100%;
 
     // Phones
@@ -80,28 +96,83 @@
 
 
   #titles {
-    background-color: var(--color08);
+    background-color: var(--color-titles-intro);
     opacity: 0.85;
     padding-top: 1em;
     padding-bottom: 1em;
     position: relative;
     top: 68%;
 
-    h1 {
-      font-size: x-large;
-      margin: 0;
-      color: white;
-    }
-    p#subtitle {
-      margin: 0;
-      color: white;
-      padding: 1em 0.5em 1em 0.5em;
-    }
-    p#date {
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      font-weight: 400;
-      color: white;
+    fieldset {
+      border-style: solid none none none; /* top, right, bottom, left */
+      border-width: 0.15em;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+
+      legend {
+        margin: auto;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-weight: 900;
+        color: white;
+        font-size: x-large;
+      }
+      p#subtitle {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        color: white;
+        font-style: italic;
+        font-size: 0.8em;
+      }
+      p#date {
+        margin-top: 0;
+        margin-bottom: 0.5em;
+        font-weight: 400;
+        color: white;
+
+        .calendar {
+          vertical-align: top;
+        }
+      }
+      #progress-motto {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        font-size: 0.8em;
+        color: white;
+      }
+      #progress-container {
+        background: linear-gradient(to right, #ca241d, #feca00);
+        border-radius: 1em;
+        max-width: 20em;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+
+        #progress {
+          background-color: white;
+          font-weight: 900;
+          text-align: left;
+          padding-left: var(--padding-left);
+          padding-top: 0.25em;
+          padding-bottom: 0.25em;
+          width: var(--width);
+          margin-left: auto;
+          border-top-right-radius: 1em;
+          border-bottom-right-radius: 1em;
+          height: 1em;
+        }
+        #progress-score {
+          color: white;
+          position: absolute;
+          margin: 0;
+          padding-left: 0.5em;
+          padding-top: 0.25em;
+          padding-bottom: 0.25em;
+          vertical-align: middle;
+          font-weight: 900;
+        }
+      }
     }
   }
 </style>
