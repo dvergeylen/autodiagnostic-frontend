@@ -210,9 +210,10 @@
           class:player={$chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'Player'}
           class:narrator={$chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'Narrator'}>
           {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}
-            <img src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}"
-              alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}"
-              on:load={updateScrollHeight} />
+            <video autoplay loop muted playsinline on:load={updateScrollHeight}>
+              <source src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}" type="video/mp4">
+              <p>{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}</p>
+            </video>
           {:else}
             <p>
               {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language] instanceof Object}
@@ -234,10 +235,10 @@
       <div class="player" class:is-grid-2x2={answersNodeIds.reduce((acc, id) => acc || $chapters[$currentChapterId].dialogNodes[id].imagePath, false)}>
         {#each answersNodeIds as answerDialogNodeId (answerDialogNodeId)}
             {#if $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}
-              <img src="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}"
-              alt="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imageAlt}"
-               on:click={() => addAnswer(answerDialogNodeId)}
-               on:load={updateScrollHeight}/>
+              <video autoplay loop muted playsinline on:click={() => addAnswer(answerDialogNodeId)} on:load={updateScrollHeight}>
+                <source src="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}" type="video/mp4">
+                <p>{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imageAlt}</p>
+              </video>
             {:else}
               <p class="choice" on:click={() => addAnswer(answerDialogNodeId)}>
                 {#if $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language] instanceof Object}
@@ -338,13 +339,13 @@
       }
 
       div.player, div.npc1 {
-        img {
+        video {
           max-width: 9.5em;
           margin: auto;
           cursor: pointer;
           max-height: 10em;
         }
-        img:only-child {
+        video:only-child {
           margin: auto;
           padding-top: 0.5em;
           padding-bottom: 0.5em;
