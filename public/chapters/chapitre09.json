@@ -13,7 +13,8 @@
       "label": {
         "fr": "Aéroport International Narita Tokyo"
       }
-    }
+    },
+    "progress": 95
   },
   "dialogNodes": {
     "1": {

@@ -44,10 +44,10 @@
           {chapterDate}
         </p>
         <p id="subtitle">{ @html $chapters[$currentChapterId].metadata.title[$gameState.language]}</p>
-        {#if Number($currentChapterId) > 1}
+        {#if $chapters[$currentChapterId].metadata.progress}
           <p id="progress-motto">Ton profil s'affine, sa précision est actuellement de :</p>
           <div id="progress-container">
-            <div id="progress" style="--width: {(1 - (Number($currentChapterId) / 10)) * 100}%;--padding-left: {$currentChapterId === '10' ? '0' : '0.5em'};">
+            <div id="progress" style="--width: {(100 - Number($chapters[$currentChapterId].metadata.progress))}%;--padding-left: {$currentChapterId === '10' ? '0' : '0.5em'};">
             </div>
             <p id="progress-score">
               {Number($currentChapterId) * 10}%
