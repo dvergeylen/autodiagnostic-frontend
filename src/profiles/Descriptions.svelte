@@ -70,6 +70,7 @@
 <style lang="scss">
   h4 {
     margin-top: 0;
+    max-width: 50%;
   }
   h4::after {
     content: "";
