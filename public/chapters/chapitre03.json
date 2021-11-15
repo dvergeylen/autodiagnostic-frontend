@@ -556,8 +556,7 @@
       },
       "nextNodes": [
         "27",
-        "30",
-        "32"
+        "30"
       ],
       "character": "NPC1",
       "attribution": {
@@ -621,7 +620,7 @@
         "en": ""
       },
       "nextNodes": [
-        "33"
+        "32"
       ],
       "character": "NPC1",
       "attribution": {
@@ -669,7 +668,7 @@
       "nextNodes": [
         "29"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -687,7 +686,9 @@
         "fr": "Bizz",
         "en": ""
       },
-      "nextNodes": [],
+      "nextNodes": [
+        "33"
+      ],
       "character": "NPC1",
       "attribution": {
         "leader": 0,
