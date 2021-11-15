@@ -60,13 +60,13 @@
   };
 
   // Width, height depends on screen resolution, hence fetch them dynamically
-  let width = 500;  // px
-  let height = 500; // px
+  let width = 550;  // px
+  let height = 550; // px
 
   // 'y' coordinates points to bottom ↓, hence the minus sign
   const coordinates = profilesOrdered.map((profile, i) => ({
-    x: Math.floor(((width  / 2) + (0.85 * (width  / 2) / 10) * $gameState.attribution[profile] * Math.cos(2 * Math.PI * i * (1 / 8)))),
-    y: Math.floor(((height / 2) - (0.85 * (height / 2) / 10) * $gameState.attribution[profile] * Math.sin(2 * Math.PI * i * (1 / 8)))),
+    x: Math.floor(((width  / 2) + (0.65 * (width  / 2) / 10) * $gameState.attribution[profile] * Math.cos(2 * Math.PI * i * (1 / 8)))),
+    y: Math.floor(((height / 2) - (0.65 * (height / 2) / 10) * $gameState.attribution[profile] * Math.sin(2 * Math.PI * i * (1 / 8)))),
   }));
   const path = coordinates.reduce((acc, coord, i) => i === 0 ? acc + `M${coord.x} ${coord.y}`: acc + ` L${coord.x} ${coord.y}`, '');
 
@@ -125,7 +125,7 @@
     </legend>
   </fieldset>
   <div id="graph-container">
-    <svg id="graph" viewBox="0 0 500 500">
+    <svg id="graph" viewBox="0 0 {width} {height}">
       <use href='assets/sprite_results.svg#results-background' xlink:href='assets/sprite_results.svg#results-background' />
       <path d="{path} Z" stroke="var(--color-primary)" stroke-width="3" fill="#FF505099"/>
       {#each profilesOrdered as profile, i (i)}
@@ -285,7 +285,7 @@
     min-width: 15ch;
     max-width: 30ch;
 
-    border: 1px solid var(--color-primary);
+    border: 2px solid red;
     border-radius: 0.25em;
     padding: 0.25em 0.5em;
 
@@ -304,7 +304,7 @@
       justify-self: end;
       width: 0.8em;
       height: 0.5em;
-      background-color: var(--color-primary);
+      background-color: red;
       clip-path: polygon(100% 0%, 0 0%, 50% 100%);
     }
   }
