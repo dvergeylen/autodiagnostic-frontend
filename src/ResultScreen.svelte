@@ -3,14 +3,8 @@
   import { onMount } from "svelte";
   import { currentChapterId, gameState, sortedPlayerAttributions } from './stores/gameState';
   import { sendResultsTelemetry } from './telemetry';
-  import Leader from './profiles/Leader.svelte';
-  import Planificateur from './profiles/Planificateur.svelte';
-  import Bricoleur from './profiles/Bricoleur.svelte';
-  import Coequipier from './profiles/Coequipier.svelte';
-  import Idealiste from './profiles/Idealiste.svelte';
-  import Creatif from './profiles/Creatif.svelte';
-  import Audacieux from './profiles/Audacieux.svelte';
-  import Explorateur from './profiles/Explorateur.svelte';
+  import Strengths from './profiles/Strengths.svelte';
+  import Descriptions from './profiles/Descriptions.svelte';
   import Footer from "./Footer.svelte";
 
   let mainProfile: string;
@@ -33,42 +27,34 @@
   const profiles = {
     leader:  {
       name: 'Le Leader',
-      component: Leader,
       avatarName: 'Leader',
     },
     bricoleur: {
       name: 'Le Bricoleur',
-      component: Bricoleur,
       avatarName: 'Bricoleur',
     },
     coequipier: {
       name: 'Le Coéquipier',
-      component: Coequipier,
       avatarName: 'Coequipier',
     },
     planificateur: {
       name: 'Le Planificateur',
-      component: Planificateur,
       avatarName: 'Planificateur',
     },
     idealiste: {
       name: 'L\'Idéaliste',
-      component: Idealiste,
       avatarName: 'Idealiste',
     },
     creatif: {
       name: 'Le Créatif',
-      component: Creatif,
       avatarName: 'Creatif',
     },
     audacieux: {
       name: 'L\'Audacieux',
-      component: Audacieux,
       avatarName: 'Audacieux',
     },
     explorateur: {
       name: 'L\'Explorateur',
-      component: Explorateur,
       avatarName: 'Explorateur',
     },
   };
@@ -101,17 +87,17 @@
 
 <main>
   <div id="congratulations">
-    <h1>Félicitations!</h1>
+    <h2>FÉLICITATIONS</h2>
     <p class="is-bold">
       Belle aventure ! Félicitations et merci d’avoir joué ! <br />
       Voici les résultats du test :
     </p>
   </div>
 
-  <div id="profile">
-    <h3>Ton profil dominant :</h3>
+  <fieldset id="profile">
+    <legend>Ton profil dominant</legend>
     <h2>{profiles[mainProfile].name}</h2>
-  </div>
+  </fieldset>
 
 
   <div id="profile-avatar-container">
@@ -124,9 +110,20 @@
     </picture>
   </div>
 
-  <p>
-    Voici les toutes les composantes de ton profil :
-  </p>
+  <div class="share-container">
+    <a href="https://www.badgee.net" target="_blank" rel="noopener noreferrer">Valorise ces compétences avec Badg'ee</a>
+  </div>
+
+  <Strengths profileName={selectedProfile} />
+
+  <fieldset id="graph-title">
+    <legend>
+      <svg class="icon magnifying-glass">
+        <use href='assets/sprite_icons.svg#search' />
+      </svg>
+      TES RÉSULTATS DÉTAILLÉS :
+    </legend>
+  </fieldset>
   <div id="graph-container">
     <svg id="graph" viewBox="0 0 500 500">
       <use href='assets/sprite_results.svg#results-background' xlink:href='assets/sprite_results.svg#results-background' />
@@ -150,29 +147,47 @@
       </div>
       <p class="caption">Clique sur les autres profils pour voir leur description</p>
     </div>
-    <svelte:component this={profiles[selectedProfile].component} showBadgee={selectedProfile === mainProfile}/>
+    <Descriptions profileName={selectedProfile} />
   </div>
 </main>
 
 <Footer />
 
 <style lang="scss">
+  #congratulations {
+    h2 {
+      background-color: var(--color-primary);
+      color: white;
+      font-weight: 900;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      font-size: 2em;
+    }
+    p {
+      font-size: 0.8em;
+    }
+  }
 
   #profile {
-    color: white;
-    background-color: var(--color-primary);
     margin-top: 1em;
     margin-bottom: 2em;
-    h2 {
-      margin-top: 0.15em;
-      margin-bottom: 0.5em;
-      font-size: 2em;
-      color: white;
+    border: 5px solid red;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.25em;
+
+    legend {
+      margin: auto;
+      padding-left: 5%;
+      padding-right: 5%;
+      font-weight: 700;
     }
-    h3 {
-      margin-top: 0.5em;
+    h2 {
+      font-weight: 900;
+      margin-top: 0.15em;
       margin-bottom: 0;
-      color: white;
+      font-size: 2em;
     }
   }
 
@@ -186,6 +201,24 @@
       max-width: 25em;
       max-height: 25em;
     }
+  }
+
+  fieldset#graph-title {
+    border-style: solid none none none;
+    border-top: 3px solid red;
+    margin-top: 2.5em;
+    legend {
+      margin: auto;
+      padding-left: 5%;
+      padding-right: 5%;
+      font-weight: 900;
+    }
+  }
+
+  .magnifying-glass {
+    fill: red;
+    margin-right: 0.5em;
+    vertical-align: top;
   }
 
   #graph-container {
