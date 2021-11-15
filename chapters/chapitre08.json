@@ -590,7 +590,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "/assets/images/chapter8_hug_selfie.gif"
+      "imagePath": "/assets/images/chapter8_hug_selfie.webm"
     },
     "28": {
       "id": "28",
@@ -655,7 +655,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "/assets/images/chapter8_anger.gif"
+      "imagePath": "/assets/images/chapter8_anger.webm"
     },
     "31": {
       "id": "31",
@@ -677,7 +677,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "/assets/images/chapter8_girly_cat_typing.gif"
+      "imagePath": "/assets/images/chapter8_girly_cat_typing.webm"
     },
     "32": {
       "id": "32",
@@ -762,7 +762,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "/assets/images/chapter8_tasting.gif"
+      "imagePath": "/assets/images/chapter8_tasting.webm"
     },
     "36": {
       "id": "36",
@@ -829,7 +829,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "/assets/images/chapter8_dancing.gif"
+      "imagePath": "/assets/images/chapter8_dancing.webm"
     }
   }
 }

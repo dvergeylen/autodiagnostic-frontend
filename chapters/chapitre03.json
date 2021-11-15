@@ -556,8 +556,7 @@
       },
       "nextNodes": [
         "27",
-        "30",
-        "32"
+        "30"
       ],
       "character": "NPC1",
       "attribution": {
@@ -591,7 +590,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "/assets/images/chapter3_well_done.gif"
+      "imagePath": "/assets/images/chapter3_well_done.webm"
     },
     "28": {
       "id": "28",
@@ -621,7 +620,7 @@
         "en": ""
       },
       "nextNodes": [
-        "33"
+        "32"
       ],
       "character": "NPC1",
       "attribution": {
@@ -655,7 +654,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "/assets/images/chapter3_boo.gif"
+      "imagePath": "/assets/images/chapter3_boo.webm"
     },
     "31": {
       "id": "31",
@@ -669,7 +668,7 @@
       "nextNodes": [
         "29"
       ],
-      "character": "NPC1",
+      "character": "Player",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
@@ -687,7 +686,9 @@
         "fr": "Bizz",
         "en": ""
       },
-      "nextNodes": [],
+      "nextNodes": [
+        "33"
+      ],
       "character": "NPC1",
       "attribution": {
         "leader": 0,
