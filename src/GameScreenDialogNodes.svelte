@@ -76,33 +76,39 @@
         displayResultsBox = true;
       }
 
-    // Display Answer DialogNode div:
-    // - when transitioning from NPCx → Player (even if 1 choice)
-    // - when Player and multiple nextNodes
+    // Display Answer DialogNode div when 'Player' and multiple nextNodes
     } else if (currentSpeaker === 'Player' && (nextNodes.length > 1)) {
       const timerReply = 1000;
       timerId = setTimeout(() => {
         displayAnswerDialogBox(nextNodeIds);
       }, skipTimer ? 0 : timerReply);
 
-    // Narrator, display node immediately
+    // 'Narrator', display node immediately
     } else if (currentSpeaker === 'Narrator') {
-      const timerReply = 2500;
-
       // ...unless multiple Narrator nodes are displayed consecutively
+      const timerReply = 3500;
       timerId = setTimeout(() => {
         $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
 
         // Call next DialogNode, if any
         displayNextDialogNode(nextNodeIds[0]);
       }, (previousSpeaker !== 'Narrator') || skipTimer ? 0 : timerReply);
-    // Display next node, after a random time typing
+    // Display next node, after some time typing (varying according to nextnode's length)
     } else {
-      const timerIsTyping = Math.floor(Math.random() * (750 - 500 + 1) + 500);
+      const parentNodeLength = $chapters[$currentChapterId].dialogNodes[parentNodeId]?.text[$gameState.language] instanceof Object ?
+        $chapters[$currentChapterId].dialogNodes[parentNodeId].text[$gameState.language][$gameState.gender.toLowerCase()].length :
+        $chapters[$currentChapterId].dialogNodes[parentNodeId]?.text[$gameState.language]?.length || 10;
+      // BeforeIsTyping time is reduced when responses from a same character are following
+      const timerBeforeIsTyping = Math.floor(parentNodeLength * (previousSpeaker === currentSpeaker ? 25 : 50));
+      console.log(`timerBeforeIsTyping: ${timerBeforeIsTyping}`);
       timerId = setTimeout(() => {
         showIsTyping = true;
 
-        const timerReply = Math.floor(Math.random() * (1500 - 1000 + 1) + 1000);
+        const nextNodeLength = $chapters[$currentChapterId].dialogNodes[nextNodeIds[0]].text[$gameState.language] instanceof Object ?
+          $chapters[$currentChapterId].dialogNodes[nextNodeIds[0]].text[$gameState.language][$gameState.gender.toLowerCase()].length :
+          $chapters[$currentChapterId].dialogNodes[nextNodeIds[0]].text[$gameState.language].length;
+        const timerIsTyping = Math.floor((nextNodeLength || 10) * 50);
+        console.log(`timerIsTyping: ${timerIsTyping}`);
         timerId = setTimeout(() => {
           showIsTyping = false;
           $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
@@ -112,8 +118,8 @@
 
           // Call recursively
           displayNextDialogNode(nextNodeIds[0]);
-        },  skipTimer ? 0 : timerReply);
-      },  skipTimer ? 0 : timerIsTyping);
+        },  skipTimer ? 0 : timerIsTyping);
+      },  skipTimer ? 0 : timerBeforeIsTyping);
     }
   }
 
