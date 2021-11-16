@@ -23,11 +23,6 @@
     margin-right: auto;
     margin-top: 2em;
   }
-  #logo-fse {
-    max-width: 12em;
-    margin: auto;
-    margin-left: 5%;
-  }
   footer::after {
     content: "";
     height: 2em;
