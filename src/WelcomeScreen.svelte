@@ -7,9 +7,14 @@
   let newGamePressed: boolean = false;
   let isNewGame = false;
   let isGenderConfigured: boolean;
+  let gender: 'M' | 'F' | '' = '';
 
   function toggleMusic() {
     playMusicStore.set(!$playMusicStore);
+  }
+
+  function toggleCharacter(g: 'M' | 'F') {
+    gender = gender !== g ? g : '';
   }
 
   function toggleNewGamePressed() {
@@ -20,13 +25,9 @@
   }
 
   function startGame() {
-    $appStatus = GameStatus.INTRO;
-  }
-
-  function startNewGame(gender: 'M' | 'F') {
-    $gameState.gender = gender;
+    $gameState.gender = gender === '' ? 'M' : gender;
     $gameState.nodes = {};
-    startGame();
+    $appStatus = GameStatus.INTRO;
   }
 
   $: isNewGame = (Object.entries($gameState.nodes).length === 0);
@@ -93,29 +94,34 @@
             Continuer
         </button>
         {/if}
-        <button on:click={toggleNewGamePressed} class:pressed={newGamePressed} class="is-uppercase">
-          Nouvelle Partie
-        </button>
       </div>
-      <div class:is-hidden={!newGamePressed} class="buttons-protagoniste">
+      <div class="buttons-protagoniste">
         <p class="is-uppercase">
-          Protagoniste :
+          Nouvelle Partie :
+        </p>
+        <p class="is-uppercase is-small">
+          Choisis ton personnage :
         </p>
         <div class="is-flex">
-          <div on:click={() => startNewGame('F')}>
+          <div on:click={() => toggleCharacter('F')}>
 
-              <img src='/assets/images/avatar_Arya_intro.png' alt="Arya"/>
-              <div class="is-button is-uppercase">
-                Féminin
+              <img class:selected={gender === 'F'} src='/assets/images/avatar_Arya_intro.png' alt="Arya"/>
+              <div class:selected={gender === 'F'} class="is-button is-uppercase">
+                Arya
               </div>
           </div>
-          <div on:click={() => startNewGame('M')}>
-              <img src='/assets/images/avatar_Jon_intro.png' alt="Jon"/>
-              <div class="is-button is-uppercase">
-                Masculin
+          <div on:click={() => toggleCharacter('M')}>
+              <img class:selected={gender === 'M'} src='/assets/images/avatar_Jon_intro.png' alt="Jon"/>
+              <div class:selected={gender === 'M'} class="is-button is-uppercase">
+                Jon
               </div>
           </div>
         </div>
+      </div>
+      <div class="has-text-centered">
+        <button on:click={startGame} disabled={gender.length === 0} class="is-uppercase" class:disabled={gender.length === 0}>
+          Démarrer
+        </button>
       </div>
     </div>
   </div>
@@ -189,28 +195,10 @@
     padding: 1em;
     border-radius: 0.25em;
 
-    div#buttons-settings {
-      button, .is-button {
-        margin: auto;
-        color: white;
-        border: 1.5px solid white;
-        border-radius: 0.25em;
-        background-color: rgba(255, 255, 255, 0.25);
-        font-weight: bold;
-        font-size: 0.7em;
-        padding-top: 1em;
-        padding-bottom: 1em;
-        width: 100%;
-        max-width: 25em;
-      }
-      button + button {
-        margin-top: 1em;
-      }
-    }
-
     .buttons-protagoniste {
       margin: auto;
       margin-top: 1em;
+      margin-bottom: 1em;
       color: white;
       border: 1.5px solid white;
       border-radius: 0.25em;
@@ -263,6 +251,28 @@
   div#music-settings-wrapper {
     text-align: right;
     flex-grow: 1;
+  }
+
+  img.selected, .is-button.selected {
+    border: 2px solid red !important;
+  }
+
+  button, .is-button {
+    margin: auto;
+    color: white;
+    border: 1.5px solid white;
+    border-radius: 0.25em;
+    background-color: rgba(255, 255, 255, 0.25);
+    font-weight: bold;
+    font-size: 0.7em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+    max-width: 25em;
+  }
+
+  button.disabled {
+    background-color: rgba(255, 255, 255, 0.6);
   }
 
   svg.music {
