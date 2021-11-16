@@ -282,7 +282,7 @@
       "text": {
         "fr": {
           "m": "Bon, on verra… Sans ma meilleure amie tout ce temps, ce sera pas pareil ici.",
-          "f": "Bon, on verra… Sans mon meilleure ami tout ce temps, ce sera pas pareil ici."
+          "f": "Bon, on verra… Sans mon meilleur ami tout ce temps, ce sera pas pareil ici."
         },
         "en": ""
       },
@@ -304,7 +304,7 @@
     "14": {
       "id": "14",
       "text": {
-        "fr": "T'inquiète pas! On s'envoies des SMS TOUS les jours",
+        "fr": "T'inquiète pas! On s'envoie des SMS TOUS les jours",
         "en": ""
       },
       "nextNodes": [
@@ -430,7 +430,7 @@
     "20": {
       "id": "20",
       "text": {
-        "fr": "bonne idée car j'y connais rien moi à la carte du Japon!!",
+        "fr": "Bonne idée car j'y connais rien moi à la carte du Japon!!",
         "en": ""
       },
       "nextNodes": [
