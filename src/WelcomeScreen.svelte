@@ -118,7 +118,7 @@
           </div>
         </div>
       </div>
-      <div class="has-text-centered">
+      <div class="has-text-centered" class:is-hidden={gender.length === 0}>
         <button on:click={startGame} disabled={gender.length === 0} class="is-uppercase" class:disabled={gender.length === 0}>
           Démarrer
         </button>
