@@ -187,8 +187,8 @@
       "id": "8",
       "text": {
         "fr": {
-          "m": "Courage, tu vas y arriver ! T'es le meilleur!",
-          "f": "Courage, tu vas y arriver ! T'es la meilleure!"
+          "m": "Courage, tu vas y arriver ! T'es la meilleure!",
+          "f": "Courage, tu vas y arriver ! T'es le meilleur!"
         },
         "en": ""
       },
@@ -911,13 +911,13 @@
       "id": "42",
       "text": {
         "fr": {
-          "m": "[Arya déconnectée]",
-          "f": "[Jon déconnecté]"
+          "m": "Arya s'est déconnectée",
+          "f": "Jon s'est déconnecté"
         },
         "en": ""
       },
       "nextNodes": [],
-      "character": "NPC1",
+      "character": "Narrator",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
