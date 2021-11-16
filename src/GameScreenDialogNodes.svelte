@@ -87,11 +87,15 @@
 
     // Narrator, display node immediately
     } else if (currentSpeaker === 'Narrator') {
-      $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
+      const timerReply = 2500;
 
-      // Call next DialogNode, if any
-      displayNextDialogNode(nextNodeIds[0]);
+      // ...unless multiple Narrator nodes are displayed consecutively
+      timerId = setTimeout(() => {
+        $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
 
+        // Call next DialogNode, if any
+        displayNextDialogNode(nextNodeIds[0]);
+      }, (previousSpeaker !== 'Narrator') || skipTimer ? 0 : timerReply);
     // Display next node, after a random time typing
     } else {
       const timerIsTyping = Math.floor(Math.random() * (750 - 500 + 1) + 500);
