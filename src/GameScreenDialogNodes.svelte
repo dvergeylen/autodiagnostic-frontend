@@ -100,7 +100,6 @@
         $chapters[$currentChapterId].dialogNodes[parentNodeId]?.text[$gameState.language]?.length || 10;
       // BeforeIsTyping time is reduced when responses from a same character are following
       const timerBeforeIsTyping = Math.floor(parentNodeLength * (previousSpeaker === currentSpeaker ? 25 : 50));
-      console.log(`timerBeforeIsTyping: ${timerBeforeIsTyping}`);
       timerId = setTimeout(() => {
         showIsTyping = true;
 
@@ -108,7 +107,6 @@
           $chapters[$currentChapterId].dialogNodes[nextNodeIds[0]].text[$gameState.language][$gameState.gender.toLowerCase()].length :
           $chapters[$currentChapterId].dialogNodes[nextNodeIds[0]].text[$gameState.language].length;
         const timerIsTyping = Math.floor((nextNodeLength || 10) * 50);
-        console.log(`timerIsTyping: ${timerIsTyping}`);
         timerId = setTimeout(() => {
           showIsTyping = false;
           $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
@@ -236,9 +234,9 @@
         </div>
       {/each}
       <div id="typing-container" class:is-hidden={!showIsTyping} class:npc1={npc1Typing} class:player={playerTyping}>
-        <p>
-          ...
-        </p>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
       </div>
     </div>
     <div id="answer-container">
@@ -385,6 +383,46 @@
         animation-name: fadeIn;
         animation-duration: 0.5s;
       }
+
+      @keyframes isTyping {
+        0% {
+          transform: translateY(0px);
+          ///background-color:#6CAD96; // rgba(20,105,69,.7);
+        }
+        28% {
+          transform: translateY(-3.5px);
+          ///background-color:#9ECAB9; //rgba(20,105,69,.4);
+        }
+        44% {
+          transform: translateY(0px);
+          //background-color: #B5D9CB; //rgba(20,105,69,.2);
+        }
+      }
+      #typing-container {
+        height: 2em;
+        display: flex;
+        align-items: center;
+      }
+      .dot {
+        animation: isTyping 1s infinite ease-in-out;
+        background-color: var(--anthracite);
+        border-radius: 50%;
+        height: 0.1em;
+        width: 0.1em;
+        margin-right: 0.15em;
+        vertical-align: middle;
+        display: inline-block;
+        padding: 0;
+      }
+      .dot:nth-child(1) {
+        animation-delay: 400ms;
+      }
+      .dot:nth-child(2) {
+        animation-delay: 500ms;
+      }
+      .dot:nth-child(3) {
+        animation-delay: 600ms;
+      }
     }
   }
 
@@ -392,7 +430,7 @@
     background-color: white;
     font-weight: 700;
     cursor: pointer;
-    animation-name: svelte-1h363kf-fadeIn;
+    animation-name: fadeIn;
     animation-duration: 2s;
     border: 2px solid red;
   }
