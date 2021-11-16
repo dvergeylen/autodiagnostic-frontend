@@ -217,9 +217,9 @@
           {:else}
             <p>
               {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language] instanceof Object}
-                {$chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language][$gameState.gender.toLowerCase()]}
+                {@html $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language][$gameState.gender.toLowerCase()]}
               {:else}
-                {$chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language]}
+                {@html $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language]}
               {/if}
             </p>
           {/if}

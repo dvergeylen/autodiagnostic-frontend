@@ -409,7 +409,7 @@
     "19": {
       "id": "19",
       "text": {
-        "fr": "Et tu pourras voir où je suis via l'onglet \"carte\" de ton tél.",
+        "fr": "Et tu pourras voir où je suis via l'onglet <svg class=\"icon map\" style=\"fill: var(--anthracite);\"><use href='assets/sprite_icons.svg#map-marked-alt' /></svg> de ton tél.",
         "en": ""
       },
       "nextNodes": [
