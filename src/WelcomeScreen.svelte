@@ -91,7 +91,7 @@
       <div id="buttons-settings" class="is-grid">
         {#if !isNewGame && isGenderConfigured }
           <button class:pressed={!newGamePressed} on:click={startGame} class="is-uppercase">
-            Continuer
+            Continuer ⟶
         </button>
         {/if}
       </div>

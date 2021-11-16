@@ -253,12 +253,12 @@
     </div>
     {#if displayNextChapterBox}
       <div id="next-chapter-container" on:click={startNextChapter}>
-        <p>Continuer (Chapitre {nextChapterId}) →</p>
+        <p>Continuer (Chapitre {nextChapterId}) ⟶</p>
       </div>
     {/if}
     {#if displayResultsBox}
       <div id="next-chapter-container" on:click={displayResultsScreen}>
-        <p>Fin de l'Aventure (Résultats) →</p>
+        <p>Fin de l'Aventure (Résultats) ⟶</p>
       </div>
     {/if}
   {:else}
@@ -379,10 +379,11 @@
   }
 
   #next-chapter-container {
-    background-color: darkgray;
-    font-weight: 600;
+    background-color: white;
+    font-weight: 700;
     cursor: pointer;
-      animation-name: fadeIn;
-      animation-duration: 2s;
+    animation-name: svelte-1h363kf-fadeIn;
+    animation-duration: 2s;
+    border: 2px solid red;
   }
 </style>
