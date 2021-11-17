@@ -78,7 +78,7 @@
 
     // Display Answer DialogNode div when 'Player' and multiple nextNodes
     } else if (currentSpeaker === 'Player' && (nextNodes.length > 1)) {
-      const timerReply = 1000;
+      const timerReply = 500;
       timerId = setTimeout(() => {
         displayAnswerDialogBox(nextNodeIds);
       }, skipTimer ? 0 : timerReply);
@@ -260,8 +260,8 @@
       </div>
     </div>
     <div id="answer-container" class:is-hidden={answersNodeIds.length === 0}>
-      <div class="phylactery player" class:is-grid-2x2={answersNodeIds.reduce((acc, id) => acc || $chapters[$currentChapterId].dialogNodes[id].imagePath, false)}>
-        <div class="dialog">
+      <div class="phylactery player">
+        <div class="dialog" class:is-grid-2x2={answersNodeIds.reduce((acc, id) => acc || $chapters[$currentChapterId].dialogNodes[id].imagePath, false)}>
           {#each answersNodeIds as answerDialogNodeId (answerDialogNodeId)}
               {#if $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}
                 <video autoplay loop muted playsinline on:click={() => addAnswer(answerDialogNodeId)} on:load={updateScrollHeight}>
@@ -357,8 +357,14 @@
           }
         }
 
+        .dialog {
+          animation-name: fadeIn;
+          animation-duration: 0.5s;
+          align-items: center;
+        }
+
         video {
-          max-width: 9.5em;
+          max-width: 8em;
           margin: auto;
           cursor: pointer;
           max-height: 10em;
@@ -378,8 +384,6 @@
           background: white;
           margin-left: 0.5em;
           text-align: left;
-          animation-name: fadeIn;
-          animation-duration: 0.5s;
         }
       }
       .phylactery.player {
@@ -390,8 +394,6 @@
           background: var(--color04);
           margin-right: 0.5em;
           text-align: right;
-          animation-name: fadeIn;
-          animation-duration: 0.5s;
           display: grid;
           width: -moz-fit-content;
           width: fit-content;
