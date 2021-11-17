@@ -332,7 +332,7 @@
         display: grid;
 
         @media (min-width: 640px) {
-          max-width: 60%;
+          max-width: 80%;
         }
         @media (max-width: 640px) {
           max-width: 90%;
@@ -365,11 +365,11 @@
           animation-name: fadeIn;
           animation-duration: 0.5s;
           align-items: center;
-          max-width: none;
+          justify-content: center;
 
           img {
-            max-width: 100%;
-            padding: 0.5em;
+            max-width: 15em;
+            margin: 0.5em;
           }
         }
 
@@ -457,7 +457,6 @@
           box-shadow: none;
           margin-left: auto;
           margin-right: auto;
-          max-width: 100%;
         }
       }
 
