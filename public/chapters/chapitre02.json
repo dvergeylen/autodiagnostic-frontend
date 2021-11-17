@@ -23,7 +23,6 @@
         "fr": "T'en es où, là?"
       },
       "nextNodes": [
-        "2",
         "30"
       ],
       "character": "Player",
@@ -652,7 +651,9 @@
         "fr": "clique sur une zone neutre pour accélérer le rythme des répliques",
         "en": ""
       },
-      "nextNodes": [],
+      "nextNodes": [
+        "2"
+      ],
       "character": "Narrator",
       "attribution": {
         "leader": 0,

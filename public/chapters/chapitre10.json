@@ -257,11 +257,11 @@
     "12": {
       "id": "12",
       "text": {
-        "fr": "[Arya et Jon déconnectés]",
+        "fr": "Arya et Jon se sont déconnectés",
         "en": ""
       },
       "nextNodes": [],
-      "character": "NPC1",
+      "character": "Narrator",
       "attribution": {
         "leader": 0,
         "bricoleur": 0,
