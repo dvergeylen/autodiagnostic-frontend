@@ -64,7 +64,7 @@
     "3": {
       "id": "3",
       "text": {
-        "fr": "Oui, sorry. Le décallage horaire me tue! Je m'y fait pas trop ",
+        "fr": "Oui, sorry. Le décalage horaire me tue! Je m'y fait pas trop ",
         "en": ""
       },
       "nextNodes": [
@@ -493,7 +493,7 @@
         "en": ""
       },
       "nextNodes": [
-        "24"
+        "34"
       ],
       "character": "NPC1",
       "attribution": {
@@ -723,6 +723,28 @@
         "audacieux": 0,
         "explorateur": 0
       }
+    },
+    "34": {
+      "id": "34",
+      "text": {
+        "fr": "",
+        "en": ""
+      },
+      "nextNodes": [
+        "24"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      },
+      "imagePath": "/assets/images/chapter2_tickets-1-5.png"
     }
   }
 }
