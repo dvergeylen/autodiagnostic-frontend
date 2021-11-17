@@ -11,7 +11,7 @@
     </div>
   </div>
   <div id="footer-container">
-    <p id="moto" class="is-uppercase">'Voyage au bout du monde' est un outil développé le groupe <a href="https://www.sowalfin.be">Sowalfin</a>.</p>
+    <p id="moto" class="is-uppercase">'Voyage au bout du monde' est un outil développé par le groupe <a href="https://www.sowalfin.be">Sowalfin</a>.</p>
   </div>
 </footer>
 
