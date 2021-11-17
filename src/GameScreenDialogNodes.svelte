@@ -99,14 +99,14 @@
         $chapters[$currentChapterId].dialogNodes[parentNodeId].text[$gameState.language][$gameState.gender.toLowerCase()].length :
         $chapters[$currentChapterId].dialogNodes[parentNodeId]?.text[$gameState.language]?.length || 10;
       // BeforeIsTyping time is reduced when responses from a same character are following
-      const timerBeforeIsTyping = Math.floor(parentNodeLength * (previousSpeaker === currentSpeaker ? 25 : 50));
+      const timerBeforeIsTyping = Math.floor(parentNodeLength * (previousSpeaker === currentSpeaker ? 20 : 30));
       timerId = setTimeout(() => {
         showIsTyping = true;
 
         const nextNodeLength = $chapters[$currentChapterId].dialogNodes[nextNodeIds[0]].text[$gameState.language] instanceof Object ?
           $chapters[$currentChapterId].dialogNodes[nextNodeIds[0]].text[$gameState.language][$gameState.gender.toLowerCase()].length :
           $chapters[$currentChapterId].dialogNodes[nextNodeIds[0]].text[$gameState.language].length;
-        const timerIsTyping = Math.floor((nextNodeLength || 10) * 50);
+        const timerIsTyping = Math.floor((nextNodeLength || 10) * 40);
         timerId = setTimeout(() => {
           showIsTyping = false;
           $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
@@ -331,7 +331,7 @@
           max-width: 60%;
         }
         @media (max-width: 640px) {
-          max-width: 80%;
+          max-width: 90%;
         }
         p {
           display: inline-block;
