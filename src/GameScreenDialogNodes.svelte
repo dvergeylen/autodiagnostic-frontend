@@ -228,10 +228,14 @@
           {/if}
           <div class="dialog">
             {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}
-              <video autoplay loop muted playsinline on:load={updateScrollHeight}>
-                <source src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}" type="video/mp4">
-                <p>{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}</p>
-              </video>
+              {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath.endsWith('webm')}
+                <video autoplay loop muted playsinline on:load={updateScrollHeight}>
+                  <source src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}" type="video/webm">
+                  <p>{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}</p>
+                </video>
+              {:else}
+                <img src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}" alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}" />
+              {/if}
             {:else}
               <p>
                 {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language] instanceof Object}
@@ -265,7 +269,7 @@
           {#each answersNodeIds as answerDialogNodeId (answerDialogNodeId)}
               {#if $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}
                 <video autoplay loop muted playsinline on:click={() => addAnswer(answerDialogNodeId)} on:load={updateScrollHeight}>
-                  <source src="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}" type="video/mp4">
+                  <source src="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}" type="video/webm">
                   <p>{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imageAlt}</p>
                 </video>
               {:else}
@@ -361,6 +365,12 @@
           animation-name: fadeIn;
           animation-duration: 0.5s;
           align-items: center;
+          max-width: none;
+
+          img {
+            max-width: 100%;
+            padding: 0.5em;
+          }
         }
 
         video {
@@ -447,6 +457,7 @@
           box-shadow: none;
           margin-left: auto;
           margin-right: auto;
+          max-width: 100%;
         }
       }
 
