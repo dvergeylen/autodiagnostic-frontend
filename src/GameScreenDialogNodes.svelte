@@ -213,23 +213,43 @@
   {#if $chapters[$currentChapterId]}
     <div id="dialog-container">
       {#each displayedNodeIds as dialogNodeId (dialogNodeId)}
-        <div
-          class:npc1={$chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'NPC1'}
-          class:player={$chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'Player'}
-          class:narrator={$chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'Narrator'}>
-          {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}
-            <video autoplay loop muted playsinline on:load={updateScrollHeight}>
-              <source src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}" type="video/mp4">
-              <p>{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}</p>
-            </video>
-          {:else}
-            <p>
-              {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language] instanceof Object}
-                {@html $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language][$gameState.gender.toLowerCase()]}
+        <div class="phylactery"
+            class:npc1={$chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'NPC1'}
+            class:player={$chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'Player'}
+            class:narrator={$chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'Narrator'}>
+          {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'NPC1'}
+            <div class="avatar">
+              {#if $gameState.gender === 'M'}
+                <img src='/assets/images/avatar_Arya.png' alt="Arya"/>
               {:else}
-                {@html $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language]}
+                <img src='/assets/images/avatar_Jon.png' alt="Jon"/>
               {/if}
-            </p>
+            </div>
+          {/if}
+          <div class="dialog">
+            {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}
+              <video autoplay loop muted playsinline on:load={updateScrollHeight}>
+                <source src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}" type="video/mp4">
+                <p>{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}</p>
+              </video>
+            {:else}
+              <p>
+                {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language] instanceof Object}
+                  {@html $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language][$gameState.gender.toLowerCase()]}
+                {:else}
+                  {@html $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language]}
+                {/if}
+              </p>
+            {/if}
+          </div>
+          {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'Player'}
+            <div class="avatar">
+              {#if $gameState.gender === 'M'}
+                <img src='/assets/images/avatar_Jon.png' alt="Jon"/>
+              {:else}
+                <img src='/assets/images/avatar_Arya.png' alt="Arya"/>
+              {/if}
+            </div>
           {/if}
         </div>
       {/each}
@@ -239,24 +259,33 @@
         <div class="dot"></div>
       </div>
     </div>
-    <div id="answer-container">
-      <div class="player" class:is-grid-2x2={answersNodeIds.reduce((acc, id) => acc || $chapters[$currentChapterId].dialogNodes[id].imagePath, false)}>
-        {#each answersNodeIds as answerDialogNodeId (answerDialogNodeId)}
-            {#if $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}
-              <video autoplay loop muted playsinline on:click={() => addAnswer(answerDialogNodeId)} on:load={updateScrollHeight}>
-                <source src="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}" type="video/mp4">
-                <p>{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imageAlt}</p>
-              </video>
-            {:else}
-              <p class="choice" on:click={() => addAnswer(answerDialogNodeId)}>
-                {#if $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language] instanceof Object}
-                  {$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language][$gameState.gender.toLowerCase()]}
-                {:else}
-                  {$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language]}
-                {/if}
-              </p>
-            {/if}
-        {/each}
+    <div id="answer-container" class:is-hidden={answersNodeIds.length === 0}>
+      <div class="phylactery player" class:is-grid-2x2={answersNodeIds.reduce((acc, id) => acc || $chapters[$currentChapterId].dialogNodes[id].imagePath, false)}>
+        <div class="dialog">
+          {#each answersNodeIds as answerDialogNodeId (answerDialogNodeId)}
+              {#if $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}
+                <video autoplay loop muted playsinline on:click={() => addAnswer(answerDialogNodeId)} on:load={updateScrollHeight}>
+                  <source src="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}" type="video/mp4">
+                  <p>{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imageAlt}</p>
+                </video>
+              {:else}
+                <p class="choice" on:click={() => addAnswer(answerDialogNodeId)}>
+                  {#if $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language] instanceof Object}
+                    {$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language][$gameState.gender.toLowerCase()]}
+                  {:else}
+                    {$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language]}
+                  {/if}
+                </p>
+              {/if}
+          {/each}
+        </div>
+        <div class="avatar">
+          {#if $gameState.gender === 'M'}
+            <img src='/assets/images/avatar_Jon.png' alt="Jon"/>
+          {:else}
+            <img src='/assets/images/avatar_Arya.png' alt="Arya"/>
+          {/if}
+        </div>
       </div>
     </div>
     {#if displayNextChapterBox}
@@ -275,13 +304,12 @@
 </div>
 
 <style lang="scss">
-
   #dialog-container-background {
     height: 100%;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    background-color: var(--light-grey);
+    background-color: var(--color-background-chat);
     padding-bottom: 1em;
 
     #dialog-container, #answer-container {
@@ -295,7 +323,8 @@
         padding-right: 1em;
         width: -moz-fit-content;
         width: fit-content;
-        box-shadow: 0 0 0.5em #a3a3a3;
+        border-radius: 0.5em;
+        box-shadow: 0.1em 0.1em 0 0 #dbbbbd;
         display: grid;
 
         @media (min-width: 640px) {
@@ -311,52 +340,111 @@
         }
       }
 
-      div.npc1 {
-        background: white;
-        border-radius: 0 0.5em 0.5em 0.5em; /* top-left corner, top-right corner, bottom-right corner, bottom-left corner */
-        margin-left: 0.5em;
-        text-align: left;
-        justify-self: left;
-        animation-name: fadeIn;
-        animation-duration: 0.5s;
-      }
+      .phylactery {
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        padding-left: 0.25em;
+        padding-right: 0.25em;
 
-      div.player {
-        background: var(--color04);
-        border-radius: 0.5em 0.5em 0 0.5em; /* top-left corner, top-right corner, bottom-right corner, bottom-left corner */
-        margin-right: 0.5em;
-        text-align: right;
-        justify-self: right;
-        animation-name: fadeIn;
-        animation-duration: 0.5s;
-        display: grid;
-        width: -moz-fit-content;
-        width: fit-content;
+        .avatar {
+          box-shadow: none;
+          padding: 0;
 
-        p.choice {
-          color: var(--anthracite);
-          cursor: pointer;
-          margin: 0;
-          padding-top: 0.3em;
-          padding-bottom: 0.3em;
-          font-weight: 500;
+          img {
+            width: 2em;
+            height: 2em;
+          }
         }
-        p.choice:not(:last-child) {
-          border-bottom: solid 1px lightgray;
-        }
-      }
 
-      div.player, div.npc1 {
         video {
           max-width: 9.5em;
           margin: auto;
           cursor: pointer;
           max-height: 10em;
         }
+
         video:only-child {
           margin: auto;
           padding-top: 0.5em;
           padding-bottom: 0.5em;
+        }
+      }
+
+      .phylactery.npc1 {
+        justify-self: left;
+
+        .dialog {
+          background: white;
+          margin-left: 0.5em;
+          text-align: left;
+          animation-name: fadeIn;
+          animation-duration: 0.5s;
+        }
+      }
+      .phylactery.player {
+        justify-self: right;
+        justify-content: flex-end;;
+
+        .dialog {
+          background: var(--color04);
+          margin-right: 0.5em;
+          text-align: right;
+          animation-name: fadeIn;
+          animation-duration: 0.5s;
+          display: grid;
+          width: -moz-fit-content;
+          width: fit-content;
+
+          p.choice {
+            color: var(--anthracite);
+            cursor: pointer;
+            margin: 0;
+            padding-top: 0.3em;
+            padding-bottom: 0.3em;
+            font-weight: 500;
+          }
+          p.choice:not(:last-child) {
+            border-bottom: solid 1px var(--anthracite);
+          }
+        }
+      }
+
+      .phylactery.npc1 ~ .phylactery.npc1 {
+        .avatar {
+          display: none;
+        }
+      }
+
+      .phylactery.player ~ .phylactery.player {
+        .avatar {
+          display: none;
+        }
+      }
+
+
+      @keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+      }
+      .phylactery.narrator {
+        background: white;
+        text-align: center;
+        justify-self: center;
+        box-shadow: none;
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        text-transform: uppercase;
+        border: 1px solid red;
+        font-weight: 700;
+        font-size: 0.8em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        max-width: 75%;
+        .dialog {
+          box-shadow: none;
+          margin-left: auto;
+          margin-right: auto;
         }
       }
 
@@ -368,40 +456,22 @@
         max-width: none !important;
       }
 
-      @keyframes fadeIn {
-        0% {opacity: 0;}
-        100% {opacity: 1;}
-      }
-      div.narrator {
-        background: gray;
-        border-radius: 0; /* top-left corner, top-right corner, bottom-right corner, bottom-left corner */
-        text-align: center;
-        justify-self: center;
-        border-radius: 0.5em;
-        background-color: #b7b5b5;
-        box-shadow: none;
-        animation-name: fadeIn;
-        animation-duration: 0.5s;
-      }
-
       @keyframes isTyping {
         0% {
           transform: translateY(0px);
-          ///background-color:#6CAD96; // rgba(20,105,69,.7);
         }
         28% {
           transform: translateY(-3.5px);
-          ///background-color:#9ECAB9; //rgba(20,105,69,.4);
         }
         44% {
           transform: translateY(0px);
-          //background-color: #B5D9CB; //rgba(20,105,69,.2);
         }
       }
       #typing-container {
         height: 2em;
         display: flex;
         align-items: center;
+        border-radius: 0.5em;
       }
       .dot {
         animation: isTyping 1s infinite ease-in-out;
@@ -413,6 +483,7 @@
         vertical-align: middle;
         display: inline-block;
         padding: 0;
+        box-shadow: none;
       }
       .dot:nth-child(1) {
         animation-delay: 400ms;
@@ -422,6 +493,13 @@
       }
       .dot:nth-child(3) {
         animation-delay: 600ms;
+      }
+      #typing-container.npc1 {
+        background: white;
+      }
+      #typing-container.player {
+        background: var(--color04);
+        justify-self: right;
       }
     }
   }
@@ -433,5 +511,6 @@
     animation-name: fadeIn;
     animation-duration: 2s;
     border: 2px solid red;
+    margin-top: 1em;
   }
 </style>
