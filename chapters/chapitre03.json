@@ -489,7 +489,7 @@
     "23": {
       "id": "23",
       "text": {
-        "fr": "Gros coup de bol, une fille quittant un banc dans un parc à laisser tomber des tickets",
+        "fr": "Gros coup de bol, une fille quittant un banc dans un parc à laissé tomber des tickets",
         "en": ""
       },
       "nextNodes": [
@@ -661,8 +661,8 @@
       "id": "31",
       "text": {
         "fr": {
-          "m": "Franchement, c'est pas toi, Jon!",
-          "f": "Franchement, c'est pas toi, Arya!"
+          "m": "Franchement, c'est pas toi, Arya!",
+          "f": "Franchement, c'est pas toi, Jon!"
         },
         "en": ""
       },
