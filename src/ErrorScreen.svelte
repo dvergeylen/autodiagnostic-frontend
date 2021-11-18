@@ -5,8 +5,8 @@
 </script>
 
 <main>
-  <h1>Voyage au bout du monde</h1>
-  <h3>Une aventure d'introspection</h3>
+  <h1>ON MY WAY</h1>
+  <h3>UNE AVENTURE D'INTROSPECTION</h3>
   <div class="error-container">
     <p class="error">Une erreur est survenue lors du chargement des chapitres du jeu: <br />{message}</p>
   </div>

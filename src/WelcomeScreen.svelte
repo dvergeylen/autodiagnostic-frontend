@@ -36,7 +36,7 @@
 
 <main>
   <div class="h1-wrapper">
-    <h1>VOYAGE AU BOUT DU MONDE</h1>
+    <h1>ON MY WAY</h1>
   </div>
   <h3>UNE AVENTURE D'INTROSPECTION</h3>
 
