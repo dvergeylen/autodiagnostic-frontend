@@ -228,14 +228,21 @@
           {/if}
           <div class="dialog">
             {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}
-              {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath.endsWith('webm')}
-                <video autoplay loop muted playsinline on:load={updateScrollHeight}>
-                  <source src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}" type="video/webm">
-                  <p>{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}</p>
-                </video>
-              {:else}
-                <img src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}" alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}" />
-              {/if}
+              <picture>
+                  {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath.endsWith('webp')}
+                  <source type="image/webp" srcset="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}">
+                  <img
+                    on:load={updateScrollHeight}
+                    class="video"
+                    src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath.replace('.webp', '.gif')}"
+                    alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}" />
+                {:else}
+                  <img
+                    on:load={updateScrollHeight}
+                    src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}"
+                    alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}" />
+                {/if}
+              </picture>
             {:else}
               <p>
                 {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language] instanceof Object}
@@ -268,10 +275,23 @@
         <div class="dialog" class:is-grid-2x2={answersNodeIds.reduce((acc, id) => acc || $chapters[$currentChapterId].dialogNodes[id].imagePath, false)}>
           {#each answersNodeIds as answerDialogNodeId (answerDialogNodeId)}
               {#if $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}
-                <video autoplay loop muted playsinline on:click={() => addAnswer(answerDialogNodeId)} on:load={updateScrollHeight}>
-                  <source src="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}" type="video/webm">
-                  <p>{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imageAlt}</p>
-                </video>
+                <picture on:load={updateScrollHeight}>
+                    {#if $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath.endsWith('webp')}
+                    <source type="image/webp" srcset="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}">
+                    <img
+                      on:load={updateScrollHeight}
+                      on:click={() => addAnswer(answerDialogNodeId)}
+                      class="video"
+                      src="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath.replace('.webp', '.gif')}"
+                      alt="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imageAlt}" />
+                  {:else}
+                    <img
+                      on:load={updateScrollHeight}
+                      on:click={() => addAnswer(answerDialogNodeId)}
+                      src="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}"
+                      alt="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imageAlt}" />
+                  {/if}
+                </picture>
               {:else}
                 <p class="choice" on:click={() => addAnswer(answerDialogNodeId)}>
                   {#if $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language] instanceof Object}
@@ -371,19 +391,17 @@
             max-width: 15em;
             margin: 0.5em;
           }
-        }
-
-        video {
-          max-width: 8em;
-          margin: auto;
-          cursor: pointer;
-          max-height: 10em;
-        }
-
-        video:only-child {
-          margin: auto;
-          padding-top: 0.5em;
-          padding-bottom: 0.5em;
+          img.video {
+            max-width: 8em;
+            margin: auto;
+            cursor: pointer;
+            max-height: 10em;
+          }
+          picture:only-child {
+            margin: auto;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+          }
         }
       }
 
