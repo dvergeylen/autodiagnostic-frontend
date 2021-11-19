@@ -226,33 +226,35 @@
               {/if}
             </div>
           {/if}
-          <div class="dialog">
             {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}
-              <picture>
-                  {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath.endsWith('webp')}
-                  <source type="image/webp" srcset="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}">
-                  <img
-                    on:load={updateScrollHeight}
-                    class="video"
-                    data-src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath.replace('.webp', '.gif')}"
-                    alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}" />
-                {:else}
-                  <img
-                    on:load={updateScrollHeight}
-                    src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}"
-                    alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}" />
-                {/if}
-              </picture>
+              <div class="dialog image-container">
+                <picture>
+                    {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath.endsWith('webp')}
+                    <source type="image/webp" srcset="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}">
+                    <img
+                      on:load={updateScrollHeight}
+                      class="video"
+                      data-src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath.replace('.webp', '.gif')}"
+                      alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}" />
+                  {:else}
+                    <img
+                      on:load={updateScrollHeight}
+                      src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}"
+                      alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}" />
+                  {/if}
+                </picture>
+              </div>
             {:else}
-              <p>
-                {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language] instanceof Object}
-                  {@html $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language][$gameState.gender.toLowerCase()]}
-                {:else}
-                  {@html $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language]}
-                {/if}
-              </p>
+              <div class="dialog">
+                <p>
+                  {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language] instanceof Object}
+                    {@html $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language][$gameState.gender.toLowerCase()]}
+                  {:else}
+                    {@html $chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language]}
+                  {/if}
+                </p>
+              </div>
             {/if}
-          </div>
           {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'Player'}
             <div class="avatar">
               {#if $gameState.gender === 'M'}
@@ -389,19 +391,26 @@
 
           img {
             max-width: 15em;
-            margin: 0.5em;
           }
           img.video {
             max-width: 8em;
             margin: auto;
             cursor: pointer;
-            max-height: 10em;
+            max-height: 100%;
           }
           picture:only-child {
             margin: auto;
             padding-top: 0.5em;
             padding-bottom: 0.5em;
+            display: flex;
+            align-items: center;
           }
+        }
+
+        .dialog.image-container {
+          padding-left: 0.5em;
+          padding-right: 0.5em;
+          max-width: 100%;
         }
       }
 
