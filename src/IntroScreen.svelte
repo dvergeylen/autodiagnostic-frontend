@@ -100,15 +100,18 @@
     opacity: 0.85;
     padding-top: 1em;
     padding-bottom: 1em;
-    position: relative;
-    top: 68%;
+    position: sticky;
+    top: 100%;
 
     fieldset {
       border-style: solid none none none; /* top, right, bottom, left */
       border-width: 0.15em;
+      border-color: white;
       max-width: 90%;
       margin-left: auto;
       margin-right: auto;
+      padding-top: 0;
+      padding-bottom: 0;
 
       legend {
         margin: auto;
@@ -117,6 +120,13 @@
         font-weight: 900;
         color: white;
         font-size: x-large;
+        white-space: nowrap;
+        width: 50%;
+
+        // Narrow Phones
+        @media (max-width: 320px) {
+          font-size: large;
+        }
       }
       p#subtitle {
         margin-top: 0.5em;
@@ -124,6 +134,11 @@
         color: white;
         font-style: italic;
         font-size: 0.8em;
+
+        // Narrow Phones
+        @media (max-width: 320px) {
+          font-size: 0.7em;
+        }
       }
       p#date {
         margin-top: 0;
@@ -140,6 +155,11 @@
         margin-bottom: 0.5em;
         font-size: 0.8em;
         color: white;
+
+        // Narrow Phones
+        @media (max-width: 320px) {
+          font-size: 0.7em;
+        }
       }
       #progress-container {
         background: linear-gradient(to right, #ca241d, #feca00);
