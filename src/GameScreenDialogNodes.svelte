@@ -234,7 +234,7 @@
                   <img
                     on:load={updateScrollHeight}
                     class="video"
-                    src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath.replace('.webp', '.gif')}"
+                    data-src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath.replace('.webp', '.gif')}"
                     alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}" />
                 {:else}
                   <img
@@ -282,7 +282,7 @@
                       on:load={updateScrollHeight}
                       on:click={() => addAnswer(answerDialogNodeId)}
                       class="video"
-                      src="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath.replace('.webp', '.gif')}"
+                      data-src="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath.replace('.webp', '.gif')}"
                       alt="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imageAlt}" />
                   {:else}
                     <img
