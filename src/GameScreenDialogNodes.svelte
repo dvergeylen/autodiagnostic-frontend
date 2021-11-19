@@ -393,7 +393,7 @@
             max-width: 15em;
           }
           img.video {
-            max-width: 8em;
+            max-width: 12em;
             margin: auto;
             cursor: pointer;
             max-height: 100%;
