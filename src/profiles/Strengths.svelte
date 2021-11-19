@@ -63,7 +63,7 @@
 
 <div id="strengths-container">
   {#each profiles[profileName] as strength}
-    <fieldset>
+    <fieldset class="is-flex has-align-items-center has-justify-content-center">
       <legend>
         <svg class="icon thumbtack">
           <use href='assets/sprite_icons.svg#thumbtack' />

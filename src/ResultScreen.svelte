@@ -102,11 +102,11 @@
 
   <div id="profile-avatar-container">
     <picture>
-       <source srcset="assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Medium.png"
-            media="(min-width: 769px)">
-       <source srcset="assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Small.png"
-            media="(max-width: 768px)">
-      <img src="assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Small.png" alt="{profiles[mainProfile].name}" />
+      <source srcset="assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Medium.png"
+        media="(min-width: 769px)">
+      <source srcset="assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Small.png"
+        media="(max-width: 768px)">
+      <img data-src="assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Small.png" alt="{profiles[mainProfile].name}" />
     </picture>
   </div>
 
