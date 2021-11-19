@@ -393,7 +393,7 @@
             max-width: 15em;
           }
           img.video {
-            max-width: 12em;
+            max-width: 8em;
             margin: auto;
             cursor: pointer;
             max-height: 100%;
@@ -404,6 +404,9 @@
             padding-bottom: 0.5em;
             display: flex;
             align-items: center;
+            img.video {
+              max-width: 12em;
+            }
           }
         }
 
