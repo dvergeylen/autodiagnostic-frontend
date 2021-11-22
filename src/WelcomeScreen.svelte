@@ -130,6 +130,10 @@
 <Footer />
 
 <style lang="scss">
+  main {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
   div.h1-wrapper {
     background-color: var(--color-primary);
     margin-top: 1em;
