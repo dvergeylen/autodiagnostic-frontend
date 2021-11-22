@@ -180,7 +180,9 @@
   // Image loading doesn't trigger an 'afterUpdate' svelte event,
   // thus linking this function to images
   function updateScrollHeight() {
-    window.scrollTo(0,document.body.scrollHeight);
+    const headerHeight = document.querySelector('.header').clientHeight;
+    const dialogContainerBackgroundHeight = document.getElementById('dialog-container-background').clientHeight;
+    window.scrollTo(0, headerHeight + dialogContainerBackgroundHeight);
   }
 
   onMount(() => {
@@ -196,7 +198,8 @@
     const bodyHeight = document.querySelector('body').clientHeight;
     const dialogContainerHeight = document.getElementById('dialog-container').clientHeight;
     const headerHeight = document.querySelector('.header').clientHeight;
-    const yOffset = (bodyHeight * 0.9) >= (dialogContainerHeight + headerHeight) ? 0 : document.body.scrollHeight;
+    const dialogContainerBackgroundHeight = document.getElementById('dialog-container-background').clientHeight;
+    const yOffset = (bodyHeight * 0.8) >= (dialogContainerHeight + headerHeight) ? 0 : (headerHeight + dialogContainerBackgroundHeight);
     window.scrollTo(0, yOffset);
   });
 
