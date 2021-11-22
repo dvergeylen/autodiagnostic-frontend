@@ -199,7 +199,7 @@
     const dialogContainerHeight = document.getElementById('dialog-container').clientHeight;
     const headerHeight = document.querySelector('.header').clientHeight;
     const dialogContainerBackgroundHeight = document.getElementById('dialog-container-background').clientHeight;
-    const yOffset = (bodyHeight * 0.8) >= (dialogContainerHeight + headerHeight) ? 0 : (headerHeight + dialogContainerBackgroundHeight);
+    const yOffset = (bodyHeight * 0.4) >= (dialogContainerHeight + headerHeight) ? 0 : (headerHeight + dialogContainerBackgroundHeight);
     window.scrollTo(0, yOffset);
   });
 
