@@ -193,7 +193,11 @@
   })
 
   afterUpdate(() => {
-    window.scrollTo(0,document.body.scrollHeight);
+    const bodyHeight = document.querySelector('body').clientHeight;
+    const dialogContainerHeight = document.getElementById('dialog-container').clientHeight;
+    const headerHeight = document.querySelector('.header').clientHeight;
+    const yOffset = (bodyHeight * 0.9) >= (dialogContainerHeight + headerHeight) ? 0 : document.body.scrollHeight;
+    window.scrollTo(0, yOffset);
   });
 
   const displayMapUnsubscribe = displayMapStore.subscribe(newVal => {
