@@ -24,7 +24,10 @@
     }
   }
 
-  onMount(waitStoresToLoad);
+  onMount(() => {
+    waitStoresToLoad();
+    window.scrollTo(0,document.body.scrollHeight);
+  });
 
   $: twoDigitsChapterId = $currentChapterId.padStart(2, '0');
   const url_smartphone = `url('/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Arya' : 'Jon'}_Ratio2-5.png')`;
@@ -32,7 +35,9 @@
   const url_desktop = `url('/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Arya' : 'Jon'}_Ratio1-6.png')`;
 </script>
 
-<div id="intro" on:click={abortTimer} style="--url-smartphone: {url_smartphone};--url-tablet: {url_tablet}; --url-desktop: {url_desktop};">
+<div id="intro"
+  on:click={abortTimer}
+  style="--url-smartphone: {url_smartphone};--url-tablet: {url_tablet}; --url-desktop: {url_desktop};">
   <div id="titles">
     <fieldset>
       <legend>{$currentChapterId === '0' ? 'INTRODUCTION' : `CHAPITRE ${twoDigitsChapterId}`}</legend>
@@ -68,7 +73,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-color: var(--color-background-intro);
-    height: 100%;
 
     // Phones
     @media (max-width: 767px) {

@@ -421,6 +421,7 @@
           padding-left: 0.5em;
           padding-right: 0.5em;
           max-width: 100%;
+          width: fit-content;
         }
       }
 

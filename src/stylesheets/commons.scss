@@ -21,11 +21,7 @@
 }
 
 body {
-  min-height: 100%; /* Fallback */
-  min-height: -moz-available;
-  min-height: -webkit-fill-available;
-  min-height: fill-available;
-  min-height: stretch; /* Latest specification */
+  min-height: 100vh;
   padding: 0;
 }
 
