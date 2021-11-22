@@ -197,7 +197,6 @@
 
     img {
       height: auto;
-      width: 100%;
       max-width: 25em;
       max-height: 25em;
     }
