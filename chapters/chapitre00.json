@@ -37,7 +37,8 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      }
+      },
+      "imagePath": "/assets/images/illus_inter_chat/03_Appart.png"
     },
     "2": {
       "id": "2",
@@ -80,7 +81,8 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
-      }
+      },
+      "imagePath": "/assets/images/illus_inter_chat/03_Appart.webp"
     },
     "4": {
       "id": "4",
