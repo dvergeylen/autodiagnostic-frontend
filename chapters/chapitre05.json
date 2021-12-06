@@ -1113,8 +1113,8 @@
       },
       "imagePath": {
         "fr": {
-          "m": "/assets/images/illus_inter_chat/05_Kyoto_Arya.png",
-          "f": "/assets/images/illus_inter_chat/05_Kyoto_Jon.png"
+          "m": "/assets/images/illus_inter_chat/05_Kyoto_Arya.webp",
+          "f": "/assets/images/illus_inter_chat/05_Kyoto_Jon.webp"
         }
       }
     },
@@ -1143,8 +1143,8 @@
       },
       "imagePath": {
         "fr": {
-          "m": "/assets/images/illus_inter_chat/05_Ryokan_Arya.png",
-          "f": "/assets/images/illus_inter_chat/05_Ryokan_Jon.png"
+          "m": "/assets/images/illus_inter_chat/05_Ryokan_Arya.webp",
+          "f": "/assets/images/illus_inter_chat/05_Ryokan_Jon.webp"
         }
       }
     }

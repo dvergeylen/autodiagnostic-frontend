@@ -749,8 +749,8 @@
       },
       "imagePath": {
         "fr": {
-          "m": "/assets/images/illus_inter_chat/03_Tickets_Arya.png",
-          "f": "/assets/images/illus_inter_chat/03_Tickets_Jon.png"
+          "m": "/assets/images/illus_inter_chat/03_Tickets_Arya.webp",
+          "f": "/assets/images/illus_inter_chat/03_Tickets_Jon.webp"
         }
       }
     },
@@ -774,7 +774,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "/assets/images/illus_inter_chat/03_Appart.png"
+      "imagePath": "/assets/images/illus_inter_chat/03_Appart.webp"
     }
   }
 }
