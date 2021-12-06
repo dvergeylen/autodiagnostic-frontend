@@ -3,7 +3,7 @@ import { Readable, readable, Subscriber, Unsubscriber, derived } from 'svelte/st
 export const chapters = readable({}, start);
 
 function start(set: Subscriber<{}>): Unsubscriber {
-  // Adapt Array(10) with the number of the available chapters
+  // Adapt Array(11) with the number of the available chapters
   const promises: Array<Promise<Scenario>> = Array.from(Array(11).keys()).map(async (i: number): Promise<Scenario> => {
     const scenarioFile = await fetch(`chapters/chapitre${String(i).padStart(2, '0')}.json`);
 
