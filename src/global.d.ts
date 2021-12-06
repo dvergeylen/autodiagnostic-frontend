@@ -43,8 +43,14 @@ interface DialogNode {
     creatif?: number,
     audacieux?: number,
     explorateur?: number,
-  }
-  imagePath?: string,
+  },
+  imagePath?: string | {
+    fr: string | {
+      m: string,
+      f: string,
+    },
+    en?: string,
+  },
   mapMarker?: {
     longitude: number,
     latitude: number,

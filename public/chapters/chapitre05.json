@@ -71,7 +71,7 @@
         "en": ""
       },
       "nextNodes": [
-        "4"
+        "50"
       ],
       "character": "NPC1",
       "attribution": {
@@ -767,7 +767,7 @@
         "en": ""
       },
       "nextNodes": [
-        "36"
+        "51"
       ],
       "character": "NPC1",
       "attribution": {
@@ -1089,6 +1089,63 @@
         "creatif": 0,
         "audacieux": 0,
         "explorateur": 0
+      }
+    },
+    "50": {
+      "id": "50",
+      "text": {
+        "fr": "Selfie Arya Kyoto",
+        "en": "Selfie Jon Kyoto"
+      },
+      "nextNodes": [
+        "4"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      },
+      "imagePath": {
+        "fr": {
+          "m": "/assets/images/illus_inter_chat/05_Kyoto_Arya.png",
+          "f": "/assets/images/illus_inter_chat/05_Kyoto_Jon.png"
+        }
+      }
+    },
+    "51": {
+      "id": "51",
+      "text": {
+        "fr": {
+          "m": "Selfie d'Arya Ryokan",
+          "f": "Selfie de Jon Ryokan"
+        },
+        "en": ""
+      },
+      "nextNodes": [
+        "36"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      },
+      "imagePath": {
+        "fr": {
+          "m": "/assets/images/illus_inter_chat/05_Ryokan_Arya.png",
+          "f": "/assets/images/illus_inter_chat/05_Ryokan_Jon.png"
+        }
       }
     }
   }

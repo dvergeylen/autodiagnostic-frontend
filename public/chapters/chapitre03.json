@@ -131,7 +131,7 @@
         "en": ""
       },
       "nextNodes": [
-        "7"
+        "35"
       ],
       "character": "NPC1",
       "attribution": {
@@ -727,7 +727,10 @@
     "34": {
       "id": "34",
       "text": {
-        "fr": "",
+        "fr": {
+          "m": "2 tickets dans la main d'Arya",
+          "f": "2 tickets dans la main de Jon"
+        },
         "en": ""
       },
       "nextNodes": [
@@ -744,7 +747,34 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "/assets/images/chapter2_tickets-1-5.png"
+      "imagePath": {
+        "fr": {
+          "m": "/assets/images/illus_inter_chat/03_Tickets_Arya.png",
+          "f": "/assets/images/illus_inter_chat/03_Tickets_Jon.png"
+        }
+      }
+    },
+    "35": {
+      "id": "35",
+      "text": {
+        "fr": "Chambre d'accueil",
+        "en": ""
+      },
+      "nextNodes": [
+        "7"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      },
+      "imagePath": "/assets/images/illus_inter_chat/03_Appart.png"
     }
   }
 }

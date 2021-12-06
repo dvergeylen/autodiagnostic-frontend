@@ -235,11 +235,19 @@
           {/if}
             {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}
               <div class="dialog image-container">
-                <img
-                  on:load={updateScrollHeight}
-                  class="video"
-                  src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}"
-                  alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imageAlt}" />
+                {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath[$gameState.language] instanceof Object}
+                  <img
+                    on:load={updateScrollHeight}
+                    class="video"
+                    src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath[$gameState.language][$gameState.gender.toLowerCase()]}"
+                    alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language]}" />
+                {:else}
+                  <img
+                    on:load={updateScrollHeight}
+                    class="video"
+                    src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}"
+                    alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language]}" />
+                {/if}
               </div>
             {:else}
               <div class="dialog">
@@ -279,7 +287,7 @@
                   on:click={() => addAnswer(answerDialogNodeId)}
                   class="video"
                   src="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}"
-                  alt="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imageAlt}" />
+                  alt="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language]}" />
               {:else}
                 <p class="choice" on:click={() => addAnswer(answerDialogNodeId)}>
                   {#if $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language] instanceof Object}

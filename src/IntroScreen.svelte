@@ -38,30 +38,32 @@
 <div id="intro"
   on:click={abortTimer}
   style="--url-smartphone: {url_smartphone};--url-tablet: {url_tablet}; --url-desktop: {url_desktop};">
-  <div id="titles">
-    <fieldset>
-      <legend>{$currentChapterId === '0' ? 'INTRODUCTION' : `CHAPITRE ${twoDigitsChapterId}`}</legend>
-      {#if storesLoaded}
-        <p id="date">
-          <svg class="icon calendar">
-            <use href='assets/sprite_icons.svg#calendar-alt' />
-          </svg>
-          {chapterDate}
-        </p>
-        <p id="subtitle">{ @html $chapters[$currentChapterId].metadata.title[$gameState.language]}</p>
-        {#if $chapters[$currentChapterId].metadata.progress}
-          <p id="progress-motto">Ton profil s'affine, sa précision est actuellement de :</p>
-          <div id="progress-container">
-            <div id="progress" style="--width: {(100 - Number($chapters[$currentChapterId].metadata.progress))}%;--padding-left: {$currentChapterId === '10' ? '0' : '0.5em'};">
+  {#if $currentChapterId > 0}
+    <div id="titles">
+      <fieldset>
+        <legend>{$currentChapterId === '0' ? 'INTRODUCTION' : `CHAPITRE ${twoDigitsChapterId}`}</legend>
+        {#if storesLoaded}
+          <p id="date">
+            <svg class="icon calendar">
+              <use href='assets/sprite_icons.svg#calendar-alt' />
+            </svg>
+            {chapterDate}
+          </p>
+          <p id="subtitle">{ @html $chapters[$currentChapterId].metadata.title[$gameState.language]}</p>
+          {#if $chapters[$currentChapterId].metadata.progress}
+            <p id="progress-motto">Ton profil s'affine, sa précision est actuellement de :</p>
+            <div id="progress-container">
+              <div id="progress" style="--width: {(100 - Number($chapters[$currentChapterId].metadata.progress))}%;--padding-left: {$currentChapterId === '10' ? '0' : '0.5em'};">
+              </div>
+              <p id="progress-score">
+                {Number($currentChapterId) * 10}%
+              </p>
             </div>
-            <p id="progress-score">
-              {Number($currentChapterId) * 10}%
-            </p>
-          </div>
+          {/if}
         {/if}
-      {/if}
-    </fieldset>
-  </div>
+      </fieldset>
+    </div>
+  {/if}
 </div>
 
 <style lang="scss">
