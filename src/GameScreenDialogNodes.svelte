@@ -348,7 +348,7 @@
         display: grid;
 
         @media (min-width: 640px) {
-          max-width: 80%;
+          max-width: 25em;
         }
         @media (max-width: 640px) {
           max-width: 90%;
@@ -405,7 +405,7 @@
           img.video:only-child {
             max-width: 12em;
           }
-          max-width: 100%;
+          width: 100%;
         }
       }
 
