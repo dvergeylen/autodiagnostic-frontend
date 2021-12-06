@@ -240,13 +240,17 @@
                     on:load={updateScrollHeight}
                     class="video"
                     src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath[$gameState.language][$gameState.gender.toLowerCase()]}"
-                    alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language]}" />
+                    alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language][$gameState.gender.toLowerCase()]}"
+                    width="100%"
+                    height="100%" />
                 {:else}
                   <img
                     on:load={updateScrollHeight}
                     class="video"
                     src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}"
-                    alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language]}" />
+                    alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language]}"
+                    width="100%"
+                    height="100%" />
                 {/if}
               </div>
             {:else}
@@ -351,7 +355,7 @@
         max-width: 25em;
         // Phones
         @media (max-width: 500px) {
-          max-width: 15em;
+          max-width: 18em;
         }
         p {
           display: inline-block;
