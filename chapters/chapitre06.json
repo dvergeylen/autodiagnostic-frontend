@@ -955,7 +955,7 @@
         "en": ""
       },
       "nextNodes": [
-        "46"
+        "55"
       ],
       "character": "Player",
       "attribution": {
@@ -976,7 +976,7 @@
         "en": ""
       },
       "nextNodes": [
-        "46"
+        "55"
       ],
       "character": "Player",
       "attribution": {
@@ -1182,6 +1182,28 @@
         "audacieux": 0,
         "explorateur": 0
       }
+    },
+    "55": {
+      "id": "55",
+      "text": {
+        "fr": "Mon-Fuji",
+        "en": ""
+      },
+      "nextNodes": [
+        "46"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      },
+      "imagePath": "/assets/images/illus_inter_chat/06_Fuji.png"
     }
   }
 }

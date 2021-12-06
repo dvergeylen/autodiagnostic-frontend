@@ -696,7 +696,7 @@
         "en": ""
       },
       "nextNodes": [
-        "33"
+        "54"
       ],
       "character": "NPC1",
       "attribution": {
@@ -1161,6 +1161,28 @@
         "audacieux": 0,
         "explorateur": 0
       }
+    },
+    "54": {
+      "id": "54",
+      "text": {
+        "fr": "Meiji-jingu",
+        "en": ""
+      },
+      "nextNodes": [
+        "33"
+      ],
+      "character": "NPC1",
+      "attribution": {
+        "leader": 0,
+        "bricoleur": 0,
+        "coequipier": 0,
+        "planificateur": 0,
+        "idealiste": 0,
+        "creatif": 0,
+        "audacieux": 0,
+        "explorateur": 0
+      },
+      "imagePath": "/assets/images/illus_inter_chat/07_Miji_jingu.png"
     }
   }
 }
