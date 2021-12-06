@@ -279,7 +279,9 @@
     </div>
     <div id="answer-container" class:is-hidden={answersNodeIds.length === 0}>
       <div class="phylactery player">
-        <div class="dialog" class:is-grid-2x2={answersNodeIds.reduce((acc, id) => acc || $chapters[$currentChapterId].dialogNodes[id].imagePath, false)}>
+        <div class="dialog"
+          class:is-grid-2x2={answersNodeIds.reduce((acc, id) => acc || $chapters[$currentChapterId].dialogNodes[id].imagePath, false)}
+          class:image-container={answersNodeIds.reduce((acc, id) => acc || $chapters[$currentChapterId].dialogNodes[id].imagePath, false)}>
           {#each answersNodeIds as answerDialogNodeId (answerDialogNodeId)}
               {#if $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}
                 <img
@@ -346,12 +348,10 @@
         border-radius: 0.5em;
         box-shadow: 0.1em 0.1em 0 0 #dbbbbd;
         display: grid;
-
-        @media (min-width: 640px) {
-          max-width: 25em;
-        }
-        @media (max-width: 640px) {
-          max-width: 90%;
+        max-width: 25em;
+        // Phones
+        @media (max-width: 500px) {
+          max-width: 15em;
         }
         p {
           display: inline-block;
@@ -387,10 +387,15 @@
             max-width: 15em;
           }
           img.video {
-            max-width: 8em;
             margin: auto;
             cursor: pointer;
             max-height: 100%;
+            max-width: 8em;
+
+            // Phones
+            @media (max-width: 500px) {
+              max-width: 7em;
+            }
           }
         }
 
@@ -404,6 +409,7 @@
           align-items: center;
           img.video:only-child {
             max-width: 12em;
+            object-fit: contain !important;
           }
           width: 100%;
         }
