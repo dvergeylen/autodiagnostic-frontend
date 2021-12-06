@@ -154,6 +154,11 @@
 <Footer />
 
 <style lang="scss">
+  main {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
   #congratulations {
     h2 {
       background-color: var(--color-primary);
@@ -172,7 +177,6 @@
     margin-top: 1em;
     margin-bottom: 2em;
     border: 5px solid red;
-    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 0.25em;

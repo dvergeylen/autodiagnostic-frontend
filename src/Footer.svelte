@@ -17,11 +17,24 @@
 
 <style lang="scss">
   footer {
-    max-width: 50em;
-    min-width: 50%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
+
+    // Phones
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+
+    // Tablets
+    @media (min-width: 769px) and (max-width: 1023px) {
+      width: 90%;
+    }
+
+    // Desktops
+    @media (min-width: 1024px) {
+      width: 33em;
+    }
   }
   footer::after {
     content: "";
@@ -29,7 +42,18 @@
     background: url("/assets/images/trame_sowalfin.svg");
     background-repeat: repeat-x;
     display: inline-block;
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    // Phones, Tablets
+    @media (max-width: 1023px) {
+      width: 100%;
+    }
+
+    // Desktops
+    @media (min-width: 1024px) {
+      width: 33em;
+    }
   }
 
   #moto {
@@ -37,8 +61,17 @@
   }
   .logo-container {
     height: 3em;
-    width: 6em;
     display: flex;
+
+    // Phones, Tablets
+    @media (max-width: 1023px) {
+      width: 30%;
+    }
+
+    // Desktops
+    @media (min-width: 1024px) {
+      width: 6em;
+    }
   }
   .logo-container:not(:last-child) {
     padding-right: 0.5em;
