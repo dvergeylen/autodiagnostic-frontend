@@ -19,7 +19,10 @@
   let narratorTyping: boolean = false;
   let displayMap: boolean = false;
   let userClickedOnAnswer: boolean = false;
-  let timerId: NodeJS.Timeout;
+  let temporizing: boolean = false;
+  let dialogNodeTimerId: NodeJS.Timeout;
+  let temporizingTimerId: NodeJS.Timeout;
+  let answerDialogNodeTimerId: NodeJS.Timeout;
 
   // Display error screen if unable to load chapters
   $: if (Object.keys($chapters).includes('error')) {
@@ -32,7 +35,8 @@
 
   function clearTimer() {
     if (!userClickedOnAnswer) {
-      clearTimeout(timerId);
+      clearTimeout(dialogNodeTimerId);
+      dialogNodeTimerId = null; // tells displayAnswerDialogBox() dialogNodeTimerId was cleared and did not timed out
       waitStoresToLoad(true);
     } else {
       userClickedOnAnswer = false;
@@ -47,6 +51,18 @@
   }
 
   function displayAnswerDialogBox(nextNodeIds: Array<string>) {
+    if (!dialogNodeTimerId && !temporizingTimerId) {
+      /* Setting a temporization to avoid user answering a question
+       * when trying to speed up the dialog
+       */
+      clearTimeout(temporizingTimerId);
+      temporizing = true;
+      temporizingTimerId = setTimeout(() => {
+        temporizing = false;
+        temporizingTimerId = null;
+      }, 750);
+    }
+
     answersNodeIds = nextNodeIds;
   }
 
@@ -79,7 +95,7 @@
     // Display Answer DialogNode div when 'Player' and multiple nextNodes
     } else if (currentSpeaker === 'Player' && (nextNodes.length > 1)) {
       const timerReply = 500;
-      timerId = setTimeout(() => {
+      answerDialogNodeTimerId = setTimeout(() => {
         displayAnswerDialogBox(nextNodeIds);
       }, skipTimer ? 0 : timerReply);
 
@@ -87,7 +103,7 @@
     } else if (currentSpeaker === 'Narrator') {
       // ...unless multiple Narrator nodes are displayed consecutively
       const timerReply = 3500;
-      timerId = setTimeout(() => {
+      dialogNodeTimerId = setTimeout(() => {
         $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
 
         // Call next DialogNode, if any
@@ -100,14 +116,14 @@
         $chapters[$currentChapterId].dialogNodes[parentNodeId]?.text[$gameState.language]?.length || 10;
       // BeforeIsTyping time is reduced when responses from a same character are following
       const timerBeforeIsTyping = Math.floor(parentNodeLength * (previousSpeaker === currentSpeaker ? 20 : 30));
-      timerId = setTimeout(() => {
+      dialogNodeTimerId = setTimeout(() => {
         showIsTyping = true;
 
         const nextNodeLength = $chapters[$currentChapterId].dialogNodes[nextNodeIds[0]].text[$gameState.language] instanceof Object ?
           $chapters[$currentChapterId].dialogNodes[nextNodeIds[0]].text[$gameState.language][$gameState.gender.toLowerCase()].length :
           $chapters[$currentChapterId].dialogNodes[nextNodeIds[0]].text[$gameState.language].length;
         const timerIsTyping = Math.floor((nextNodeLength || 10) * 40);
-        timerId = setTimeout(() => {
+        dialogNodeTimerId = setTimeout(() => {
           showIsTyping = false;
           $gameState.nodes[$currentChapterId] = [...($gameState.nodes[$currentChapterId] || []), nextNodeIds[0]];
 
@@ -122,6 +138,10 @@
   }
 
   function addAnswer(dialogNodeid: string) {
+    // Stop here if still within the temporizing time
+    if (temporizing)
+      return;
+
     // Clear Map, if any
     displayMapStore.set(false);
 
@@ -190,7 +210,9 @@
   });
 
   onDestroy(() => {
-    clearTimeout(timerId);
+    clearTimeout(dialogNodeTimerId);
+    clearTimeout(temporizingTimerId);
+    clearTimeout(answerDialogNodeTimerId);
     displayMapUnsubscribe();
   })
 
@@ -205,7 +227,7 @@
 
   const displayMapUnsubscribe = displayMapStore.subscribe(newVal => {
     if (newVal && !displayMap) {
-      clearTimeout(timerId);
+      clearTimeout(dialogNodeTimerId);
     } else if (newVal == false && displayMap === true) {
       waitStoresToLoad();
     }
