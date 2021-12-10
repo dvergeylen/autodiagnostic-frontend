@@ -4,7 +4,7 @@
 # On the dev PC:
 # yarn run build
 # docker build -t autodiagnostic-frontend .
-# docker save -o autodiagnostic-frontend:latest.dockerimage.tar autodiagnostic-frontend:latest
+# docker save -o autodiagnostic-frontend-latest.dockerimage.tar autodiagnostic-frontend:latest
 # scp autodiagnostic-frontend-latest.dockerimage.tar badgeedev@badgee-tst.sowalfin.net:/home/badgeedev/
 
 # On the host PC (where the Docker images will be started)
@@ -20,7 +20,6 @@ WORKDIR /usr/src/app
 
 # Bundle app source
 COPY ./public/ /usr/src/app/
-#COPY ./public/ /usr/share/nginx/html/
 
 # Copy configuration
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
