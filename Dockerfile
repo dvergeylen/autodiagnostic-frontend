@@ -25,6 +25,7 @@ COPY ./public/ /usr/src/app/
 # Copy configuration
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
+EXPOSE 80
 
 # RUN
 # Same as parent
