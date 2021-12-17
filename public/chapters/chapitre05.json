@@ -21,8 +21,8 @@
       "id": "1",
       "text": {
         "fr": {
-          "m": "Arya? Bien arrivée à Kyoto?",
-          "f": "Jon? Bien arrivé à Kyoto?"
+          "m": "Arya? Bien rentrée de Kyoto?",
+          "f": "Jon? Bien rentré de Kyoto?"
         }
       },
       "nextNodes": [
@@ -65,8 +65,8 @@
       "id": "3",
       "text": {
         "fr": {
-          "m": "ah, t'es connecté aussi! Oui, c'est bon. Je suis dans TA super ville!!",
-          "f": "ah, t'es connectée aussi! Oui, c'est bon. Je suis dans TA super ville!!"
+          "m": "ah, t'es connecté aussi! Oui, c'est bon. J'étais dans TA super ville!!",
+          "f": "ah, t'es connectée aussi! Oui, c'est bon. J'étais dans TA super ville!!"
         },
         "en": ""
       },

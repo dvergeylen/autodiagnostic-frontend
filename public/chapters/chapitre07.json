@@ -1015,27 +1015,6 @@
         "en": ""
       },
       "nextNodes": [
-        "48"
-      ],
-      "character": "Player",
-      "attribution": {
-        "leader": 0,
-        "bricoleur": 0,
-        "coequipier": 0,
-        "planificateur": 0,
-        "idealiste": 0,
-        "creatif": 0,
-        "audacieux": 0,
-        "explorateur": 1
-      }
-    },
-    "48": {
-      "id": "48",
-      "text": {
-        "fr": "Je déteste ces traditions, j'adore l'aventure!",
-        "en": ""
-      },
-      "nextNodes": [
         "49"
       ],
       "character": "Player",
@@ -1047,7 +1026,7 @@
         "idealiste": 0,
         "creatif": 0,
         "audacieux": 0,
-        "explorateur": 0
+        "explorateur": 1
       }
     },
     "49": {
@@ -1078,8 +1057,8 @@
       "id": "50",
       "text": {
         "fr": {
-          "m": "T'es lourd! Allez, je file… Marianne a fait des frittes pour moi!!",
-          "f": "T'es lourde! Allez, je file… Marianne a fait des frittes pour moi!!"
+          "m": "T'es lourd! Allez, je file… Marianne a fait des frites pour moi!!",
+          "f": "T'es lourde! Allez, je file… Marianne a fait des frites pour moi!!"
         },
         "en": ""
       },
