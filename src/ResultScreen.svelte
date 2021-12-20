@@ -102,11 +102,11 @@
 
   <div id="profile-avatar-container">
     <picture>
-      <source srcset="assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Medium.png"
+      <source srcset="{process.env.APP_PATH_PREFIX}/assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Medium.png"
         media="(min-width: 769px)">
-      <source srcset="assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Small.png"
+      <source srcset="{process.env.APP_PATH_PREFIX}/assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Small.png"
         media="(max-width: 768px)">
-      <img data-src="assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Small.png" alt="{profiles[mainProfile].name}" />
+      <img data-src="{process.env.APP_PATH_PREFIX}/assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Small.png" alt="{profiles[mainProfile].name}" />
     </picture>
   </div>
 
@@ -119,14 +119,15 @@
   <fieldset id="graph-title">
     <legend>
       <svg class="icon magnifying-glass">
-        <use href='assets/sprite_icons.svg#search' />
+        <use href={[process.env.APP_PATH_PREFIX, 'assets/sprite_icons.svg#search'].join('/')} />
       </svg>
       TES RÉSULTATS DÉTAILLÉS :
     </legend>
   </fieldset>
   <div id="graph-container">
     <svg id="graph" viewBox="0 0 {width} {height}">
-      <use href='assets/sprite_results.svg#results-background' xlink:href='assets/sprite_results.svg#results-background' />
+      <use href={[process.env.APP_PATH_PREFIX, 'assets/sprite_results.svg#results-background'].join('/')}
+        xlink:href={[process.env.APP_PATH_PREFIX, 'assets/sprite_results.svg#results-background'].join('/')} />
       <path d="{path} Z" stroke="var(--color-primary)" stroke-width="3" fill="#FF505099"/>
       {#each profilesOrdered as profile, i (i)}
         <circle cx="{coordinates[i].x}" cy="{coordinates[i].y}" r="5" fill="#FF5050"/>

@@ -49,19 +49,21 @@
       advice: "<p>N'hésite pas à utiliser ton sens de l'observation et tes intuitions pour identifier de nouveaux besoins, des défis, et penser à leurs solutions, cela te permettra d'associer les talents de l'explorateur et du créatif, une belle combinaison !</p>",
     },
   };
+
+  const urlHorizontalBarSubtitle = `url('${[process.env.APP_PATH_PREFIX, 'assets/images/horizontal_bar_subtitle.svg'].join('/')}')`;
 </script>
 
 <h4>
   <svg class="icon scroll">
-    <use href='assets/sprite_icons.svg#scroll' />
+    <use href={[process.env.APP_PATH_PREFIX, 'assets/sprite_icons.svg#scroll'].join('/')} />
   </svg>
   Description :
 </h4>
 {@html profiles[profileName].desc}
 
-<h4>
+<h4 style="--url-horizontal-bar-subtitle: {urlHorizontalBarSubtitle};">
   <svg class="icon lightbulb">
-    <use href='assets/sprite_icons.svg#lightbulb' />
+    <use href={[process.env.APP_PATH_PREFIX, 'assets/sprite_icons.svg#lightbulb'].join('/')} />
   </svg>
   Un conseil :
   </h4>
@@ -75,7 +77,7 @@
   h4::after {
     content: "";
     height: 0.5em;
-    background: url("/assets/images/horizontal_bar_subtitle.svg");
+    background: var(--url-horizontal-bar-subtitle);
     background-repeat: no-repeat;
     display: inline-block;
     width: 75%;

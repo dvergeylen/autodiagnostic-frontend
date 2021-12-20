@@ -8,7 +8,7 @@
     // Default map-marker images aren't loaded correctly,
     // see: https://github.com/Leaflet/Leaflet/issues/4968
     L.Icon.Default.mergeOptions({
-      imagePath: '/assets/images/leaflet/',
+      imagePath: `${process.env.APP_PATH_PREFIX}/assets/images/leaflet/`,
     });
 
     const zoom = $chapters[$currentChapterId].metadata.mapMarker.zoom;

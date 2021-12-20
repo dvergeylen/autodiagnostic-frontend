@@ -55,7 +55,7 @@
 <fieldset id="strengths">
   <legend>
     <svg class="icon trophy">
-      <use href='assets/sprite_icons.svg#trophy' />
+      <use href={[process.env.APP_PATH_PREFIX, 'assets/sprite_icons.svg#trophy'].join('/')} />
     </svg>
     TES POINTS FORTS :
   </legend>
@@ -66,7 +66,7 @@
     <fieldset class="is-flex has-align-items-center has-justify-content-center">
       <legend>
         <svg class="icon thumbtack">
-          <use href='assets/sprite_icons.svg#thumbtack' />
+          <use href={[process.env.APP_PATH_PREFIX, 'assets/sprite_icons.svg#thumbtack'].join('/')} />
         </svg>
       </legend>
       {strength}

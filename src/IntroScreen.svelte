@@ -30,22 +30,22 @@
   });
 
   $: twoDigitsChapterId = $currentChapterId.padStart(2, '0');
-  const url_smartphone = `url('/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Arya' : 'Jon'}_Ratio2-5.png')`;
-  const url_tablet = `url('/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Arya' : 'Jon'}_Ratio2.png')`;
-  const url_desktop = `url('/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Arya' : 'Jon'}_Ratio1-6.png')`;
+  const url_smartphone = `url('${process.env.APP_PATH_PREFIX}/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Arya' : 'Jon'}_Ratio2-5.png')`;
+  const url_tablet = `url('${process.env.APP_PATH_PREFIX}/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Arya' : 'Jon'}_Ratio2.png')`;
+  const url_desktop = `url('${process.env.APP_PATH_PREFIX}/assets/images/intros/${$currentChapterId.padStart(2, '0')}_${($gameState.gender == 'M') ? 'Arya' : 'Jon'}_Ratio1-6.png')`;
 </script>
 
 <div id="intro"
   on:click={abortTimer}
   style="--url-smartphone: {url_smartphone};--url-tablet: {url_tablet}; --url-desktop: {url_desktop};">
-  {#if $currentChapterId > 0}
+  {#if Number($currentChapterId) > 0}
     <div id="titles">
       <fieldset>
         <legend>{$currentChapterId === '0' ? 'INTRODUCTION' : `CHAPITRE ${twoDigitsChapterId}`}</legend>
         {#if storesLoaded}
           <p id="date">
             <svg class="icon calendar">
-              <use href='assets/sprite_icons.svg#calendar-alt' />
+              <use href={[process.env.APP_PATH_PREFIX, 'assets/sprite_icons.svg#calendar-alt'].join('/')} />
             </svg>
             {chapterDate}
           </p>

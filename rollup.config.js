@@ -1,13 +1,20 @@
 import svelte from 'rollup-plugin-svelte';
 import commonjs from '@rollup/plugin-commonjs';
+import replace from '@rollup/plugin-replace';
 import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
+import { config } from 'dotenv';
+import path from 'path';
 
 const production = !process.env.ROLLUP_WATCH;
+const envs = config({ path: production ?
+  path.resolve(process.cwd(), '.env.production') :
+  path.resolve(process.cwd(), '.env')
+}).parsed;
 
 function serve() {
 	let server;
@@ -75,7 +82,15 @@ export default {
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser()
+		production && terser(),
+
+    // Replace env variables at compile time
+    replace({
+      preventAssignment: true,
+      values: {
+        'process.env.APP_PATH_PREFIX': JSON.stringify(envs['APP_PATH_PREFIX']),
+      },
+    }),
 	],
 	watch: {
 		clearScreen: false

@@ -3,8 +3,14 @@
 
   "include": ["src/**/*"],
   "exclude": ["node_modules/*", "__sapper__/*", "public/*"],
-  "target": "es6",
   "strict": true,
   "noImplicitAny": true,
-  "strictNullChecks": true
+  "strictNullChecks": true,
+  "compilerOptions": {
+    "target": "es6"
+  },
+  "types": [
+    "svelte",
+    "node"
+  ]
 }

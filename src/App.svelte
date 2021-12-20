@@ -43,12 +43,14 @@
   <ErrorScreen />
 {:else}
   <WelcomeScreen />
-  <audio id="background-music" src="/assets/sounds/watermarked_Sounds_Like_Sander_When_Stars_Collide_instrumental_3_49.mp3" autoplay loop bind:muted={muteMusic}>
+  <!--
+  <audio id="background-music" src={[process.env.APP_PATH_PREFIX, 'assets/sounds/watermarked_Sounds_Like_Sander_When_Stars_Collide_instrumental_3_49.mp3'].join('/')} autoplay loop bind:muted={muteMusic}>
     <track kind="captions">
   </audio>
+  -->
 {/if}
 
-<audio bind:this={soundPlayer} id="notification-sound" src="/assets/sounds/message.mp3">
+<audio bind:this={soundPlayer} id="notification-sound" src={[process.env.APP_PATH_PREFIX, 'assets/sounds/message.mp3'].join('/')}>
   <track kind="captions">
 </audio>
 

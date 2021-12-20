@@ -1,13 +1,17 @@
-<footer>
+<script lang="ts">
+  const urlTrameSowalfin = `url('${[process.env.APP_PATH_PREFIX, 'assets/images/trame_sowalfin_color_06.svg'].join('/')}')`;
+</script>
+
+<footer style="--url-trame-background: {urlTrameSowalfin};">
   <div class="is-flex has-align-items-center">
     <div class="logo-container">
-      <img id="sowalfin-creation" src="/assets/images/logo_sowalfin_creation.svg" alt="Sowalfin Création"/>
+      <img id="sowalfin-creation" src={[process.env.APP_PATH_PREFIX, '/assets/images/logo_sowalfin_creation.svg'].join('/')} alt="Sowalfin Création"/>
     </div>
     <div class="logo-container">
-      <img src="/assets/images/logo_FSE_Coq_Wallonie.svg" alt="Logo FSE et Wallonie"/>
+      <img src={[process.env.APP_PATH_PREFIX, 'assets/images/logo_FSE_Coq_Wallonie.svg'].join('/')} alt="Logo FSE et Wallonie"/>
     </div>
     <div class="logo-container">
-      <img src="/assets/images/logo_EnMieux.svg" alt="Logo En Mieux"/>
+      <img src={[process.env.APP_PATH_PREFIX, 'assets/images/logo_EnMieux.svg'].join('/')} alt="Logo En Mieux"/>
     </div>
   </div>
   <div id="footer-container">
@@ -39,7 +43,7 @@
   footer::after {
     content: "";
     height: 2em;
-    background: url("/assets/images/trame_sowalfin.svg");
+    background: var(--url-trame-background);
     background-repeat: repeat-x;
     display: inline-block;
     margin-left: auto;

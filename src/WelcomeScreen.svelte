@@ -32,9 +32,12 @@
 
   $: isNewGame = (Object.entries($gameState.nodes).length === 0);
   $: isGenderConfigured = ($gameState?.gender?.length || 0) > 0;
+
+  const urlHorizontalBarSubtitle = `url('${[process.env.APP_PATH_PREFIX, 'assets/images/horizontal_bar_subtitle.svg'].join('/')}')`;
+  const urlTrameSowalfin = `url('${[process.env.APP_PATH_PREFIX, 'assets/images/trame_sowalfin_color_06.svg'].join('/')}')`;
 </script>
 
-<main>
+<main style="--url-horizontal-bar-subtitle: {urlHorizontalBarSubtitle}; --url-trame-background: {urlTrameSowalfin};">
   <div class="h1-wrapper">
     <h1>ON MY WAY</h1>
   </div>
@@ -50,11 +53,11 @@
       <div id="music-settings-wrapper">
         {#if $playMusicStore}
           <svg on:click={toggleMusic} class="icon music">
-            <use href='assets/sprite_icons.svg#music' />
+            <use href={[process.env.APP_PATH_PREFIX, 'assets/sprite_icons.svg#music'].join('/')} />
           </svg>
         {:else}
           <svg on:click={toggleMusic} class="icon music">
-            <use href='assets/sprite_icons.svg#music-slash' />
+            <use href={[process.env.APP_PATH_PREFIX, 'assets/sprite_icons.svg#music-slash'].join('/')} />
           </svg>
         {/if}
       </div>
@@ -105,13 +108,13 @@
         <div class="is-flex">
           <div on:click={() => toggleCharacter('F')}>
 
-              <img class:selected={gender === 'F'} src='/assets/images/avatar_Arya_intro.png' alt="Arya"/>
+              <img class:selected={gender === 'F'} src={[process.env.APP_PATH_PREFIX, 'assets/images/avatar_Arya_intro.png'].join('/')} alt="Arya"/>
               <div class:selected={gender === 'F'} class="is-button is-uppercase">
                 Arya
               </div>
           </div>
           <div on:click={() => toggleCharacter('M')}>
-              <img class:selected={gender === 'M'} src='/assets/images/avatar_Jon_intro.png' alt="Jon"/>
+              <img class:selected={gender === 'M'} src={[process.env.APP_PATH_PREFIX, 'assets/images/avatar_Jon_intro.png'].join('/')} alt="Jon"/>
               <div class:selected={gender === 'M'} class="is-button is-uppercase">
                 Jon
               </div>
@@ -156,7 +159,7 @@
   .h1-wrapper::after {
     content: "";
     height: 1em;
-    background: url("/assets/images/trame_sowalfin_color_06.svg");
+    background-image: var(--url-trame-background);
     background-repeat: repeat-x;
     display: inline-block;
     width: 100%;
@@ -187,7 +190,7 @@
     h4::after {
       content: "";
       height: 0.5em;
-      background: url("/assets/images/horizontal_bar_subtitle.svg");
+      background-image: var(--url-horizontal-bar-subtitle);
       background-repeat: repeat-x;
       display: inline-block;
       width: 75%;
@@ -246,7 +249,7 @@
   div#buttons-wrapper::after {
     content: "";
     height: 1em;
-    background: url("/assets/images/trame_sowalfin_color_06.svg");
+    background-image: var(--url-trame-background);
     background-repeat: repeat-x;
     display: inline-block;
     width: 100%;

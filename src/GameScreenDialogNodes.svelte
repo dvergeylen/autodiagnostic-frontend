@@ -249,9 +249,9 @@
           {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'NPC1'}
             <div class="avatar">
               {#if $gameState.gender === 'M'}
-                <img src='/assets/images/avatar_Arya.png' alt="Arya"/>
+                <img src={[process.env.APP_PATH_PREFIX, '/assets/images/avatar_Arya.png'].join('/')} alt="Arya"/>
               {:else}
-                <img src='/assets/images/avatar_Jon.png' alt="Jon"/>
+                <img src={[process.env.APP_PATH_PREFIX, '/assets/images/avatar_Jon.png'].join('/')} alt="Jon"/>
               {/if}
             </div>
           {/if}
@@ -289,9 +289,9 @@
           {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'Player'}
             <div class="avatar">
               {#if $gameState.gender === 'M'}
-                <img src='/assets/images/avatar_Jon.png' alt="Jon"/>
+                <img src={[process.env.APP_PATH_PREFIX, '/assets/images/avatar_Jon.png'].join('/')} alt="Jon"/>
               {:else}
-                <img src='/assets/images/avatar_Arya.png' alt="Arya"/>
+                <img src={[process.env.APP_PATH_PREFIX, '/assets/images/avatar_Arya.png'].join('/')} alt="Arya"/>
               {/if}
             </div>
           {/if}
@@ -329,9 +329,9 @@
         </div>
         <div class="avatar">
           {#if $gameState.gender === 'M'}
-            <img src='/assets/images/avatar_Jon.png' alt="Jon"/>
+            <img src={[process.env.APP_PATH_PREFIX, '/assets/images/avatar_Jon.png'].join('/')} alt="Jon"/>
           {:else}
-            <img src='/assets/images/avatar_Arya.png' alt="Arya"/>
+            <img src={[process.env.APP_PATH_PREFIX, '/assets/images/avatar_Arya.png'].join('/')} alt="Arya"/>
           {/if}
         </div>
       </div>

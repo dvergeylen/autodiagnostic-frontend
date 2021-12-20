@@ -24,10 +24,10 @@
 <div class="header">
   <div id="npc-avatar">
     {#if $gameState.gender === 'M'}
-      <img src='/assets/images/avatar_Arya.png' alt="Arya"/>
+      <img src={[process.env.APP_PATH_PREFIX, '/images/avatar_Arya.png'].join('/')} alt="Arya"/>
       <p>Arya</p>
     {:else}
-      <img src='/assets/images/avatar_Jon.png' alt="Jon"/>
+      <img src={[process.env.APP_PATH_PREFIX, '/images/avatar_Jon.png'].join('/')} alt="Jon"/>
       <p>Jon</p>
     {/if}
   </div>
@@ -35,22 +35,22 @@
   <div id="settings">
     {#if $playSoundsStore}
       <svg on:click={toggleSounds} class="icon map">
-        <use href='assets/sprite_icons.svg#volume' />
+        <use href={[process.env.APP_PATH_PREFIX, 'assets/sprite_icons.svg#volume'].join('/')} />
       </svg>
     {:else}
       <svg on:click={toggleSounds} class="icon map">
-        <use href='assets/sprite_icons.svg#volume-slash' />
+        <use href={[process.env.APP_PATH_PREFIX, 'assets/sprite_icons.svg#volume-slash' ].join('/')}/>
       </svg>
     {/if}
     <!-- Debug to go to result screen -->
     <svg on:click={goToResultScreen} class="icon map">
-      <use href='assets/sprite_icons.svg#award' />
+      <use href={[process.env.APP_PATH_PREFIX, 'assets/sprite_icons.svg#award'].join('/')} />
     </svg>
     <svg on:click={toggledisplayMapStore} class="icon map">
-      <use href='assets/sprite_icons.svg#map-marked-alt' />
+      <use href={[process.env.APP_PATH_PREFIX, 'assets/sprite_icons.svg#map-marked-alt'].join('/')} />
     </svg>
     <svg on:click={goToWelcomeScreen} class="icon home">
-      <use href='assets/sprite_icons.svg#home' />
+      <use href={[process.env.APP_PATH_PREFIX, 'assets/sprite_icons.svg#home' ].join('/')}/>
     </svg>
   </div>
 </div>
