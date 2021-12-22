@@ -5,7 +5,7 @@
 <footer style="--url-trame-background: {urlTrameSowalfin};">
   <div class="is-flex has-align-items-center">
     <div class="logo-container">
-      <img id="sowalfin-creation" src={[process.env.APP_PATH_PREFIX, '/assets/images/logo_sowalfin_creation.svg'].join('/')} alt="Sowalfin Création"/>
+      <img id="sowalfin-creation" src={[process.env.APP_PATH_PREFIX, 'assets/images/logo_sowalfin_creation.svg'].join('/')} alt="Sowalfin Création"/>
     </div>
     <div class="logo-container">
       <img src={[process.env.APP_PATH_PREFIX, 'assets/images/logo_FSE_Coq_Wallonie.svg'].join('/')} alt="Logo FSE et Wallonie"/>

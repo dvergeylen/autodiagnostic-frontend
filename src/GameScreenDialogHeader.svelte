@@ -24,10 +24,10 @@
 <div class="header">
   <div id="npc-avatar">
     {#if $gameState.gender === 'M'}
-      <img src={[process.env.APP_PATH_PREFIX, '/images/avatar_Arya.png'].join('/')} alt="Arya"/>
+      <img src={[process.env.APP_PATH_PREFIX, 'assets/images/avatar_Arya.png'].join('/')} alt="Arya"/>
       <p>Arya</p>
     {:else}
-      <img src={[process.env.APP_PATH_PREFIX, '/images/avatar_Jon.png'].join('/')} alt="Jon"/>
+      <img src={[process.env.APP_PATH_PREFIX, 'assets/images/avatar_Jon.png'].join('/')} alt="Jon"/>
       <p>Jon</p>
     {/if}
   </div>

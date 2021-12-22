@@ -102,11 +102,18 @@
 
   <div id="profile-avatar-container">
     <picture>
-      <source srcset="{process.env.APP_PATH_PREFIX}/assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Medium.png"
+      <source srcset="{[
+        process.env.APP_PATH_PREFIX,
+        `assets/images/profiles/${profiles[mainProfile].avatarName}_${$gameState.gender}_Medium.png`].join('/')}"
         media="(min-width: 769px)">
-      <source srcset="{process.env.APP_PATH_PREFIX}/assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Small.png"
+      <source srcset="{[
+        process.env.APP_PATH_PREFIX,
+        `assets/images/profiles/${profiles[mainProfile].avatarName}_${$gameState.gender}_Small.png`].join('/')}"
         media="(max-width: 768px)">
-      <img data-src="{process.env.APP_PATH_PREFIX}/assets/images/profiles/{profiles[mainProfile].avatarName}_{$gameState.gender}_Small.png" alt="{profiles[mainProfile].name}" />
+      <img data-src="{[
+        process.env.APP_PATH_PREFIX,
+        `assets/images/profiles/${profiles[mainProfile].avatarName}_${$gameState.gender}_Small.png`].join('/')}"
+        alt="{profiles[mainProfile].name}" />
     </picture>
   </div>
 

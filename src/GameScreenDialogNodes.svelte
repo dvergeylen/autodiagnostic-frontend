@@ -249,9 +249,9 @@
           {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'NPC1'}
             <div class="avatar">
               {#if $gameState.gender === 'M'}
-                <img src={[process.env.APP_PATH_PREFIX, '/assets/images/avatar_Arya.png'].join('/')} alt="Arya"/>
+                <img src={[process.env.APP_PATH_PREFIX, 'assets/images/avatar_Arya.png'].join('/')} alt="Arya"/>
               {:else}
-                <img src={[process.env.APP_PATH_PREFIX, '/assets/images/avatar_Jon.png'].join('/')} alt="Jon"/>
+                <img src={[process.env.APP_PATH_PREFIX, 'assets/images/avatar_Jon.png'].join('/')} alt="Jon"/>
               {/if}
             </div>
           {/if}
@@ -261,7 +261,8 @@
                   <img
                     on:load={updateScrollHeight}
                     class="video"
-                    src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath[$gameState.language][$gameState.gender.toLowerCase()]}"
+                    src="{[process.env.APP_PATH_PREFIX,
+                           $chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath[$gameState.language][$gameState.gender.toLowerCase()]].join('/')}"
                     alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language][$gameState.gender.toLowerCase()]}"
                     width="100%"
                     height="100%" />
@@ -269,7 +270,7 @@
                   <img
                     on:load={updateScrollHeight}
                     class="video"
-                    src="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath}"
+                    src="{[process.env.APP_PATH_PREFIX, $chapters[$currentChapterId].dialogNodes[dialogNodeId].imagePath].join('/')}"
                     alt="{$chapters[$currentChapterId].dialogNodes[dialogNodeId].text[$gameState.language]}"
                     width="100%"
                     height="100%" />
@@ -289,9 +290,9 @@
           {#if $chapters[$currentChapterId].dialogNodes[dialogNodeId].character === 'Player'}
             <div class="avatar">
               {#if $gameState.gender === 'M'}
-                <img src={[process.env.APP_PATH_PREFIX, '/assets/images/avatar_Jon.png'].join('/')} alt="Jon"/>
+                <img src={[process.env.APP_PATH_PREFIX, 'assets/images/avatar_Jon.png'].join('/')} alt="Jon"/>
               {:else}
-                <img src={[process.env.APP_PATH_PREFIX, '/assets/images/avatar_Arya.png'].join('/')} alt="Arya"/>
+                <img src={[process.env.APP_PATH_PREFIX, 'assets/images/avatar_Arya.png'].join('/')} alt="Arya"/>
               {/if}
             </div>
           {/if}
@@ -314,7 +315,7 @@
                   on:load={updateScrollHeight}
                   on:click={() => addAnswer(answerDialogNodeId)}
                   class="video"
-                  src="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath}"
+                  src="{[process.env.APP_PATH_PREFIX, $chapters[$currentChapterId].dialogNodes[answerDialogNodeId].imagePath].join('/')}"
                   alt="{$chapters[$currentChapterId].dialogNodes[answerDialogNodeId].text[$gameState.language]}" />
               {:else}
                 <p class="choice" on:click={() => addAnswer(answerDialogNodeId)}>
@@ -329,9 +330,9 @@
         </div>
         <div class="avatar">
           {#if $gameState.gender === 'M'}
-            <img src={[process.env.APP_PATH_PREFIX, '/assets/images/avatar_Jon.png'].join('/')} alt="Jon"/>
+            <img src={[process.env.APP_PATH_PREFIX, 'assets/images/avatar_Jon.png'].join('/')} alt="Jon"/>
           {:else}
-            <img src={[process.env.APP_PATH_PREFIX, '/assets/images/avatar_Arya.png'].join('/')} alt="Arya"/>
+            <img src={[process.env.APP_PATH_PREFIX, 'assets/images/avatar_Arya.png'].join('/')} alt="Arya"/>
           {/if}
         </div>
       </div>

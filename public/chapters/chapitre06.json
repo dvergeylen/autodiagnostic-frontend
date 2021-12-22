@@ -278,7 +278,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "/assets/images/chapter6_sponge_bob_bored.webp"
+      "imagePath": "assets/images/chapter6_sponge_bob_bored.webp"
     },
     "13": {
       "id": "13",
@@ -321,7 +321,7 @@
         "audacieux": 0,
         "explorateur": 1
       },
-      "imagePath": "/assets/images/chapter6_minions.webp"
+      "imagePath": "assets/images/chapter6_minions.webp"
     },
     "15": {
       "id": "15",
@@ -1203,7 +1203,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "/assets/images/illus_inter_chat/06_Fuji.webp"
+      "imagePath": "assets/images/illus_inter_chat/06_Fuji.webp"
     }
   }
 }

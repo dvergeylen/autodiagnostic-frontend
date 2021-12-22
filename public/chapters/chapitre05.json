@@ -344,7 +344,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "/assets/images/chapter5_hello_there.webp"
+      "imagePath": "assets/images/chapter5_hello_there.webp"
     },
     "16": {
       "id": "16",
@@ -1048,7 +1048,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "/assets/images/chapter5_enjoy.webp"
+      "imagePath": "assets/images/chapter5_enjoy.webp"
     },
     "48": {
       "id": "48",
@@ -1070,7 +1070,7 @@
         "audacieux": 0,
         "explorateur": 0
       },
-      "imagePath": "/assets/images/chapter5_so.webp"
+      "imagePath": "assets/images/chapter5_so.webp"
     },
     "49": {
       "id": "49",
@@ -1113,8 +1113,8 @@
       },
       "imagePath": {
         "fr": {
-          "m": "/assets/images/illus_inter_chat/05_Kyoto_Arya.webp",
-          "f": "/assets/images/illus_inter_chat/05_Kyoto_Jon.webp"
+          "m": "assets/images/illus_inter_chat/05_Kyoto_Arya.webp",
+          "f": "assets/images/illus_inter_chat/05_Kyoto_Jon.webp"
         }
       }
     },
@@ -1143,8 +1143,8 @@
       },
       "imagePath": {
         "fr": {
-          "m": "/assets/images/illus_inter_chat/05_Ryokan_Arya.webp",
-          "f": "/assets/images/illus_inter_chat/05_Ryokan_Jon.webp"
+          "m": "assets/images/illus_inter_chat/05_Ryokan_Arya.webp",
+          "f": "assets/images/illus_inter_chat/05_Ryokan_Jon.webp"
         }
       }
     }
