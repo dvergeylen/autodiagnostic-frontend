@@ -67,7 +67,10 @@
     "3": {
       "id": "3",
       "text": {
-        "fr": "Suis en route pour le stade Ryogoku Kokugikan mais totalement perdue dans une rue!",
+        "fr": {
+          "m": "Suis en route pour le stade Ryogoku Kokugikan mais totalement perdue dans une rue!",
+          "f": "Suis en route pour le stade Ryogoku Kokugikan mais totalement perdu dans une rue!"
+        },
         "en": ""
       },
       "nextNodes": [
