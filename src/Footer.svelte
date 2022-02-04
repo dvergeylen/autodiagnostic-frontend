@@ -8,7 +8,7 @@
       <img src={[process.env.APP_PATH_PREFIX, 'assets/images/logo_EnMieux.svg'].join('/')} alt="Logo En Mieux"/>
       <img src={[process.env.APP_PATH_PREFIX, 'assets/images/logo_FSE_Coq_Wallonie.svg'].join('/')} alt="Logo FSE et Wallonie"/>
     </div>
-    <div class="">
+    <div>
       <img id="sowalfin-creation" src={[process.env.APP_PATH_PREFIX, 'assets/images/logo_sowalfin_creation.svg'].join('/')} alt="Sowalfin Création"/>
     </div>
   </div>
@@ -84,7 +84,7 @@
     }
   }
   #sowalfin-creation {
-    max-width: 50%;
+    max-width: 55%;
     margin:auto;
     margin-left: 0.5em;
     margin-right: 0.5em;
