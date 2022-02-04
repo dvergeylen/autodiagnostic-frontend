@@ -1,17 +1,15 @@
 <script lang="ts">
-  const urlTrameSowalfin = `url('${[process.env.APP_PATH_PREFIX, 'assets/images/trame_sowalfin_color_06.svg'].join('/')}')`;
+  const urlTrameSowalfin = `url('${[process.env.APP_PATH_PREFIX, 'assets/images/trame_sowalfin.svg'].join('/')}')`;
 </script>
 
 <footer style="--url-trame-background: {urlTrameSowalfin};">
   <div class="is-flex has-align-items-center">
     <div class="logo-container">
-      <img id="sowalfin-creation" src={[process.env.APP_PATH_PREFIX, 'assets/images/logo_sowalfin_creation.svg'].join('/')} alt="Sowalfin Création"/>
-    </div>
-    <div class="logo-container">
+      <img src={[process.env.APP_PATH_PREFIX, 'assets/images/logo_EnMieux.svg'].join('/')} alt="Logo En Mieux"/>
       <img src={[process.env.APP_PATH_PREFIX, 'assets/images/logo_FSE_Coq_Wallonie.svg'].join('/')} alt="Logo FSE et Wallonie"/>
     </div>
-    <div class="logo-container">
-      <img src={[process.env.APP_PATH_PREFIX, 'assets/images/logo_EnMieux.svg'].join('/')} alt="Logo En Mieux"/>
+    <div class="">
+      <img id="sowalfin-creation" src={[process.env.APP_PATH_PREFIX, 'assets/images/logo_sowalfin_creation.svg'].join('/')} alt="Sowalfin Création"/>
     </div>
   </div>
   <div id="footer-container">
@@ -64,26 +62,29 @@
     font-size: 0.75em;
   }
   .logo-container {
-    height: 3em;
+    width: 50%;
     display: flex;
 
     // Phones, Tablets
     @media (max-width: 1023px) {
-      width: 30%;
+    height: 2em;
     }
 
     // Desktops
     @media (min-width: 1024px) {
-      width: 6em;
+    height: 3em;
+    }
+
+    img:first-child {
+      padding-right: 1em;
+    }
+    img:last-child {
+      padding-left: 1em;
+      border-left: 1px solid gray;
     }
   }
-  .logo-container:not(:last-child) {
-    padding-right: 0.5em;
-    border-right: 1px solid gray;
-    margin-right: 0.5em;
-  }
   #sowalfin-creation {
-    max-width: 5em;
+    max-width: 50%;
     margin:auto;
     margin-left: 0.5em;
     margin-right: 0.5em;
