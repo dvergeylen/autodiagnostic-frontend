@@ -13,7 +13,7 @@
     </div>
   </div>
   <div id="footer-container">
-    <p id="moto" class="is-uppercase">'On my way' est un outil développé par le groupe <a href="https://www.sowalfin.be">Sowalfin</a>.</p>
+    <p id="moto" class="is-uppercase">Un outil développé par le groupe <a href="https://www.sowalfin.be">Sowalfin</a>.</p>
   </div>
 </footer>
 
