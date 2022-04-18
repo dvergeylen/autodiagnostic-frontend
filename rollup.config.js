@@ -10,11 +10,12 @@ import css from 'rollup-plugin-css-only';
 import { config } from 'dotenv';
 import path from 'path';
 
-const production = !process.env.ROLLUP_WATCH;
-const envs = config({ path: production ?
-  path.resolve(process.cwd(), '.env.production') :
-  path.resolve(process.cwd(), '.env')
+const build = process.env.BUILD;
+const envs = config({
+  path: build === 'production' ? path.resolve(process.cwd(), '.env.production') :
+    (build === 'staging' ? path.resolve(process.cwd(), '.env.staging') : path.resolve(process.cwd(), '.env'))
 }).parsed;
+const production = process.env.BUILD != 'development';
 
 function serve() {
 	let server;

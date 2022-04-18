@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "production": "rollup -c --environment BUILD:production",
+    "staging": "rollup -c --environment BUILD:staging",
+    "dev": "rollup -c -w --environment BUILD:development",
     "start": "sirv public --no-clear --host --port 5001",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "deploy": "npm run build &&  ./node_modules/gh-pages/bin/gh-pages.js -d public/"
