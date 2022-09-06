@@ -43,13 +43,15 @@
   </div>
   <h3>UNE AVENTURE D'INTROSPECTION</h3>
 
+  <!--
   <div id="warning-dev">
     <p>🚧 Version en Développement</p>
   </div>
+  -->
 
   <div id="intro-text">
     <div class="is-flex">
-      <h4 class="is-bold">Bienvenue !</h4>
+      <h4 class="is-bold">Bienvenue!</h4>
       <div id="music-settings-wrapper">
         {#if $playMusicStore}
           <svg on:click={toggleMusic} class="icon music">
@@ -68,7 +70,7 @@
     <p>
       Tu vas assister aux échanges de SMS entre Arya et Jon.<br />
       Ces deux-là sont les meilleurs amis du monde …<br />
-      Mais la vie les sépare pour 1 an. 12 longs mois !<br />
+      Mais la vie les sépare pour 1 an. 12 longs mois!<br />
       Le temps d'un séjour au Japon pour l'un.<br />
       Pendant que l'autre reste en Belgique.<br />
       Mais, ils restent connectés.<br />
@@ -78,16 +80,16 @@
       Pour pouvoir établir ton profil actuel de compétences, tu vas jouer un personnage.<br />
       Tu dois répondre à sa place lorsque des choix multiples te sont proposés.<br />
       Tu dois veiller à choisir la réponse qui te correspond le plus.<br />
-      Bref, que ferais-tu/que dirais-tu dans la même situation ?<br />
+      Bref, que ferais-tu/que dirais-tu dans la même situation?<br />
       Tes choix doivent refléter qui tu es, comment tu fonctionnes en général.<br />
     </p>
     <p>
       Joue spontanément et honnêtement...<br />
-      Et tu découvriras ton profil dès la partie finie 😉<br />
+      Et tu découvriras ton profil dès la partie finie 😉<br />
       (Environ dans 20 minutes)
     </p>
     <p>
-      C'est parti !
+      C'est parti!
     </p>
 
     <div id="buttons-wrapper">
