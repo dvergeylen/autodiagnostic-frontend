@@ -89,7 +89,7 @@
   <div id="congratulations">
     <h2>FÉLICITATIONS</h2>
     <p class="is-bold">
-      Belle aventure ! Félicitations et merci d’avoir joué ! <br />
+      Belle aventure! Félicitations et merci d’avoir joué ! <br />
       Voici les résultats du test :
     </p>
   </div>
@@ -115,10 +115,6 @@
         `assets/images/profiles/${profiles[mainProfile].avatarName}_${$gameState.gender}_Small.png`].join('/')}"
         alt="{profiles[mainProfile].name}" />
     </picture>
-  </div>
-
-  <div class="share-container">
-    <a href="https://www.badgee.net" target="_blank" rel="noopener noreferrer">Valorise ces compétences avec Badg'ee</a>
   </div>
 
   <Strengths profileName={selectedProfile} />
