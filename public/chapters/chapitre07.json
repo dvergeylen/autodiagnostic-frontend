@@ -307,7 +307,10 @@
     "14": {
       "id": "14",
       "text": {
-        "fr": "Suis curieux de tout!",
+        "fr": {
+          "m": "Suis curieux de tout!",
+          "f": "Suis curieuse de tout!"
+        },
         "en": ""
       },
       "nextNodes": [
@@ -968,7 +971,7 @@
     "45": {
       "id": "45",
       "text": {
-        "fr": "robe blanche, lançé de bouquet, et j'en passe",
+        "fr": "robe blanche, lancer de bouquet, et j'en passe",
         "en": ""
       },
       "nextNodes": [

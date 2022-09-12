@@ -283,7 +283,10 @@
     "13": {
       "id": "13",
       "text": {
-        "fr": "J'ai fait passer un projet aussi. Pour moins gaspiller. Suis super content!",
+        "fr": ,{
+          "m": "J'ai fait passer un projet aussi. Pour moins gaspiller. Suis super content!",
+          "f": "J'ai fait passer un projet aussi. Pour moins gaspiller. Suis super contente!"
+        },
         "en": ""
       },
       "nextNodes": [
@@ -929,7 +932,10 @@
     "43": {
       "id": "43",
       "text": {
-        "fr": "Et si t'avais pu voir ça, là haut, le spectacle, Jon, ça en valait cette souffrance…",
+        "fr": {
+          "m": "Et si t'avais pu voir ça, là haut, le spectacle, Arya, ça en valait cette souffrance…",
+          "f": "Et si t'avais pu voir ça, là haut, le spectacle, Jon, ça en valait cette souffrance…"
+        },
         "en": ""
       },
       "nextNodes": [
