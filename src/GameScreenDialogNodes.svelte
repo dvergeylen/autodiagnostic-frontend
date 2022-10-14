@@ -176,6 +176,7 @@
       // Update Stats (TODO: if user permitted it)
       const attributions = Object.entries<number>($chapters[$currentChapterId].dialogNodes[dialogNodeid].attribution)
                                  .filter(([k, v]) => v !== 0);
+      // Telemetry
       if (attributions.length > 0) {
         sendTimestampTelemetry('1', $currentChapterId, dialogNodeid, attributions[0][0], attributions[0][1]);
       }

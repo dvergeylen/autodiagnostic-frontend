@@ -8,7 +8,7 @@ export async function sendTimestampTelemetry(part: string, chapter: string, node
   data.append('timestamp[attribution_value]', String(attributionValue));
   // N.B: uid (ip address) is set server side
 
-  const response = await fetch('http://localhost:3000/timestamps', { // TODO: update this
+  const response = await fetch('https://ge.sowalfin.be/autodiagnostic/stats/api/timestamps', {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -28,7 +28,7 @@ export async function sendResultsTelemetry(attributions) {
   });
   // N.B: uid (ip address) is set server side
 
-  const response = await fetch('http://localhost:3000/profiles', { // TODO: update this
+  const response = await fetch('https://ge.sowalfin.be/autodiagnostic/stats/api/profiles', {
     method: 'POST',
     headers: {
       Accept: 'application/json',
