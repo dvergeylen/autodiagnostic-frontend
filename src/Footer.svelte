@@ -9,11 +9,11 @@
       <img src={[process.env.APP_PATH_PREFIX, 'assets/images/logo_FSE_Coq_Wallonie.svg'].join('/')} alt="Logo FSE et Wallonie"/>
     </div>
     <div>
-      <img id="sowalfin-creation" src={[process.env.APP_PATH_PREFIX, 'assets/images/logo_sowalfin_creation.svg'].join('/')} alt="Sowalfin Création"/>
+      <img id="logo-we" src={[process.env.APP_PATH_PREFIX, 'assets/images/logo_WE.svg'].join('/')} alt="Sowalfin Création"/>
     </div>
   </div>
   <div id="footer-container">
-    <p id="moto" class="is-uppercase">Un outil développé par le groupe <a href="https://www.sowalfin.be">Sowalfin</a>.</p>
+    <p id="moto" class="is-uppercase">Un outil développé par <a href="https://wallonie-entreprendre.be/">Wallonie Entreprendre</a>.</p>
   </div>
 </footer>
 
@@ -83,8 +83,8 @@
       border-left: 1px solid gray;
     }
   }
-  #sowalfin-creation {
-    max-width: 55%;
+  #logo-we {
+    max-width: 90%;
     margin:auto;
     margin-left: 0.5em;
     margin-right: 0.5em;
